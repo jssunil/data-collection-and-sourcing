@@ -62,4 +62,4 @@ python report/build.py                              # injects results/*.json int
 npx netlify-cli deploy --dir report --prod          # first time: npx netlify-cli login
 ```
 
-Netlify link: _(add after deploy)_
+Netlify link: https://era-v5-s3-data-india-40b.netlify.app

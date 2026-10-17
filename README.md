@@ -2,13 +2,13 @@
 
 ERA V5 Session 3 assignment: decide the data, cleaning, evaluation, fertility targets and vocabulary size for a 40B model that is as good as Gemma 4, strong in code and agentic work, strong in Indian languages, and India-first. The task text is in [assignment.md](assignment.md).
 
-**Submission:** the short report in [`report/index.html`](report/index.html), deployed on Netlify (link at the end of this file). This repository holds the evidence: code, data manifests, results and logs.
+**Submission:** the short report in https://era-v5-s3-data-india-40b.netlify.app (built into `site/` by `report/build.py` from `report/template.html` and `results/`). This repository holds the evidence: code, data manifests, results and logs.
 
 ## Documents
 
 | File | Content |
 |---|---|
-| [report/index.html](report/index.html) | The submission: decisions and numbers only. |
+| [report/template.html](report/template.html) | The submission: decisions and numbers only (built and deployed as the site home page). |
 | [PLAN.md](PLAN.md) | Experiment plan: words, design options with reasons, procedures, budget, tests. |
 | [SESSION_03_EXPLAINER.md](SESSION_03_EXPLAINER.md) | Session 3 in depth: token budget, tiers, mining loop, erasure risk, Unicode issues, tokenizer theory, evaluation; 40 papers (arXiv numbers checked). |
 | [FIRST_PRINCIPLES_QA.md](FIRST_PRINCIPLES_QA.md) | 46 questions that rebuild each decision from first principles, with answers from the measurements. |

@@ -22,7 +22,7 @@ The assignment asks four questions:
 | Q3 | How do you test the model against the objectives? | Literature + E1/E2 (tokenizer gates) |
 | Q4 | Which fertility targets, which languages, and which vocabulary size? | E1 (released tokenizers) + E2 (vocabulary sweep and cost model) |
 
-The submission is a short report on Netlify (`report/index.html`). The assignment says: "Longer submissions will result in lower scores." Thus the report gives decisions and numbers only. This repository holds the evidence.
+The submission is a short report on Netlify (`site/index.html`, built from `report/template.html`). The assignment says: "Longer submissions will result in lower scores." Thus the report gives decisions and numbers only. This repository holds the evidence.
 
 ---
 

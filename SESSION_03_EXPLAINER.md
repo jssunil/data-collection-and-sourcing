@@ -24,7 +24,7 @@ Sources: the course notes (`era-v5-capstone-tracker/sessions/session_03_data_col
 4. Read the BrahmicTokenizer-131K report §2.3 and §5. Run E1.
 5. Read "Scaling laws with vocabulary" (Tao et al.). Run E2.
 6. Read DeepSeekMath §2 (the mining loop) and Llama 3 §3.1 (data) and §5 (contamination).
-7. Read the report (`report/index.html`) and check each number against `results/`.
+7. Read the report (`site/index.html`, or the Netlify link in README) and check each number against `results/`.
 
 ---
 

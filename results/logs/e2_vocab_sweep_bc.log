@@ -1,0 +1,14 @@
+trained english V=393,216 on 300 M chars in 25s
+sweep: english mix
+  V= 32,768  eng 1.349  T1 3.348  T2 3.392  code B/t 3.441  math B/t 3.238
+  V= 49,152  eng 1.301  T1 3.004  T2 3.070  code B/t 3.580  math B/t 3.330
+  V= 65,536  eng 1.275  T1 2.780  T2 2.860  code B/t 3.666  math B/t 3.382
+  V= 98,304  eng 1.249  T1 2.503  T2 2.606  code B/t 3.760  math B/t 3.450
+  V=131,072  eng 1.235  T1 2.340  T2 2.460  code B/t 3.821  math B/t 3.492
+  V=163,840  eng 1.225  T1 2.228  T2 2.362  code B/t 3.864  math B/t 3.515
+  V=196,608  eng 1.219  T1 2.139  T2 2.276  code B/t 3.893  math B/t 3.532
+  V=262,144  eng 1.212  T1 2.021  T2 2.159  code B/t 3.932  math B/t 3.556
+  V=327,680  eng 1.206  T1 1.947  T2 2.086  code B/t 3.960  math B/t 3.574
+  V=393,216  eng 1.202  T1 1.887  T2 2.028  code B/t 3.977  math B/t 3.584
+pretok gpt2: eng 1.286  hin 3.332  tam 6.833  mal 7.532
+pretok ours: eng 1.375  hin 1.576  tam 2.606  mal 3.186

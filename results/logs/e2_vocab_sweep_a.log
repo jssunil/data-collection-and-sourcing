@@ -1,0 +1,12 @@
+trained india V=393,216 on 297 M chars in 64s
+sweep: india mix
+  V= 32,768  eng 1.491  T1 2.622  T2 2.880  code B/t 3.264  math B/t 3.066
+  V= 49,152  eng 1.418  T1 2.402  T2 2.650  code B/t 3.406  math B/t 3.180
+  V= 65,536  eng 1.373  T1 2.258  T2 2.510  code B/t 3.510  math B/t 3.250
+  V= 98,304  eng 1.320  T1 2.084  T2 2.321  code B/t 3.630  math B/t 3.339
+  V=131,072  eng 1.293  T1 1.978  T2 2.206  code B/t 3.701  math B/t 3.393
+  V=163,840  eng 1.274  T1 1.904  T2 2.133  code B/t 3.750  math B/t 3.430
+  V=196,608  eng 1.262  T1 1.850  T2 2.072  code B/t 3.788  math B/t 3.459
+  V=262,144  eng 1.246  T1 1.774  T2 1.994  code B/t 3.842  math B/t 3.494
+  V=327,680  eng 1.236  T1 1.723  T2 1.932  code B/t 3.880  math B/t 3.517
+  V=393,216  eng 1.227  T1 1.685  T2 1.888  code B/t 3.906  math B/t 3.533

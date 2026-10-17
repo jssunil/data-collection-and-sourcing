@@ -1,0 +1,623 @@
+{
+ "eng": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.0,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.0,
+   "letter_ratio_0.75": 0.001,
+   "c4_terminal_punct_3_lines": 0.107,
+   "fineweb_line_punct_0.12": 0.001,
+   "any": 0.107
+  },
+  "aware": {
+   "gopher_words_50": 0.0,
+   "gopher_mean_word_len_3_10": 0.011,
+   "gopher_stopwords_2": 0.0,
+   "letter_ratio_0.75": 0.002,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.0,
+   "any": 0.012
+  },
+  "mwl_band": [
+   4.132655004235598,
+   6.512214791502753
+  ],
+  "not_nfc": 0.0,
+  "has_zwj_zwnj": 0.0
+ },
+ "hin": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.011,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.917,
+   "letter_ratio_0.75": 0.997,
+   "c4_terminal_punct_3_lines": 0.789,
+   "fineweb_line_punct_0.12": 0.627,
+   "any": 1.0
+  },
+  "aware": {
+   "gopher_words_50": 0.011,
+   "gopher_mean_word_len_3_10": 0.016,
+   "gopher_stopwords_2": 0.0,
+   "letter_ratio_0.75": 0.006,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.016,
+   "any": 0.041
+  },
+  "mwl_band": [
+   3.4632606286170016,
+   5.258046200061395
+  ],
+  "not_nfc": 0.013,
+  "has_zwj_zwnj": 0.0
+ },
+ "ben": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.025,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.956,
+   "letter_ratio_0.75": 0.997,
+   "c4_terminal_punct_3_lines": 0.871,
+   "fineweb_line_punct_0.12": 0.78,
+   "any": 0.999
+  },
+  "aware": {
+   "gopher_words_50": 0.025,
+   "gopher_mean_word_len_3_10": 0.017,
+   "gopher_stopwords_2": 0.014,
+   "letter_ratio_0.75": 0.007,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.004,
+   "any": 0.057
+  },
+  "mwl_band": [
+   4.324487749608124,
+   6.75639303482587
+  ],
+  "not_nfc": 0.001,
+  "has_zwj_zwnj": 0.0
+ },
+ "mar": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.013,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.934,
+   "letter_ratio_0.75": 0.998,
+   "c4_terminal_punct_3_lines": 0.22,
+   "fineweb_line_punct_0.12": 0.012,
+   "any": 0.999
+  },
+  "aware": {
+   "gopher_words_50": 0.013,
+   "gopher_mean_word_len_3_10": 0.013,
+   "gopher_stopwords_2": 0.001,
+   "letter_ratio_0.75": 0.005,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.007,
+   "any": 0.033
+  },
+  "mwl_band": [
+   4.597931730473281,
+   7.097173370319001
+  ],
+  "not_nfc": 0.432,
+  "has_zwj_zwnj": 0.0
+ },
+ "tel": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.029,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.961,
+   "letter_ratio_0.75": 0.999,
+   "c4_terminal_punct_3_lines": 0.34,
+   "fineweb_line_punct_0.12": 0.01,
+   "any": 1.0
+  },
+  "aware": {
+   "gopher_words_50": 0.029,
+   "gopher_mean_word_len_3_10": 0.008,
+   "gopher_stopwords_2": 0.052,
+   "letter_ratio_0.75": 0.008,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.002,
+   "any": 0.087
+  },
+  "mwl_band": [
+   5.33323188405797,
+   9.133918116542391
+  ],
+  "not_nfc": 0.0,
+  "has_zwj_zwnj": 0.0
+ },
+ "tam": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.034,
+   "gopher_mean_word_len_3_10": 0.008,
+   "gopher_stopwords_2": 0.962,
+   "letter_ratio_0.75": 1.0,
+   "c4_terminal_punct_3_lines": 0.169,
+   "fineweb_line_punct_0.12": 0.011,
+   "any": 1.0
+  },
+  "aware": {
+   "gopher_words_50": 0.034,
+   "gopher_mean_word_len_3_10": 0.007,
+   "gopher_stopwords_2": 0.059,
+   "letter_ratio_0.75": 0.012,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.006,
+   "any": 0.092
+  },
+  "mwl_band": [
+   6.010736168639641,
+   11.18183035714285
+  ],
+  "not_nfc": 0.002,
+  "has_zwj_zwnj": 0.0
+ },
+ "guj": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.012,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.962,
+   "letter_ratio_0.75": 0.998,
+   "c4_terminal_punct_3_lines": 0.26,
+   "fineweb_line_punct_0.12": 0.017,
+   "any": 0.998
+  },
+  "aware": {
+   "gopher_words_50": 0.012,
+   "gopher_mean_word_len_3_10": 0.005,
+   "gopher_stopwords_2": 0.004,
+   "letter_ratio_0.75": 0.009,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.008,
+   "any": 0.033
+  },
+  "mwl_band": [
+   3.6756576267744285,
+   6.2840729132299575
+  ],
+  "not_nfc": 0.0,
+  "has_zwj_zwnj": 0.0
+ },
+ "urd": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.001,
+   "gopher_mean_word_len_3_10": 0.002,
+   "gopher_stopwords_2": 0.978,
+   "letter_ratio_0.75": 0.0,
+   "c4_terminal_punct_3_lines": 0.983,
+   "fineweb_line_punct_0.12": 0.836,
+   "any": 0.999
+  },
+  "aware": {
+   "gopher_words_50": 0.001,
+   "gopher_mean_word_len_3_10": 0.011,
+   "gopher_stopwords_2": 0.002,
+   "letter_ratio_0.75": 0.007,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.194,
+   "any": 0.211
+  },
+  "mwl_band": [
+   2.9891797833893987,
+   4.470655650319829
+  ],
+  "not_nfc": 0.042,
+  "has_zwj_zwnj": 0.003
+ },
+ "kan": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.02,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.959,
+   "letter_ratio_0.75": 0.998,
+   "c4_terminal_punct_3_lines": 0.132,
+   "fineweb_line_punct_0.12": 0.016,
+   "any": 1.0
+  },
+  "aware": {
+   "gopher_words_50": 0.02,
+   "gopher_mean_word_len_3_10": 0.015,
+   "gopher_stopwords_2": 0.049,
+   "letter_ratio_0.75": 0.003,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.01,
+   "any": 0.084
+  },
+  "mwl_band": [
+   5.540624039081486,
+   8.404541734860883
+  ],
+  "not_nfc": 0.001,
+  "has_zwj_zwnj": 0.0
+ },
+ "ory": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.026,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.969,
+   "letter_ratio_0.75": 0.997,
+   "c4_terminal_punct_3_lines": 0.942,
+   "fineweb_line_punct_0.12": 0.894,
+   "any": 0.999
+  },
+  "aware": {
+   "gopher_words_50": 0.026,
+   "gopher_mean_word_len_3_10": 0.003,
+   "gopher_stopwords_2": 0.014,
+   "letter_ratio_0.75": 0.004,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.01,
+   "any": 0.048
+  },
+  "mwl_band": [
+   3.679462690130278,
+   7.2368443354148075
+  ],
+  "not_nfc": 0.0,
+  "has_zwj_zwnj": 0.0
+ },
+ "mal": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.059,
+   "gopher_mean_word_len_3_10": 0.06,
+   "gopher_stopwords_2": 0.973,
+   "letter_ratio_0.75": 0.999,
+   "c4_terminal_punct_3_lines": 0.229,
+   "fineweb_line_punct_0.12": 0.009,
+   "any": 1.0
+  },
+  "aware": {
+   "gopher_words_50": 0.059,
+   "gopher_mean_word_len_3_10": 0.012,
+   "gopher_stopwords_2": 0.166,
+   "letter_ratio_0.75": 0.01,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.004,
+   "any": 0.206
+  },
+  "mwl_band": [
+   5.890595556974445,
+   10.86232383808096
+  ],
+  "not_nfc": 0.0,
+  "has_zwj_zwnj": 0.003
+ },
+ "pan": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.008,
+   "gopher_mean_word_len_3_10": 0.001,
+   "gopher_stopwords_2": 0.964,
+   "letter_ratio_0.75": 0.999,
+   "c4_terminal_punct_3_lines": 0.81,
+   "fineweb_line_punct_0.12": 0.698,
+   "any": 1.0
+  },
+  "aware": {
+   "gopher_words_50": 0.008,
+   "gopher_mean_word_len_3_10": 0.012,
+   "gopher_stopwords_2": 0.002,
+   "letter_ratio_0.75": 0.004,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.003,
+   "any": 0.021
+  },
+  "mwl_band": [
+   3.4086811309333975,
+   4.972849591419816
+  ],
+  "not_nfc": 0.001,
+  "has_zwj_zwnj": 0.0
+ },
+ "asm": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.024,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.908,
+   "letter_ratio_0.75": 0.949,
+   "c4_terminal_punct_3_lines": 0.866,
+   "fineweb_line_punct_0.12": 0.788,
+   "any": 0.988
+  },
+  "aware": {
+   "gopher_words_50": 0.024,
+   "gopher_mean_word_len_3_10": 0.011,
+   "gopher_stopwords_2": 0.052,
+   "letter_ratio_0.75": 0.006,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.002,
+   "any": 0.08
+  },
+  "mwl_band": [
+   4.051225641025641,
+   7.182227042129254
+  ],
+  "not_nfc": 0.007,
+  "has_zwj_zwnj": 0.0
+ },
+ "mai": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.042,
+   "gopher_mean_word_len_3_10": 0.002,
+   "gopher_stopwords_2": 0.935,
+   "letter_ratio_0.75": 0.938,
+   "c4_terminal_punct_3_lines": 0.76,
+   "fineweb_line_punct_0.12": 0.588,
+   "any": 0.957
+  },
+  "aware": {
+   "gopher_words_50": 0.042,
+   "gopher_mean_word_len_3_10": 0.005,
+   "gopher_stopwords_2": 0.08,
+   "letter_ratio_0.75": 0.006,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.002,
+   "any": 0.127
+  },
+  "mwl_band": [
+   3.1399,
+   6.000874999999999
+  ],
+  "not_nfc": 0.006,
+  "has_zwj_zwnj": 0.0
+ },
+ "sat": {
+  "n_test": 34,
+  "english": {
+   "gopher_words_50": 0.029411764705882353,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.9705882352941176,
+   "letter_ratio_0.75": 0.029411764705882353,
+   "c4_terminal_punct_3_lines": 0.5882352941176471,
+   "fineweb_line_punct_0.12": 0.4117647058823529,
+   "any": 0.9705882352941176
+  },
+  "aware": {
+   "gopher_words_50": 0.029411764705882353,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.0,
+   "letter_ratio_0.75": 0.058823529411764705,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.058823529411764705,
+   "any": 0.14705882352941177
+  },
+  "mwl_band": [
+   3.3560467980295567,
+   5.2843194176957065
+  ],
+  "not_nfc": 0.0,
+  "has_zwj_zwnj": 0.0
+ },
+ "kas": {
+  "n_test": 77,
+  "english": {
+   "gopher_words_50": 0.18181818181818182,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.5194805194805194,
+   "letter_ratio_0.75": 0.14285714285714285,
+   "c4_terminal_punct_3_lines": 0.9090909090909091,
+   "fineweb_line_punct_0.12": 0.4935064935064935,
+   "any": 0.948051948051948
+  },
+  "aware": {
+   "gopher_words_50": 0.18181818181818182,
+   "gopher_mean_word_len_3_10": 0.025974025974025976,
+   "gopher_stopwords_2": 0.09090909090909091,
+   "letter_ratio_0.75": 0.025974025974025976,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.05194805194805195,
+   "any": 0.2857142857142857
+  },
+  "mwl_band": [
+   3.4981817275084777,
+   7.5025635670652155
+  ],
+  "not_nfc": 0.012987012987012988,
+  "has_zwj_zwnj": 0.0
+ },
+ "npi": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.015,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.995,
+   "letter_ratio_0.75": 1.0,
+   "c4_terminal_punct_3_lines": 0.968,
+   "fineweb_line_punct_0.12": 0.921,
+   "any": 1.0
+  },
+  "aware": {
+   "gopher_words_50": 0.015,
+   "gopher_mean_word_len_3_10": 0.012,
+   "gopher_stopwords_2": 0.004,
+   "letter_ratio_0.75": 0.005,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.0,
+   "any": 0.034
+  },
+  "mwl_band": [
+   4.277098678348678,
+   6.74278808359697
+  ],
+  "not_nfc": 0.002,
+  "has_zwj_zwnj": 0.0
+ },
+ "snd": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.005,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.979,
+   "letter_ratio_0.75": 0.0,
+   "c4_terminal_punct_3_lines": 0.462,
+   "fineweb_line_punct_0.12": 0.034,
+   "any": 0.991
+  },
+  "aware": {
+   "gopher_words_50": 0.005,
+   "gopher_mean_word_len_3_10": 0.016,
+   "gopher_stopwords_2": 0.001,
+   "letter_ratio_0.75": 0.008,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.005,
+   "any": 0.033
+  },
+  "mwl_band": [
+   3.2711839490296937,
+   4.340092452830189
+  ],
+  "not_nfc": 0.002,
+  "has_zwj_zwnj": 0.001
+ },
+ "doi": {
+  "n_test": 12,
+  "english": {
+   "gopher_words_50": 0.5,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.4166666666666667,
+   "letter_ratio_0.75": 0.5,
+   "c4_terminal_punct_3_lines": 0.8333333333333334,
+   "fineweb_line_punct_0.12": 0.3333333333333333,
+   "any": 0.9166666666666666
+  },
+  "aware": {
+   "gopher_words_50": 0.5,
+   "gopher_mean_word_len_3_10": 0.16666666666666666,
+   "gopher_stopwords_2": 0.16666666666666666,
+   "letter_ratio_0.75": 0.08333333333333333,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.0,
+   "any": 0.5833333333333334
+  },
+  "mwl_band": [
+   3.7798132095317545,
+   5.571153846153846
+  ],
+  "not_nfc": 0.0,
+  "has_zwj_zwnj": 0.0
+ },
+ "gom": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.015,
+   "gopher_mean_word_len_3_10": 0.001,
+   "gopher_stopwords_2": 0.94,
+   "letter_ratio_0.75": 0.718,
+   "c4_terminal_punct_3_lines": 0.108,
+   "fineweb_line_punct_0.12": 0.006,
+   "any": 0.958
+  },
+  "aware": {
+   "gopher_words_50": 0.015,
+   "gopher_mean_word_len_3_10": 0.012,
+   "gopher_stopwords_2": 0.088,
+   "letter_ratio_0.75": 0.009,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.0,
+   "any": 0.108
+  },
+  "mwl_band": [
+   3.4532969409874053,
+   8.17691509613554
+  ],
+  "not_nfc": 0.273,
+  "has_zwj_zwnj": 0.0
+ },
+ "mni": {
+  "n_test": 284,
+  "english": {
+   "gopher_words_50": 0.01056338028169014,
+   "gopher_mean_word_len_3_10": 0.0,
+   "gopher_stopwords_2": 0.7253521126760564,
+   "letter_ratio_0.75": 0.7429577464788732,
+   "c4_terminal_punct_3_lines": 0.7147887323943662,
+   "fineweb_line_punct_0.12": 0.6795774647887324,
+   "any": 0.7464788732394366
+  },
+  "aware": {
+   "gopher_words_50": 0.01056338028169014,
+   "gopher_mean_word_len_3_10": 0.014084507042253521,
+   "gopher_stopwords_2": 0.014084507042253521,
+   "letter_ratio_0.75": 0.03873239436619718,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.007042253521126761,
+   "any": 0.06690140845070422
+  },
+  "mwl_band": [
+   4.4882231325114965,
+   7.098867086085769
+  ],
+  "not_nfc": 0.5915492957746479,
+  "has_zwj_zwnj": 0.035211267605633804
+ },
+ "brx": {
+  "n_test": 750,
+  "english": {
+   "gopher_words_50": 0.021333333333333333,
+   "gopher_mean_word_len_3_10": 0.0013333333333333333,
+   "gopher_stopwords_2": 0.8466666666666667,
+   "letter_ratio_0.75": 0.996,
+   "c4_terminal_punct_3_lines": 0.976,
+   "fineweb_line_punct_0.12": 0.8893333333333333,
+   "any": 0.9986666666666667
+  },
+  "aware": {
+   "gopher_words_50": 0.021333333333333333,
+   "gopher_mean_word_len_3_10": 0.013333333333333334,
+   "gopher_stopwords_2": 0.02666666666666667,
+   "letter_ratio_0.75": 0.004,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.0,
+   "any": 0.048
+  },
+  "mwl_band": [
+   4.068293706293706,
+   7.795355731225294
+  ],
+  "not_nfc": 0.016,
+  "has_zwj_zwnj": 0.0
+ },
+ "san": {
+  "n_test": 1000,
+  "english": {
+   "gopher_words_50": 0.008,
+   "gopher_mean_word_len_3_10": 0.075,
+   "gopher_stopwords_2": 0.95,
+   "letter_ratio_0.75": 0.995,
+   "c4_terminal_punct_3_lines": 0.942,
+   "fineweb_line_punct_0.12": 0.858,
+   "any": 0.999
+  },
+  "aware": {
+   "gopher_words_50": 0.008,
+   "gopher_mean_word_len_3_10": 0.016,
+   "gopher_stopwords_2": 0.012,
+   "letter_ratio_0.75": 0.008,
+   "c4_terminal_punct_3_lines": 0.0,
+   "fineweb_line_punct_0.12": 0.088,
+   "any": 0.115
+  },
+  "mwl_band": [
+   4.242045454545455,
+   13.709033079324621
+  ],
+  "not_nfc": 0.007,
+  "has_zwj_zwnj": 0.0
+ }
+}

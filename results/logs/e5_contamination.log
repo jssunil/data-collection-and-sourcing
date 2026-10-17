@@ -1,0 +1,25 @@
+flores_eng               2/1012  0.20%  ('eng_web.jsonl', 'it is not something to be ashamed of it is no different from')
+flores_hin               0/1012  0.00%  
+flores_ben               0/1012  0.00%  
+flores_mar               0/1012  0.00%  
+flores_tel               0/1012  0.00%  
+flores_tam               0/1012  0.00%  
+flores_guj               0/1012  0.00%  
+flores_urd               0/1012  0.00%  
+flores_kan               0/1012  0.00%  
+flores_ory               0/1012  0.00%  
+flores_mal               0/1012  0.00%  
+flores_pan               0/1012  0.00%  
+flores_asm               0/1012  0.00%  
+flores_mai               0/1012  0.00%  
+flores_sat               0/1012  0.00%  
+flores_kas               0/1012  0.00%  
+flores_npi               0/1012  0.00%  
+flores_snd               0/1012  0.00%  
+flores_gom               0/1012  0.00%  
+flores_mni               0/1012  0.00%  
+flores_brx               0/1012  0.00%  
+flores_san               0/1012  0.00%  
+math_gsm8k               0/1319  0.00%  
+code_humaneval           1/164   0.61%  ('code.jsonl', '0 1 2 3 4 5 6 7 8 9 a b c')
+science_sciq             4/1000  0.40%  ('eng_web.jsonl', 'people who are at high risk of developing serious complications like pneumonia if')

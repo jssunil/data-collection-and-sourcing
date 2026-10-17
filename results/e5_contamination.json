@@ -1,0 +1,161 @@
+{
+ "flores_eng": {
+  "items": 1012,
+  "contaminated": 2,
+  "rate": 0.001976284584980237,
+  "example": [
+   "eng_web.jsonl",
+   "it is not something to be ashamed of it is no different from"
+  ]
+ },
+ "flores_hin": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_ben": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_mar": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_tel": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_tam": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_guj": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_urd": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_kan": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_ory": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_mal": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_pan": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_asm": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_mai": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_sat": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_kas": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_npi": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_snd": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_gom": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_mni": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_brx": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "flores_san": {
+  "items": 1012,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "math_gsm8k": {
+  "items": 1319,
+  "contaminated": 0,
+  "rate": 0.0,
+  "example": null
+ },
+ "code_humaneval": {
+  "items": 164,
+  "contaminated": 1,
+  "rate": 0.006097560975609756,
+  "example": [
+   "code.jsonl",
+   "0 1 2 3 4 5 6 7 8 9 a b c"
+  ]
+ },
+ "science_sciq": {
+  "items": 1000,
+  "contaminated": 4,
+  "rate": 0.004,
+  "example": [
+   "eng_web.jsonl",
+   "people who are at high risk of developing serious complications like pneumonia if"
+  ]
+ }
+}

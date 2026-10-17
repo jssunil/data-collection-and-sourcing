@@ -1,0 +1,4169 @@
+{
+ "india": {
+  "mix_report": {
+   "eng_web": {
+    "want": 78000000.0,
+    "got": 78002075
+   },
+   "code": {
+    "want": 72000000.0,
+    "got": 72001208
+   },
+   "math": {
+    "want": 21000000.000000004,
+    "got": 21006235
+   },
+   "agentic": {
+    "want": 9000000.0,
+    "got": 9002793
+   },
+   "hin": {
+    "want": 10009829.29915534,
+    "got": 10010570,
+    "pool_docs": 11703,
+    "script_ok_docs": 11674
+   },
+   "ben": {
+    "want": 9364308.953482741,
+    "got": 9368426,
+    "pool_docs": 10555,
+    "script_ok_docs": 10549
+   },
+   "mar": {
+    "want": 7256607.502017825,
+    "got": 7259340,
+    "pool_docs": 11905,
+    "script_ok_docs": 11896
+   },
+   "tel": {
+    "want": 7628997.305089706,
+    "got": 7629769,
+    "pool_docs": 12525,
+    "script_ok_docs": 12498
+   },
+   "tam": {
+    "want": 8135729.743294355,
+    "got": 8136594,
+    "pool_docs": 10505,
+    "script_ok_docs": 10479
+   },
+   "guj": {
+    "want": 6727584.353384577,
+    "got": 6727849,
+    "pool_docs": 10507,
+    "script_ok_docs": 10483
+   },
+   "urd": {
+    "want": 7256607.502017825,
+    "got": 7257889,
+    "pool_docs": 9624,
+    "script_ok_docs": 9603
+   },
+   "kan": {
+    "want": 6221180.582915339,
+    "got": 6225312,
+    "pool_docs": 12268,
+    "script_ok_docs": 12202
+   },
+   "ory": {
+    "want": 5090497.13553479,
+    "got": 5095561,
+    "pool_docs": 14215,
+    "script_ok_docs": 14162
+   },
+   "mal": {
+    "want": 7150913.929292725,
+    "got": 7151897,
+    "pool_docs": 13640,
+    "script_ok_docs": 13595
+   },
+   "pan": {
+    "want": 5174572.541520199,
+    "got": 5180991,
+    "pool_docs": 10743,
+    "script_ok_docs": 10737
+   },
+   "asm": {
+    "want": 3358475.6200524573,
+    "got": 3358991,
+    "pool_docs": 9784,
+    "script_ok_docs": 9336
+   },
+   "mai": {
+    "want": 1375515.1515839335,
+    "got": 1376294,
+    "pool_docs": 10137,
+    "script_ok_docs": 9394
+   },
+   "sat": {
+    "want": 1049655.240859198,
+    "got": 117237,
+    "pool_docs": 68,
+    "script_ok_docs": 67
+   },
+   "kas": {
+    "want": 1049655.240859198,
+    "got": 338623,
+    "pool_docs": 154,
+    "script_ok_docs": 61
+   },
+   "npi": {
+    "want": 7885543.800469324,
+    "got": 7885669,
+    "pool_docs": 13223,
+    "script_ok_docs": 13217
+   },
+   "snd": {
+    "want": 3745761.40991695,
+    "got": 3746567,
+    "pool_docs": 8763,
+    "script_ok_docs": 8763
+   },
+   "doi": {
+    "want": 1049655.240859198,
+    "got": 11602,
+    "pool_docs": 24,
+    "script_ok_docs": 15
+   },
+   "gom": {
+    "want": 1180078.108015323,
+    "got": 1180707,
+    "pool_docs": 7278,
+    "script_ok_docs": 4969
+   },
+   "mni": {
+    "want": 1049655.240859198,
+    "got": 1057464,
+    "pool_docs": 567,
+    "script_ok_docs": 436
+   },
+   "brx": {
+    "want": 1049655.240859198,
+    "got": 1050358,
+    "pool_docs": 1499,
+    "script_ok_docs": 1494
+   },
+   "san": {
+    "want": 5189520.857960601,
+    "got": 5192560,
+    "pool_docs": 6403,
+    "script_ok_docs": 6365
+   },
+   "roman_ben": {
+    "want": 1200000.0,
+    "got": 1201900
+   },
+   "roman_guj": {
+    "want": 1200000.0,
+    "got": 1200138
+   },
+   "roman_hin": {
+    "want": 1200000.0,
+    "got": 1206521
+   },
+   "roman_kan": {
+    "want": 1200000.0,
+    "got": 1200178
+   },
+   "roman_mal": {
+    "want": 1200000.0,
+    "got": 1206940
+   },
+   "roman_mar": {
+    "want": 1200000.0,
+    "got": 1200665
+   },
+   "roman_pan": {
+    "want": 1200000.0,
+    "got": 1206393
+   },
+   "roman_tam": {
+    "want": 1200000.0,
+    "got": 1202897
+   },
+   "roman_tel": {
+    "want": 1200000.0,
+    "got": 1206298
+   },
+   "roman_urd": {
+    "want": 1200000.0,
+    "got": 1201817
+   }
+  },
+  "rows": [
+   {
+    "V": 32768,
+    "lang": {
+     "eng": {
+      "fertility": 1.4913930870736496,
+      "bytes_per_token": 4.0442090438722715,
+      "tokens": 32663
+     },
+     "hin": {
+      "fertility": 1.7397730374761144,
+      "bytes_per_token": 7.555488310582117,
+      "tokens": 44613,
+      "parity": 1.3658573921562625
+     },
+     "ben": {
+      "fertility": 2.436993745514201,
+      "bytes_per_token": 7.250967687647257,
+      "tokens": 47536,
+      "parity": 1.4553470287481247
+     },
+     "mar": {
+      "fertility": 2.304105848997165,
+      "bytes_per_token": 8.101153039832285,
+      "tokens": 43884,
+      "parity": 1.3435385604506629
+     },
+     "tel": {
+      "fertility": 3.029106151847916,
+      "bytes_per_token": 6.893328395735475,
+      "tokens": 51307,
+      "parity": 1.5707987631264735
+     },
+     "tam": {
+      "fertility": 3.00548435171386,
+      "bytes_per_token": 8.36307197968939,
+      "tokens": 50417,
+      "parity": 1.5435508067232036
+     },
+     "guj": {
+      "fertility": 2.4812793258642154,
+      "bytes_per_token": 6.38831429453535,
+      "tokens": 51824,
+      "parity": 1.5866270703854515
+     },
+     "urd": {
+      "fertility": 1.810472643112863,
+      "bytes_per_token": 4.62798362129232,
+      "tokens": 50065,
+      "parity": 1.5327740868873037
+     },
+     "kan": {
+      "fertility": 3.3251552795031056,
+      "bytes_per_token": 7.011861399084711,
+      "tokens": 53535,
+      "parity": 1.6390105011787037
+     },
+     "ory": {
+      "fertility": 2.8061671763506624,
+      "bytes_per_token": 6.565177906533229,
+      "tokens": 55057,
+      "parity": 1.6856075681964302
+     },
+     "mal": {
+      "fertility": 3.709912926992632,
+      "bytes_per_token": 7.433840654281536,
+      "tokens": 55389,
+      "parity": 1.6957719744052904
+     },
+     "pan": {
+      "fertility": 2.1953215471319387,
+      "bytes_per_token": 6.051695034463356,
+      "tokens": 56872,
+      "parity": 1.7411750298502893
+     },
+     "asm": {
+      "fertility": 2.745450775053139,
+      "bytes_per_token": 6.3270578016126295,
+      "tokens": 52957,
+      "parity": 1.6213146373572545
+     },
+     "mai": {
+      "fertility": 1.936979399455528,
+      "bytes_per_token": 7.034863963415913,
+      "tokens": 47671,
+      "parity": 1.4594801457306432
+     },
+     "sat": {
+      "fertility": 4.667318006069929,
+      "bytes_per_token": 3.289730365302905,
+      "tokens": 112263,
+      "parity": 3.4370082356182836
+     },
+     "kas": {
+      "fertility": 3.364872496633216,
+      "bytes_per_token": 2.945917682297046,
+      "tokens": 77456,
+      "parity": 2.3713682147996202
+     },
+     "npi": {
+      "fertility": 2.2499866317309234,
+      "bytes_per_token": 8.067875561470638,
+      "tokens": 42077,
+      "parity": 1.2882160242476197
+     },
+     "snd": {
+      "fertility": 1.9866698217384446,
+      "bytes_per_token": 4.206157938619129,
+      "tokens": 50374,
+      "parity": 1.542234332425068
+     },
+     "gom": {
+      "fertility": 2.5777130757014293,
+      "bytes_per_token": 6.941531636990943,
+      "tokens": 48693
+     },
+     "mni": {
+      "fertility": 3.2012555774618656,
+      "bytes_per_token": 5.963112429296122,
+      "tokens": 61701,
+      "parity": 1.8890181550990417
+     },
+     "brx": {
+      "fertility": 3.1660081106374127,
+      "bytes_per_token": 6.481615896214796,
+      "tokens": 60895
+     },
+     "san": {
+      "fertility": 2.9083946980854196,
+      "bytes_per_token": 7.022625075957059,
+      "tokens": 49370,
+      "parity": 1.5114961883476716
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.065910391966874,
+      "fertility": 1.5123378609887421
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.164265598801908,
+      "fertility": 1.4754830729323036
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.6454889561475317,
+      "fertility": 2.038644384392201
+     },
+     "math_web": {
+      "bytes_per_token": 3.0657372891967034,
+      "fertility": 1.920603693552219
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.0854097823821856,
+      "fertility": 2.223980402542373
+     },
+     "code_github": {
+      "bytes_per_token": 3.26351376042269,
+      "fertility": 3.3763667175916012
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.189121116211875,
+      "fertility": 3.2267657612529264
+     },
+     "agentic_tools": {
+      "bytes_per_token": 2.82018001510023,
+      "fertility": 3.29655650293328
+     },
+     "hinglish": {
+      "bytes_per_token": 2.966666666666667,
+      "fertility": 1.6942294159042928
+     },
+     "roman_hin": {
+      "bytes_per_token": 3.067215501997712,
+      "fertility": 2.0728898471684953
+     }
+    },
+    "mean_fertility_tier1": 2.6221610940458797,
+    "mean_fertility_tier2": 2.8804648592567306,
+    "indic_bytes_per_token": 6.129717961847355
+   },
+   {
+    "V": 49152,
+    "lang": {
+     "eng": {
+      "fertility": 1.4181544221725035,
+      "bytes_per_token": 4.2530667439389545,
+      "tokens": 31059
+     },
+     "hin": {
+      "fertility": 1.6303084662480989,
+      "bytes_per_token": 8.062790030139215,
+      "tokens": 41806,
+      "parity": 1.3460188673170417
+     },
+     "ben": {
+      "fertility": 2.2397723777299294,
+      "bytes_per_token": 7.889445855936277,
+      "tokens": 43689,
+      "parity": 1.4066454167874045
+     },
+     "mar": {
+      "fertility": 2.137981728446918,
+      "bytes_per_token": 8.730623772102161,
+      "tokens": 40720,
+      "parity": 1.311053156894942
+     },
+     "tel": {
+      "fertility": 2.760066123509269,
+      "bytes_per_token": 7.5652620320855615,
+      "tokens": 46750,
+      "parity": 1.50519978106185
+     },
+     "tam": {
+      "fertility": 2.7505812220566317,
+      "bytes_per_token": 9.138098437398408,
+      "tokens": 46141,
+      "parity": 1.4855919379245952
+     },
+     "guj": {
+      "fertility": 2.2618979220530497,
+      "bytes_per_token": 7.007916684306338,
+      "tokens": 47242,
+      "parity": 1.5210406001481052
+     },
+     "urd": {
+      "fertility": 1.680251690594149,
+      "bytes_per_token": 4.986656336088155,
+      "tokens": 46464,
+      "parity": 1.4959915000482953
+     },
+     "kan": {
+      "fertility": 3.018385093167702,
+      "bytes_per_token": 7.724504074409416,
+      "tokens": 48596,
+      "parity": 1.5646350494220678
+     },
+     "ory": {
+      "fertility": 2.531243628950051,
+      "bytes_per_token": 7.278235305962185,
+      "tokens": 49663,
+      "parity": 1.5989890208957147
+     },
+     "mal": {
+      "fertility": 3.391292699263228,
+      "bytes_per_token": 8.132268130826354,
+      "tokens": 50632,
+      "parity": 1.6301877072668147
+     },
+     "pan": {
+      "fertility": 2.0221184281633597,
+      "bytes_per_token": 6.570048678056696,
+      "tokens": 52385,
+      "parity": 1.686628674458289
+     },
+     "asm": {
+      "fertility": 2.528384053087252,
+      "bytes_per_token": 6.8702481033422185,
+      "tokens": 48770,
+      "parity": 1.5702372903184263
+     },
+     "mai": {
+      "fertility": 1.7718093535410995,
+      "bytes_per_token": 7.690661835527221,
+      "tokens": 43606,
+      "parity": 1.403973083486268
+     },
+     "sat": {
+      "fertility": 4.131958591443895,
+      "bytes_per_token": 3.7159660314329988,
+      "tokens": 99386,
+      "parity": 3.19990984899707
+     },
+     "kas": {
+      "fertility": 3.21377992093488,
+      "bytes_per_token": 3.0844169888345183,
+      "tokens": 73978,
+      "parity": 2.38185389098168
+     },
+     "npi": {
+      "fertility": 2.0838992567242394,
+      "bytes_per_token": 8.710887583074594,
+      "tokens": 38971,
+      "parity": 1.2547409768505102
+     },
+     "snd": {
+      "fertility": 1.8379870642057108,
+      "bytes_per_token": 4.546412325122307,
+      "tokens": 46604,
+      "parity": 1.5004990501947906
+     },
+     "gom": {
+      "fertility": 2.3845950238221283,
+      "bytes_per_token": 7.503696303696303,
+      "tokens": 45045
+     },
+     "mni": {
+      "fertility": 2.9331742243436754,
+      "bytes_per_token": 6.508119008030565,
+      "tokens": 56534,
+      "parity": 1.8202131427283557
+     },
+     "brx": {
+      "fertility": 2.9193095559945927,
+      "bytes_per_token": 7.029349955476403,
+      "tokens": 56150
+     },
+     "san": {
+      "fertility": 2.6975552282768778,
+      "bytes_per_token": 7.571509685309341,
+      "tokens": 45791,
+      "parity": 1.4743230625583568
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.26196746478037,
+      "fertility": 1.4427679882525697
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.373952740826865,
+      "fertility": 1.4047484658156097
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.715020695077115,
+      "fertility": 1.9864346574597902
+     },
+     "math_web": {
+      "bytes_per_token": 3.1802716084931646,
+      "fertility": 1.8514350615109143
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.157699104259338,
+      "fertility": 2.1730667372881354
+     },
+     "code_github": {
+      "bytes_per_token": 3.406480788626086,
+      "fertility": 3.234663550689664
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.3044773767564215,
+      "fertility": 3.1141223416037103
+     },
+     "agentic_tools": {
+      "bytes_per_token": 2.8703297757524884,
+      "fertility": 3.238959804116536
+     },
+     "hinglish": {
+      "bytes_per_token": 3.1178653279493616,
+      "fertility": 1.6120689655172413
+     },
+     "roman_hin": {
+      "bytes_per_token": 3.2939075754489484,
+      "fertility": 1.9302301984907095
+     }
+    },
+    "mean_fertility_tier1": 2.4021726709256717,
+    "mean_fertility_tier2": 2.650245227237435,
+    "indic_bytes_per_token": 6.674682834965662
+   },
+   {
+    "V": 65536,
+    "lang": {
+     "eng": {
+      "fertility": 1.3729053467878178,
+      "bytes_per_token": 4.393241984834376,
+      "tokens": 30068
+     },
+     "hin": {
+      "fertility": 1.570331084506493,
+      "bytes_per_token": 8.370741035065064,
+      "tokens": 40268,
+      "parity": 1.3392310762272184
+     },
+     "ben": {
+      "fertility": 2.117297241874295,
+      "bytes_per_token": 8.345811138014527,
+      "tokens": 41300,
+      "parity": 1.3735532792337368
+     },
+     "mar": {
+      "fertility": 2.0249396198676886,
+      "bytes_per_token": 9.218010215987762,
+      "tokens": 38567,
+      "parity": 1.2826593055740323
+     },
+     "tel": {
+      "fertility": 2.5670681308300862,
+      "bytes_per_token": 8.134035555759986,
+      "tokens": 43481,
+      "parity": 1.446088865238792
+     },
+     "tam": {
+      "fertility": 2.5858718330849477,
+      "bytes_per_token": 9.720157683618424,
+      "tokens": 43378,
+      "parity": 1.44266329652787
+     },
+     "guj": {
+      "fertility": 2.1285550129273196,
+      "bytes_per_token": 7.446926243336257,
+      "tokens": 44457,
+      "parity": 1.478548623120926
+     },
+     "urd": {
+      "fertility": 1.5921238202003398,
+      "bytes_per_token": 5.262679719263179,
+      "tokens": 44027,
+      "parity": 1.4642477052015432
+     },
+     "kan": {
+      "fertility": 2.8060869565217392,
+      "bytes_per_token": 8.3089114170614,
+      "tokens": 45178,
+      "parity": 1.5025276040973792
+     },
+     "ory": {
+      "fertility": 2.353567787971458,
+      "bytes_per_token": 7.827684778136302,
+      "tokens": 46177,
+      "parity": 1.5357522947984568
+     },
+     "mal": {
+      "fertility": 3.168050904219692,
+      "bytes_per_token": 8.705321465570096,
+      "tokens": 47299,
+      "parity": 1.573067713183451
+     },
+     "pan": {
+      "fertility": 1.92546128310044,
+      "bytes_per_token": 6.899861670776448,
+      "tokens": 49881,
+      "parity": 1.6589397365970466
+     },
+     "asm": {
+      "fertility": 2.393540359790554,
+      "bytes_per_token": 7.257293855184215,
+      "tokens": 46169,
+      "parity": 1.535486231209259
+     },
+     "mai": {
+      "fertility": 1.6900979236926577,
+      "bytes_per_token": 8.062483471571102,
+      "tokens": 41595,
+      "parity": 1.3833643740854065
+     },
+     "sat": {
+      "fertility": 3.824928283374215,
+      "bytes_per_token": 4.014249845110379,
+      "tokens": 92001,
+      "parity": 3.05976453372356
+     },
+     "kas": {
+      "fertility": 3.09970024762153,
+      "bytes_per_token": 3.197934185446799,
+      "tokens": 71352,
+      "parity": 2.3730211520553413
+     },
+     "npi": {
+      "fertility": 1.9749746002887547,
+      "bytes_per_token": 9.191314236205123,
+      "tokens": 36934,
+      "parity": 1.2283490754290276
+     },
+     "snd": {
+      "fertility": 1.7374585896829153,
+      "bytes_per_token": 4.8094654409261155,
+      "tokens": 44055,
+      "parity": 1.4651789277637355
+     },
+     "gom": {
+      "fertility": 2.260190577024881,
+      "bytes_per_token": 7.916711558730531,
+      "tokens": 42695
+     },
+     "mni": {
+      "fertility": 2.774618657258483,
+      "bytes_per_token": 6.880025431018363,
+      "tokens": 53478,
+      "parity": 1.7785685778901157
+     },
+     "brx": {
+      "fertility": 2.773889986482271,
+      "bytes_per_token": 7.397859539294885,
+      "tokens": 53353
+     },
+     "san": {
+      "fertility": 2.575081001472754,
+      "bytes_per_token": 7.93162060761347,
+      "tokens": 43712,
+      "parity": 1.4537714513768791
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.392605980078062,
+      "fertility": 1.3998592755751347
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.50414205350776,
+      "fertility": 1.3641451200326653
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.760446217262511,
+      "fertility": 1.9537461627381782
+     },
+     "math_web": {
+      "bytes_per_token": 3.250260696555607,
+      "fertility": 1.8115674128329788
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.193898305084746,
+      "fertility": 2.1484375
+     },
+     "code_github": {
+      "bytes_per_token": 3.510462790617016,
+      "fertility": 3.1388508867107694
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.377670128783591,
+      "fertility": 3.046640564034935
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.081824460351623,
+      "fertility": 3.0166814780749727
+     },
+     "hinglish": {
+      "bytes_per_token": 3.2159259759556935,
+      "fertility": 1.5629134412385643
+     },
+     "roman_hin": {
+      "bytes_per_token": 3.4426867291157324,
+      "fertility": 1.8468133680005072
+     }
+    },
+    "mean_fertility_tier1": 2.2581230613731362,
+    "mean_fertility_tier2": 2.5104480226689017,
+    "indic_bytes_per_token": 7.068581284917031
+   },
+   {
+    "V": 98304,
+    "lang": {
+     "eng": {
+      "fertility": 1.3199853887950321,
+      "bytes_per_token": 4.569372859663081,
+      "tokens": 28909
+     },
+     "hin": {
+      "fertility": 1.484537690597824,
+      "bytes_per_token": 8.854497215509088,
+      "tokens": 38068,
+      "parity": 1.3168217510117957
+     },
+     "ben": {
+      "fertility": 1.9586793807033733,
+      "bytes_per_token": 9.021671988692875,
+      "tokens": 38206,
+      "parity": 1.3215953509287766
+     },
+     "mar": {
+      "fertility": 1.8855402709230284,
+      "bytes_per_token": 9.899504343951882,
+      "tokens": 35912,
+      "parity": 1.242242900134906
+     },
+     "tel": {
+      "fertility": 2.3567717558153265,
+      "bytes_per_token": 8.859841178386231,
+      "tokens": 39919,
+      "parity": 1.3808502542460825
+     },
+     "tam": {
+      "fertility": 2.373412816691505,
+      "bytes_per_token": 10.590269754357763,
+      "tokens": 39814,
+      "parity": 1.3772181673527275
+     },
+     "guj": {
+      "fertility": 1.9612659197548596,
+      "bytes_per_token": 8.08212289138979,
+      "tokens": 40963,
+      "parity": 1.4169635753571552
+     },
+     "urd": {
+      "fertility": 1.492496293349727,
+      "bytes_per_token": 5.613975576662144,
+      "tokens": 41272,
+      "parity": 1.4276522882147429
+     },
+     "kan": {
+      "fertility": 2.5782608695652174,
+      "bytes_per_token": 9.043122139243556,
+      "tokens": 41510,
+      "parity": 1.4358850185063474
+     },
+     "ory": {
+      "fertility": 2.1586136595310905,
+      "bytes_per_token": 8.534638269739327,
+      "tokens": 42352,
+      "parity": 1.46501089626068
+     },
+     "mal": {
+      "fertility": 2.885867381111855,
+      "bytes_per_token": 9.556538086617463,
+      "tokens": 43086,
+      "parity": 1.490400913210419
+     },
+     "pan": {
+      "fertility": 1.7882343858565584,
+      "bytes_per_token": 7.429348529983163,
+      "tokens": 46326,
+      "parity": 1.6024767373482307
+     },
+     "asm": {
+      "fertility": 2.2301830058582612,
+      "bytes_per_token": 7.788879073876052,
+      "tokens": 43018,
+      "parity": 1.4880487045556747
+     },
+     "mai": {
+      "fertility": 1.5847791637885498,
+      "bytes_per_token": 8.59828731123247,
+      "tokens": 39003,
+      "parity": 1.3491646200145284
+     },
+     "sat": {
+      "fertility": 3.348189415041783,
+      "bytes_per_token": 4.5858271040802645,
+      "tokens": 80534,
+      "parity": 2.785776055899547
+     },
+     "kas": {
+      "fertility": 2.994743472783353,
+      "bytes_per_token": 3.310012185215272,
+      "tokens": 68936,
+      "parity": 2.384586115050676
+     },
+     "npi": {
+      "fertility": 1.837281428800599,
+      "bytes_per_token": 9.880147850635932,
+      "tokens": 34359,
+      "parity": 1.1885226054169982
+     },
+     "snd": {
+      "fertility": 1.62856917494873,
+      "bytes_per_token": 5.131035985857509,
+      "tokens": 41294,
+      "parity": 1.4284132968971601
+     },
+     "gom": {
+      "fertility": 2.0836421386977237,
+      "bytes_per_token": 8.5875,
+      "tokens": 39360
+     },
+     "mni": {
+      "fertility": 2.538134274151707,
+      "bytes_per_token": 7.5210547833197055,
+      "tokens": 48920,
+      "parity": 1.6922065792659726
+     },
+     "brx": {
+      "fertility": 2.5422688988249975,
+      "bytes_per_token": 8.07186387991329,
+      "tokens": 48898
+     },
+     "san": {
+      "fertility": 2.42079528718704,
+      "bytes_per_token": 8.43713041150561,
+      "tokens": 41093,
+      "parity": 1.4214604448441661
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.550598937285346,
+      "fertility": 1.351257342143906
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.670244908763955,
+      "fertility": 1.315627664557038
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.807775696464868,
+      "fertility": 1.9208126956907836
+     },
+     "math_web": {
+      "bytes_per_token": 3.339323859789803,
+      "fertility": 1.7632510676764925
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.2503920215768676,
+      "fertility": 2.1110963983050848
+     },
+     "code_github": {
+      "bytes_per_token": 3.6295019967702644,
+      "fertility": 3.0359038933987494
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.473819526246043,
+      "fertility": 2.9623147513945827
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.281010459457266,
+      "fertility": 2.8335425574226907
+     },
+     "hinglish": {
+      "bytes_per_token": 3.339762923476187,
+      "fertility": 1.5049612948627726
+     },
+     "roman_hin": {
+      "bytes_per_token": 3.6793213795533113,
+      "fertility": 1.7280360200393177
+     }
+    },
+    "mean_fertility_tier1": 2.083970947627306,
+    "mean_fertility_tier2": 2.3208586260082744,
+    "indic_bytes_per_token": 7.648363122197412
+   },
+   {
+    "V": 131072,
+    "lang": {
+     "eng": {
+      "fertility": 1.2928633395735354,
+      "bytes_per_token": 4.665230443227971,
+      "tokens": 28315
+     },
+     "hin": {
+      "fertility": 1.4348555161252583,
+      "bytes_per_token": 9.161086046638038,
+      "tokens": 36794,
+      "parity": 1.2994525869680382
+     },
+     "ben": {
+      "fertility": 1.8540961755357326,
+      "bytes_per_token": 9.530553558590942,
+      "tokens": 36166,
+      "parity": 1.277273529931132
+     },
+     "mar": {
+      "fertility": 1.8023206972592671,
+      "bytes_per_token": 10.356599761120984,
+      "tokens": 34327,
+      "parity": 1.2123256224615928
+     },
+     "tel": {
+      "fertility": 2.2244656984295665,
+      "bytes_per_token": 9.386803970486756,
+      "tokens": 37678,
+      "parity": 1.330672788274766
+     },
+     "tam": {
+      "fertility": 2.2525782414307005,
+      "bytes_per_token": 11.158361341202001,
+      "tokens": 37787,
+      "parity": 1.334522337983401
+     },
+     "guj": {
+      "fertility": 1.8563152350857033,
+      "bytes_per_token": 8.5390627015037,
+      "tokens": 38771,
+      "parity": 1.369274236270528
+     },
+     "urd": {
+      "fertility": 1.433804650490001,
+      "bytes_per_token": 5.843779162147848,
+      "tokens": 39649,
+      "parity": 1.4002825357584319
+     },
+     "kan": {
+      "fertility": 2.44055900621118,
+      "bytes_per_token": 9.553355559514417,
+      "tokens": 39293,
+      "parity": 1.3877096945082112
+     },
+     "ory": {
+      "fertility": 2.0376146788990828,
+      "bytes_per_token": 9.041447796287958,
+      "tokens": 39978,
+      "parity": 1.411901818823945
+     },
+     "mal": {
+      "fertility": 2.7196249162759543,
+      "bytes_per_token": 10.140700423603587,
+      "tokens": 40604,
+      "parity": 1.4340102419212433
+     },
+     "pan": {
+      "fertility": 1.7048946190071799,
+      "bytes_per_token": 7.792514773473408,
+      "tokens": 44167,
+      "parity": 1.5598446053328625
+     },
+     "asm": {
+      "fertility": 2.111203276478822,
+      "bytes_per_token": 8.22783193772561,
+      "tokens": 40723,
+      "parity": 1.438212961327918
+     },
+     "mai": {
+      "fertility": 1.526512535045305,
+      "bytes_per_token": 8.926481939897256,
+      "tokens": 37569,
+      "parity": 1.326823238566131
+     },
+     "sat": {
+      "fertility": 3.0988234315885754,
+      "bytes_per_token": 4.954854030267254,
+      "tokens": 74536,
+      "parity": 2.6323856613102596
+     },
+     "kas": {
+      "fertility": 2.896824362483166,
+      "bytes_per_token": 3.4218979634684024,
+      "tokens": 66682,
+      "parity": 2.3550061804697155
+     },
+     "npi": {
+      "fertility": 1.7611892412170471,
+      "bytes_per_token": 10.307019674520282,
+      "tokens": 32936,
+      "parity": 1.1631997174642417
+     },
+     "snd": {
+      "fertility": 1.5552926329073986,
+      "bytes_per_token": 5.37278121513338,
+      "tokens": 39436,
+      "parity": 1.3927600211901818
+     },
+     "gom": {
+      "fertility": 1.9831656961355215,
+      "bytes_per_token": 9.02258288398911,
+      "tokens": 37462
+     },
+     "mni": {
+      "fertility": 2.4069212410501195,
+      "bytes_per_token": 7.931064215041711,
+      "tokens": 46391,
+      "parity": 1.638389546176938
+     },
+     "brx": {
+      "fertility": 2.3955495476759903,
+      "bytes_per_token": 8.566238388749023,
+      "tokens": 46076
+     },
+     "san": {
+      "fertility": 2.3259499263622976,
+      "bytes_per_token": 8.781171643492137,
+      "tokens": 39483,
+      "parity": 1.3944199187709694
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.645035230715545,
+      "fertility": 1.323785487028879
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.773603037908545,
+      "fertility": 1.287141673371843
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.8357363667101385,
+      "fertility": 1.9018732727537186
+     },
+     "math_web": {
+      "bytes_per_token": 3.392980692814735,
+      "fertility": 1.7353668924674481
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.283342837229931,
+      "fertility": 2.0899099576271185
+     },
+     "code_github": {
+      "bytes_per_token": 3.7014965946589724,
+      "fertility": 2.976855161502201
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.5324600733903315,
+      "fertility": 2.9131388925805144
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.3287680834517293,
+      "fertility": 2.792889902555434
+     },
+     "hinglish": {
+      "bytes_per_token": 3.492286629342591,
+      "fertility": 1.4392329345531316
+     },
+     "roman_hin": {
+      "bytes_per_token": 3.861845424956185,
+      "fertility": 1.6463631175090367
+     }
+    },
+    "mean_fertility_tier1": 1.9782844940681479,
+    "mean_fertility_tier2": 2.206143189094424,
+    "indic_bytes_per_token": 8.048119137108745
+   },
+   {
+    "V": 163840,
+    "lang": {
+     "eng": {
+      "fertility": 1.2743710332861513,
+      "bytes_per_token": 4.732927266212827,
+      "tokens": 27910
+     },
+     "hin": {
+      "fertility": 1.4040088913153688,
+      "bytes_per_token": 9.362358692331195,
+      "tokens": 36003,
+      "parity": 1.2899677534933716
+     },
+     "ben": {
+      "fertility": 1.7867835537783245,
+      "bytes_per_token": 9.889593435285342,
+      "tokens": 34853,
+      "parity": 1.248763883912576
+     },
+     "mar": {
+      "fertility": 1.7487136406594561,
+      "bytes_per_token": 10.67408274785324,
+      "tokens": 33306,
+      "parity": 1.193335721963454
+     },
+     "tel": {
+      "fertility": 2.1154799858306768,
+      "bytes_per_token": 9.870395177494977,
+      "tokens": 35832,
+      "parity": 1.2838409172339664
+     },
+     "tam": {
+      "fertility": 2.167570789865872,
+      "bytes_per_token": 11.595968207695059,
+      "tokens": 36361,
+      "parity": 1.3027946972411322
+     },
+     "guj": {
+      "fertility": 1.7861725557789907,
+      "bytes_per_token": 8.874390178523562,
+      "tokens": 37306,
+      "parity": 1.3366535292010033
+     },
+     "urd": {
+      "fertility": 1.3935920153328754,
+      "bytes_per_token": 6.01240366401121,
+      "tokens": 38537,
+      "parity": 1.380759584378359
+     },
+     "kan": {
+      "fertility": 2.332919254658385,
+      "bytes_per_token": 9.994142705005325,
+      "tokens": 37560,
+      "parity": 1.3457542099605877
+     },
+     "ory": {
+      "fertility": 1.9501529051987767,
+      "bytes_per_token": 9.446944749359679,
+      "tokens": 38262,
+      "parity": 1.3709064851307775
+     },
+     "mal": {
+      "fertility": 2.615405224380442,
+      "bytes_per_token": 10.54479102642901,
+      "tokens": 39048,
+      "parity": 1.399068434252956
+     },
+     "pan": {
+      "fertility": 1.6461437504825136,
+      "bytes_per_token": 8.070629616602181,
+      "tokens": 42645,
+      "parity": 1.5279469724113222
+     },
+     "asm": {
+      "fertility": 2.031365026699155,
+      "bytes_per_token": 8.551208432228263,
+      "tokens": 39183,
+      "parity": 1.4039054102472233
+     },
+     "mai": {
+      "fertility": 1.4853927105765714,
+      "bytes_per_token": 9.173591924939137,
+      "tokens": 36557,
+      "parity": 1.3098172697957722
+     },
+     "sat": {
+      "fertility": 2.943749220471459,
+      "bytes_per_token": 5.215871536310482,
+      "tokens": 70806,
+      "parity": 2.536940164815478
+     },
+     "kas": {
+      "fertility": 2.861331943177375,
+      "bytes_per_token": 3.4643437333940637,
+      "tokens": 65865,
+      "parity": 2.3599068434252954
+     },
+     "npi": {
+      "fertility": 1.711512753328699,
+      "bytes_per_token": 10.60617989814728,
+      "tokens": 32007,
+      "parity": 1.1467932640630598
+     },
+     "snd": {
+      "fertility": 1.5036283325445654,
+      "bytes_per_token": 5.557388658658134,
+      "tokens": 38126,
+      "parity": 1.3660336796847008
+     },
+     "gom": {
+      "fertility": 1.92212811011117,
+      "bytes_per_token": 9.309096918119474,
+      "tokens": 36309
+     },
+     "mni": {
+      "fertility": 2.2979661720452422,
+      "bytes_per_token": 8.307105280982592,
+      "tokens": 44291,
+      "parity": 1.5869222500895737
+     },
+     "brx": {
+      "fertility": 2.3120515753353437,
+      "bytes_per_token": 8.875601529120756,
+      "tokens": 44470
+     },
+     "san": {
+      "fertility": 2.2564359351988217,
+      "bytes_per_token": 9.051693078871107,
+      "tokens": 38303,
+      "parity": 1.3723754926549623
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.710127267486684,
+      "fertility": 1.3054913117963778
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.8385662946850765,
+      "fertility": 1.2698603321764401
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.851772392213375,
+      "fertility": 1.8911786996562732
+     },
+     "math_web": {
+      "bytes_per_token": 3.4298244429667486,
+      "fertility": 1.7167252898806868
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.3015417940876657,
+      "fertility": 2.0783898305084745
+     },
+     "code_github": {
+      "bytes_per_token": 3.749553910461031,
+      "fertility": 2.9387013778763214
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.5729254293959176,
+      "fertility": 2.8801459839090566
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.349294562193101,
+      "fertility": 2.775773404096649
+     },
+     "hinglish": {
+      "bytes_per_token": 3.5621306201840355,
+      "fertility": 1.4110133708655876
+     },
+     "roman_hin": {
+      "bytes_per_token": 3.9881976212259835,
+      "fertility": 1.5942038176168432
+     }
+    },
+    "mean_fertility_tier1": 1.9042675061165164,
+    "mean_fertility_tier2": 2.1325561779488402,
+    "indic_bytes_per_token": 8.338559891541905
+   },
+   {
+    "V": 196608,
+    "lang": {
+     "eng": {
+      "fertility": 1.2618601890324643,
+      "bytes_per_token": 4.779852366478506,
+      "tokens": 27636
+     },
+     "hin": {
+      "fertility": 1.3785438521233866,
+      "bytes_per_token": 9.535304101838756,
+      "tokens": 35350,
+      "parity": 1.279128672745694
+     },
+     "ben": {
+      "fertility": 1.7439249461704092,
+      "bytes_per_token": 10.132639562571656,
+      "tokens": 34017,
+      "parity": 1.230894485453756
+     },
+     "mar": {
+      "fertility": 1.7038223248976163,
+      "bytes_per_token": 10.955317247542448,
+      "tokens": 32451,
+      "parity": 1.174229266174555
+     },
+     "tel": {
+      "fertility": 2.044042980281025,
+      "bytes_per_token": 10.215354398937093,
+      "tokens": 34622,
+      "parity": 1.2527862208713272
+     },
+     "tam": {
+      "fertility": 2.1046795827123694,
+      "bytes_per_token": 11.942474366963122,
+      "tokens": 35306,
+      "parity": 1.2775365465335071
+     },
+     "guj": {
+      "fertility": 1.7340323661783013,
+      "bytes_per_token": 9.14123201811304,
+      "tokens": 36217,
+      "parity": 1.310500796063106
+     },
+     "urd": {
+      "fertility": 1.3650236863993057,
+      "bytes_per_token": 6.138236151217315,
+      "tokens": 37747,
+      "parity": 1.3658633666232451
+     },
+     "kan": {
+      "fertility": 2.2522981366459627,
+      "bytes_per_token": 10.351883514422811,
+      "tokens": 36262,
+      "parity": 1.3121291069619336
+     },
+     "ory": {
+      "fertility": 1.8878185524974516,
+      "bytes_per_token": 9.758875779583683,
+      "tokens": 37039,
+      "parity": 1.3402446084816906
+     },
+     "mal": {
+      "fertility": 2.528734092431346,
+      "bytes_per_token": 10.906208613656831,
+      "tokens": 37754,
+      "parity": 1.3661166594297294
+     },
+     "pan": {
+      "fertility": 1.6085848838107002,
+      "bytes_per_token": 8.259070838932617,
+      "tokens": 41672,
+      "parity": 1.5078882616876539
+     },
+     "asm": {
+      "fertility": 1.9725231997511534,
+      "bytes_per_token": 8.806297308662742,
+      "tokens": 38048,
+      "parity": 1.3767549573020699
+     },
+     "mai": {
+      "fertility": 1.454634106700256,
+      "bytes_per_token": 9.367569832402234,
+      "tokens": 35800,
+      "parity": 1.29541178173397
+     },
+     "sat": {
+      "fertility": 2.8070510954974432,
+      "bytes_per_token": 5.469874700079979,
+      "tokens": 67518,
+      "parity": 2.4431176726009554
+     },
+     "kas": {
+      "fertility": 2.8245796950345365,
+      "bytes_per_token": 3.509420323290115,
+      "tokens": 65019,
+      "parity": 2.3526921406860617
+     },
+     "npi": {
+      "fertility": 1.6683065076733865,
+      "bytes_per_token": 10.880861566075836,
+      "tokens": 31199,
+      "parity": 1.1289260385005067
+     },
+     "snd": {
+      "fertility": 1.4663196087710995,
+      "bytes_per_token": 5.698789671866595,
+      "tokens": 37180,
+      "parity": 1.345346649298017
+     },
+     "gom": {
+      "fertility": 1.8673901535203812,
+      "bytes_per_token": 9.581970233876683,
+      "tokens": 35275
+     },
+     "mni": {
+      "fertility": 2.2254332261077097,
+      "bytes_per_token": 8.57785652670599,
+      "tokens": 42893,
+      "parity": 1.5520697640758432
+     },
+     "brx": {
+      "fertility": 2.242539253405428,
+      "bytes_per_token": 9.150719866459555,
+      "tokens": 43133
+     },
+     "san": {
+      "fertility": 2.195640648011782,
+      "bytes_per_token": 9.302326205360735,
+      "tokens": 37271,
+      "parity": 1.348639455782313
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.7575985665627565,
+      "fertility": 1.2924651248164465
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.89518451543768,
+      "fertility": 1.2551729935510214
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.864783646514881,
+      "fertility": 1.8825893574835217
+     },
+     "math_web": {
+      "bytes_per_token": 3.458854786304275,
+      "fertility": 1.7023167276077673
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.322604430481198,
+      "fertility": 2.0652145127118646
+     },
+     "code_github": {
+      "bytes_per_token": 3.787843254173689,
+      "fertility": 2.9089955691677947
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.60167666127578,
+      "fertility": 2.8571545405289362
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.3615091939966146,
+      "fertility": 2.765687145769116
+     },
+     "hinglish": {
+      "bytes_per_token": 3.6412184552638287,
+      "fertility": 1.38036593947924
+     },
+     "roman_hin": {
+      "bytes_per_token": 4.081604155725725,
+      "fertility": 1.5577208446952882
+     }
+    },
+    "mean_fertility_tier1": 1.850136854922534,
+    "mean_fertility_tier2": 2.0724417494473175,
+    "indic_bytes_per_token": 8.577727336665172
+   },
+   {
+    "V": 262144,
+    "lang": {
+     "eng": {
+      "fertility": 1.2460618236610201,
+      "bytes_per_token": 4.840454378893368,
+      "tokens": 27290
+     },
+     "hin": {
+      "fertility": 1.3458643684436298,
+      "bytes_per_token": 9.766834724153917,
+      "tokens": 34512,
+      "parity": 1.264639061927446
+     },
+     "ben": {
+      "fertility": 1.6770737209063877,
+      "bytes_per_token": 10.536545104392749,
+      "tokens": 32713,
+      "parity": 1.198717478930011
+     },
+     "mar": {
+      "fertility": 1.6431796702719732,
+      "bytes_per_token": 11.359630623721882,
+      "tokens": 31296,
+      "parity": 1.1467936973250275
+     },
+     "tel": {
+      "fertility": 1.9400165308773172,
+      "bytes_per_token": 10.763116250760804,
+      "tokens": 32860,
+      "parity": 1.204104067423965
+     },
+     "tam": {
+      "fertility": 2.0138301043219076,
+      "bytes_per_token": 12.48123260908176,
+      "tokens": 33782,
+      "parity": 1.2378893367533894
+     },
+     "guj": {
+      "fertility": 1.661830891506272,
+      "bytes_per_token": 9.538390619147771,
+      "tokens": 34709,
+      "parity": 1.271857823378527
+     },
+     "urd": {
+      "fertility": 1.3284996202943622,
+      "bytes_per_token": 6.306992949887035,
+      "tokens": 36737,
+      "parity": 1.3461707585196043
+     },
+     "kan": {
+      "fertility": 2.152111801242236,
+      "bytes_per_token": 10.833790296978268,
+      "tokens": 34649,
+      "parity": 1.2696592158299744
+     },
+     "ory": {
+      "fertility": 1.8004077471967381,
+      "bytes_per_token": 10.232674668780433,
+      "tokens": 35324,
+      "parity": 1.294393550751191
+     },
+     "mal": {
+      "fertility": 2.3917615539182853,
+      "bytes_per_token": 11.530790557002437,
+      "tokens": 35709,
+      "parity": 1.30850128252107
+     },
+     "pan": {
+      "fertility": 1.559600092642631,
+      "bytes_per_token": 8.518476350766033,
+      "tokens": 40403,
+      "parity": 1.480505679736167
+     },
+     "asm": {
+      "fertility": 1.8955363160350458,
+      "bytes_per_token": 9.163963569728962,
+      "tokens": 36563,
+      "parity": 1.3397947966288017
+     },
+     "mai": {
+      "fertility": 1.4189996343098614,
+      "bytes_per_token": 9.60281190046674,
+      "tokens": 34923,
+      "parity": 1.2796995236350313
+     },
+     "sat": {
+      "fertility": 2.6640335924832663,
+      "bytes_per_token": 5.763522581853366,
+      "tokens": 64078,
+      "parity": 2.348039574935874
+     },
+     "kas": {
+      "fertility": 2.7687996872149094,
+      "bytes_per_token": 3.5801208127402524,
+      "tokens": 63735,
+      "parity": 2.3354708684499816
+     },
+     "npi": {
+      "fertility": 1.6075076199133735,
+      "bytes_per_token": 11.292395715521256,
+      "tokens": 30062,
+      "parity": 1.1015756687431293
+     },
+     "snd": {
+      "fertility": 1.4195062312667612,
+      "bytes_per_token": 5.886727974884005,
+      "tokens": 35993,
+      "parity": 1.3189080249175522
+     },
+     "gom": {
+      "fertility": 1.7937533086289041,
+      "bytes_per_token": 9.975327588242239,
+      "tokens": 33884
+     },
+     "mni": {
+      "fertility": 2.1107191034554322,
+      "bytes_per_token": 9.04404896514429,
+      "tokens": 40682,
+      "parity": 1.4907292048369367
+     },
+     "brx": {
+      "fertility": 2.1402724342310493,
+      "bytes_per_token": 9.587960938638682,
+      "tokens": 41166
+     },
+     "san": {
+      "fertility": 2.1202356406480116,
+      "bytes_per_token": 9.633158289572393,
+      "tokens": 35991,
+      "parity": 1.318834737999267
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.8217391408647,
+      "fertility": 1.2752722711698483
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.96660648067253,
+      "fertility": 1.2371230590015492
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.882990129478974,
+      "fertility": 1.8707005442978863
+     },
+     "math_web": {
+      "bytes_per_token": 3.4943489467358355,
+      "fertility": 1.6850252939369883
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.3427511691662635,
+      "fertility": 2.0527674788135593
+     },
+     "code_github": {
+      "bytes_per_token": 3.8424777058860005,
+      "fertility": 2.8676338775406522
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.6418632416787267,
+      "fertility": 2.8256269231948803
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.374446795360525,
+      "fertility": 2.755083523913692
+     },
+     "hinglish": {
+      "bytes_per_token": 3.7432195173082468,
+      "fertility": 1.3427515833919774
+     },
+     "roman_hin": {
+      "bytes_per_token": 4.22872652272756,
+      "fertility": 1.5035259052571501
+     }
+    },
+    "mean_fertility_tier1": 1.7740160092383397,
+    "mean_fertility_tier2": 1.9939363568186619,
+    "indic_bytes_per_token": 8.920956123690406
+   },
+   {
+    "V": 327680,
+    "lang": {
+     "eng": {
+      "fertility": 1.2358796401990777,
+      "bytes_per_token": 4.880333986034655,
+      "tokens": 27067
+     },
+     "hin": {
+      "fertility": 1.323558086027376,
+      "bytes_per_token": 9.931437831467296,
+      "tokens": 33940,
+      "parity": 1.2539254442679277
+     },
+     "ben": {
+      "fertility": 1.6352917051163744,
+      "bytes_per_token": 10.805755846761553,
+      "tokens": 31898,
+      "parity": 1.1784830236080837
+     },
+     "mar": {
+      "fertility": 1.5983408589730128,
+      "bytes_per_token": 11.678306287366139,
+      "tokens": 30442,
+      "parity": 1.1246905826282927
+     },
+     "tel": {
+      "fertility": 1.8747786043216437,
+      "bytes_per_token": 11.13764761454889,
+      "tokens": 31755,
+      "parity": 1.1731998374404256
+     },
+     "tam": {
+      "fertility": 1.9521907600596125,
+      "bytes_per_token": 12.875320630267497,
+      "tokens": 32748,
+      "parity": 1.2098865777515055
+     },
+     "guj": {
+      "fertility": 1.611701618308915,
+      "bytes_per_token": 9.835066246806488,
+      "tokens": 33662,
+      "parity": 1.243654634795138
+     },
+     "urd": {
+      "fertility": 1.3039814848298557,
+      "bytes_per_token": 6.4255802989544915,
+      "tokens": 36059,
+      "parity": 1.3322126574795876
+     },
+     "kan": {
+      "fertility": 2.0778881987577638,
+      "bytes_per_token": 11.22078077359957,
+      "tokens": 33454,
+      "parity": 1.2359700003694536
+     },
+     "ory": {
+      "fertility": 1.7356269113149847,
+      "bytes_per_token": 10.614600769388893,
+      "tokens": 34053,
+      "parity": 1.258100269701112
+     },
+     "mal": {
+      "fertility": 2.3085063630274614,
+      "bytes_per_token": 11.946643068531307,
+      "tokens": 34466,
+      "parity": 1.2733587024790336
+     },
+     "pan": {
+      "fertility": 1.5287192156257237,
+      "bytes_per_token": 8.690553745928339,
+      "tokens": 39603,
+      "parity": 1.463147005578749
+     },
+     "asm": {
+      "fertility": 1.8407382445953653,
+      "bytes_per_token": 9.43677124992959,
+      "tokens": 35506,
+      "parity": 1.3117818746074557
+     },
+     "mai": {
+      "fertility": 1.395229775303726,
+      "bytes_per_token": 9.766410390820665,
+      "tokens": 34338,
+      "parity": 1.2686296966786124
+     },
+     "sat": {
+      "fertility": 2.500727559971729,
+      "bytes_per_token": 6.139900249376558,
+      "tokens": 60150,
+      "parity": 2.2222632726197955
+     },
+     "kas": {
+      "fertility": 2.7255745253920676,
+      "bytes_per_token": 3.636898310487727,
+      "tokens": 62740,
+      "parity": 2.3179517493626927
+     },
+     "npi": {
+      "fertility": 1.566975028073365,
+      "bytes_per_token": 11.584493584493584,
+      "tokens": 29304,
+      "parity": 1.0826467654339231
+     },
+     "snd": {
+      "fertility": 1.3857864016406374,
+      "bytes_per_token": 6.029967556491548,
+      "tokens": 35138,
+      "parity": 1.2981859829312448
+     },
+     "gom": {
+      "fertility": 1.7351508734780308,
+      "bytes_per_token": 10.312231137688013,
+      "tokens": 32777
+     },
+     "mni": {
+      "fertility": 2.0394832416727198,
+      "bytes_per_token": 9.359943015594393,
+      "tokens": 39309,
+      "parity": 1.4522850703809067
+     },
+     "brx": {
+      "fertility": 2.071591972548612,
+      "bytes_per_token": 9.905835111055339,
+      "tokens": 39845
+     },
+     "san": {
+      "fertility": 2.059322533136966,
+      "bytes_per_token": 9.918099379237349,
+      "tokens": 34957,
+      "parity": 1.2914988731665866
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.8642484112502355,
+      "fertility": 1.2641275085658346
+     },
+     "science_sciq": {
+      "bytes_per_token": 5.014554685432573,
+      "fertility": 1.2252939269115757
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.8933504182940504,
+      "fertility": 1.8640020822647692
+     },
+     "math_web": {
+      "bytes_per_token": 3.5168259912504154,
+      "fertility": 1.6742558135492058
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.3516153025256283,
+      "fertility": 2.0473384533898304
+     },
+     "code_github": {
+      "bytes_per_token": 3.8800888353900156,
+      "fertility": 2.839836846669981
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.667534211970911,
+      "fertility": 2.8058488977942253
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.416374495372932,
+      "fertility": 2.7212715645818832
+     },
+     "hinglish": {
+      "bytes_per_token": 3.825317337046757,
+      "fertility": 1.3139338494018298
+     },
+     "roman_hin": {
+      "bytes_per_token": 4.333607085276612,
+      "fertility": 1.4671380556788636
+     }
+    },
+    "mean_fertility_tier1": 1.7227803460329747,
+    "mean_fertility_tier2": 1.932058015581322,
+    "indic_bytes_per_token": 9.192523552330496
+   },
+   {
+    "V": 393216,
+    "lang": {
+     "eng": {
+      "fertility": 1.2272042372494407,
+      "bytes_per_token": 4.914834244893403,
+      "tokens": 26877
+     },
+     "hin": {
+      "fertility": 1.3075693171625784,
+      "bytes_per_token": 10.052878019683865,
+      "tokens": 33530,
+      "parity": 1.247535067157793
+     },
+     "ben": {
+      "fertility": 1.608120578283605,
+      "bytes_per_token": 10.988332058148432,
+      "tokens": 31368,
+      "parity": 1.1670945418015404
+     },
+     "mar": {
+      "fertility": 1.568833350834821,
+      "bytes_per_token": 11.897958500669343,
+      "tokens": 29880,
+      "parity": 1.1117312200022325
+     },
+     "tel": {
+      "fertility": 1.8263077104734915,
+      "bytes_per_token": 11.433244973168682,
+      "tokens": 30934,
+      "parity": 1.1509469062767421
+     },
+     "tam": {
+      "fertility": 1.907779433681073,
+      "bytes_per_token": 13.175046089429117,
+      "tokens": 32003,
+      "parity": 1.1907206905532612
+     },
+     "guj": {
+      "fertility": 1.5720099588240928,
+      "bytes_per_token": 10.083391709560503,
+      "tokens": 32833,
+      "parity": 1.221602113331101
+     },
+     "urd": {
+      "fertility": 1.2836943550428526,
+      "bytes_per_token": 6.527128288917686,
+      "tokens": 35498,
+      "parity": 1.3207575250213937
+     },
+     "kan": {
+      "fertility": 2.018385093167702,
+      "bytes_per_token": 11.551575578532743,
+      "tokens": 32496,
+      "parity": 1.2090635115526287
+     },
+     "ory": {
+      "fertility": 1.7002548419979613,
+      "bytes_per_token": 10.835426721424502,
+      "tokens": 33359,
+      "parity": 1.2411727499348886
+     },
+     "mal": {
+      "fertility": 2.2414601473543203,
+      "bytes_per_token": 12.303989242492156,
+      "tokens": 33465,
+      "parity": 1.2451166424824198
+     },
+     "pan": {
+      "fertility": 1.5056357600555856,
+      "bytes_per_token": 8.823791821561338,
+      "tokens": 39005,
+      "parity": 1.4512408378911337
+     },
+     "asm": {
+      "fertility": 1.8015449219762558,
+      "bytes_per_token": 9.642071942446043,
+      "tokens": 34750,
+      "parity": 1.2929270379878706
+     },
+     "mai": {
+      "fertility": 1.3720693998618505,
+      "bytes_per_token": 9.93126628760957,
+      "tokens": 33768,
+      "parity": 1.2563902221230048
+     },
+     "sat": {
+      "fertility": 2.3823223714297592,
+      "bytes_per_token": 6.445062999546264,
+      "tokens": 57302,
+      "parity": 2.132008780741898
+     },
+     "kas": {
+      "fertility": 2.7000304096615837,
+      "bytes_per_token": 3.671305830866263,
+      "tokens": 62152,
+      "parity": 2.312460468058191
+     },
+     "npi": {
+      "fertility": 1.541575316827977,
+      "bytes_per_token": 11.775365083769815,
+      "tokens": 28829,
+      "parity": 1.0726271533281244
+     },
+     "snd": {
+      "fertility": 1.3612951569648208,
+      "bytes_per_token": 6.13845351565895,
+      "tokens": 34517,
+      "parity": 1.2842579156899951
+     },
+     "gom": {
+      "fertility": 1.6970884065643197,
+      "bytes_per_token": 10.543514879281302,
+      "tokens": 32058
+     },
+     "mni": {
+      "fertility": 1.9853688907336309,
+      "bytes_per_token": 9.615062980191292,
+      "tokens": 38266,
+      "parity": 1.4237452096588161
+     },
+     "brx": {
+      "fertility": 2.0180409691171883,
+      "bytes_per_token": 10.168697668427155,
+      "tokens": 38815
+     },
+     "san": {
+      "fertility": 2.016435935198822,
+      "bytes_per_token": 10.129042624674984,
+      "tokens": 34229,
+      "parity": 1.2735424340514194
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.8954061005192555,
+      "fertility": 1.256081742535487
+     },
+     "science_sciq": {
+      "bytes_per_token": 5.047801335872214,
+      "fertility": 1.2172236966938477
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.9005574677623884,
+      "fertility": 1.8593705742304425
+     },
+     "math_web": {
+      "bytes_per_token": 3.5334397423927086,
+      "fertility": 1.6663836913502268
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.3666395972064316,
+      "fertility": 2.0382018008474576
+     },
+     "code_github": {
+      "bytes_per_token": 3.906355130327836,
+      "fertility": 2.820741810581016
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.6875124399372354,
+      "fertility": 2.7906473520822472
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.428852367710368,
+      "fertility": 2.7113686362732423
+     },
+     "hinglish": {
+      "bytes_per_token": 3.863494982825305,
+      "fertility": 1.3009500351864884
+     },
+     "roman_hin": {
+      "bytes_per_token": 4.4036148018008126,
+      "fertility": 1.4438138119094426
+     }
+    },
+    "mean_fertility_tier1": 1.6854591406252803,
+    "mean_fertility_tier2": 1.8875771778336208,
+    "indic_bytes_per_token": 9.399454849899282
+   }
+  ],
+  "cost": [
+   {
+    "V": 32768,
+    "tokens_per_byte": 0.2515386418005565,
+    "flops_per_byte": 66821350404.46451,
+    "head_share": 0.005305039787798408,
+    "embed_params_B": 0.469762048,
+    "rel_cost": 1.0
+   },
+   {
+    "V": 49152,
+    "tokens_per_byte": 0.23926496451972645,
+    "flops_per_byte": 63729439056.7951,
+    "head_share": 0.007936507936507936,
+    "embed_params_B": 0.704643072,
+    "rel_cost": 0.9537286910702296
+   },
+   {
+    "V": 65536,
+    "tokens_per_byte": 0.23154844304221467,
+    "flops_per_byte": 61837263358.169525,
+    "head_share": 0.010554089709762533,
+    "embed_params_B": 0.939524096,
+    "rel_cost": 0.9254117581263072
+   },
+   {
+    "V": 98304,
+    "tokens_per_byte": 0.222568727563843,
+    "flops_per_byte": 59752806042.17433,
+    "head_share": 0.015748031496062992,
+    "embed_params_B": 1.409286144,
+    "rel_cost": 0.8942172775691479
+   },
+   {
+    "V": 131072,
+    "tokens_per_byte": 0.21717318042694891,
+    "flops_per_byte": 58610327995.61728,
+    "head_share": 0.020887728459530026,
+    "embed_params_B": 1.879048192,
+    "rel_cost": 0.8771197774491755
+   },
+   {
+    "V": 163840,
+    "tokens_per_byte": 0.21369413770683737,
+    "flops_per_byte": 57972566059.922714,
+    "head_share": 0.025974025974025976,
+    "embed_params_B": 2.34881024,
+    "rel_cost": 0.8675754935962715
+   },
+   {
+    "V": 196608,
+    "tokens_per_byte": 0.21103110867649122,
+    "flops_per_byte": 57547522568.97766,
+    "head_share": 0.031007751937984496,
+    "embed_params_B": 2.818572288,
+    "rel_cost": 0.8612146001337435
+   },
+   {
+    "V": 262144,
+    "tokens_per_byte": 0.20749549136959675,
+    "flops_per_byte": 57168211841.74545,
+    "head_share": 0.04092071611253197,
+    "embed_params_B": 3.758096384,
+    "rel_cost": 0.8555381101356176
+   },
+   {
+    "V": 327680,
+    "tokens_per_byte": 0.20507584206089038,
+    "flops_per_byte": 57079582180.39518,
+    "head_share": 0.05063291139240506,
+    "embed_params_B": 4.69762048,
+    "rel_cost": 0.8542117427273895
+   },
+   {
+    "V": 393216,
+    "tokens_per_byte": 0.20339107746111343,
+    "flops_per_byte": 57183927342.195984,
+    "head_share": 0.06015037593984962,
+    "embed_params_B": 5.637144576,
+    "rel_cost": 0.8557732969487456
+   }
+  ],
+  "unused_share": {
+   "32768": 0.038360595703125,
+   "49152": 0.06577555338541663,
+   "65536": 0.0981292724609375,
+   "98304": 0.166046142578125,
+   "131072": 0.23500823974609375,
+   "163840": 0.296807861328125,
+   "196608": 0.35050455729166663,
+   "262144": 0.4392433166503906,
+   "327680": 0.507476806640625,
+   "393216": 0.561688741048177
+  }
+ },
+ "english": {
+  "mix_report": {
+   "eng_web": {
+    "want": 180000000.0,
+    "got": 180000754
+   },
+   "code": {
+    "want": 75000000.0,
+    "got": 75002373
+   },
+   "math": {
+    "want": 21000000.000000004,
+    "got": 21006235
+   },
+   "agentic": {
+    "want": 9000000.0,
+    "got": 9002793
+   },
+   "hin": {
+    "want": 1390254.0693271307,
+    "got": 1390308,
+    "pool_docs": 11703,
+    "script_ok_docs": 11674
+   },
+   "ben": {
+    "want": 1300598.4657614918,
+    "got": 1300747,
+    "pool_docs": 10555,
+    "script_ok_docs": 10549
+   },
+   "mar": {
+    "want": 1007862.1530580312,
+    "got": 1009038,
+    "pool_docs": 11905,
+    "script_ok_docs": 11896
+   },
+   "tel": {
+    "want": 1059582.959040237,
+    "got": 1060107,
+    "pool_docs": 12525,
+    "script_ok_docs": 12498
+   },
+   "tam": {
+    "want": 1129962.4643464382,
+    "got": 1130418,
+    "pool_docs": 10505,
+    "script_ok_docs": 10479
+   },
+   "guj": {
+    "want": 934386.7157478578,
+    "got": 935736,
+    "pool_docs": 10507,
+    "script_ok_docs": 10483
+   },
+   "urd": {
+    "want": 1007862.1530580312,
+    "got": 1008511,
+    "pool_docs": 9624,
+    "script_ok_docs": 9603
+   },
+   "kan": {
+    "want": 864052.8587382415,
+    "got": 875700,
+    "pool_docs": 12268,
+    "script_ok_docs": 12202
+   },
+   "ory": {
+    "want": 707013.4910464986,
+    "got": 709035,
+    "pool_docs": 14215,
+    "script_ok_docs": 14162
+   },
+   "mal": {
+    "want": 993182.4901795451,
+    "got": 994211,
+    "pool_docs": 13640,
+    "script_ok_docs": 13595
+   },
+   "pan": {
+    "want": 718690.6307666943,
+    "got": 719275,
+    "pool_docs": 10743,
+    "script_ok_docs": 10737
+   },
+   "asm": {
+    "want": 466454.94722950796,
+    "got": 467080,
+    "pool_docs": 9784,
+    "script_ok_docs": 9336
+   },
+   "mai": {
+    "want": 191043.7710533241,
+    "got": 191881,
+    "pool_docs": 10137,
+    "script_ok_docs": 9394
+   },
+   "sat": {
+    "want": 145785.45011933305,
+    "got": 117237,
+    "pool_docs": 68,
+    "script_ok_docs": 67
+   },
+   "kas": {
+    "want": 145785.45011933305,
+    "got": 147945,
+    "pool_docs": 154,
+    "script_ok_docs": 61
+   },
+   "npi": {
+    "want": 1095214.4167318507,
+    "got": 1095461,
+    "pool_docs": 13223,
+    "script_ok_docs": 13217
+   },
+   "snd": {
+    "want": 520244.640266243,
+    "got": 521399,
+    "pool_docs": 8763,
+    "script_ok_docs": 8763
+   },
+   "doi": {
+    "want": 145785.45011933305,
+    "got": 11602,
+    "pool_docs": 24,
+    "script_ok_docs": 15
+   },
+   "gom": {
+    "want": 163899.73722435042,
+    "got": 165677,
+    "pool_docs": 7278,
+    "script_ok_docs": 4969
+   },
+   "mni": {
+    "want": 145785.45011933305,
+    "got": 146618,
+    "pool_docs": 567,
+    "script_ok_docs": 436
+   },
+   "brx": {
+    "want": 145785.45011933305,
+    "got": 145891,
+    "pool_docs": 1499,
+    "script_ok_docs": 1494
+   },
+   "san": {
+    "want": 720766.7858278613,
+    "got": 724755,
+    "pool_docs": 6403,
+    "script_ok_docs": 6365
+   }
+  },
+  "rows": [
+   {
+    "V": 32768,
+    "lang": {
+     "eng": {
+      "fertility": 1.348796858590932,
+      "bytes_per_token": 4.471767095463778,
+      "tokens": 29540
+     },
+     "hin": {
+      "fertility": 2.1256873220762,
+      "bytes_per_token": 6.18380450934708,
+      "tokens": 54509,
+      "parity": 1.845260663507109
+     },
+     "ben": {
+      "fertility": 3.1307290064595508,
+      "bytes_per_token": 5.644232658675575,
+      "tokens": 61068,
+      "parity": 2.0672985781990523
+     },
+     "mar": {
+      "fertility": 2.926703769820435,
+      "bytes_per_token": 6.3777941229234685,
+      "tokens": 55742,
+      "parity": 1.8870006770480705
+     },
+     "tel": {
+      "fertility": 3.9419057739992915,
+      "bytes_per_token": 5.297088425593098,
+      "tokens": 66768,
+      "parity": 2.260257278266757
+     },
+     "tam": {
+      "fertility": 3.8639046199701936,
+      "bytes_per_token": 6.505098970948979,
+      "tokens": 64817,
+      "parity": 2.1942112389979687
+     },
+     "guj": {
+      "fertility": 3.1403811165373936,
+      "bytes_per_token": 5.047537734410733,
+      "tokens": 65590,
+      "parity": 2.220379146919431
+     },
+     "urd": {
+      "fertility": 2.20851263877337,
+      "bytes_per_token": 3.793882630337962,
+      "tokens": 61072,
+      "parity": 2.0674339878131347
+     },
+     "kan": {
+      "fertility": 4.270186335403727,
+      "bytes_per_token": 5.460072727272728,
+      "tokens": 68750,
+      "parity": 2.327352742044685
+     },
+     "ory": {
+      "fertility": 3.6908256880733945,
+      "bytes_per_token": 4.991562405059795,
+      "tokens": 72414,
+      "parity": 2.4513879485443466
+     },
+     "mal": {
+      "fertility": 4.78961821835231,
+      "bytes_per_token": 5.758058426212085,
+      "tokens": 71509,
+      "parity": 2.4207515233581582
+     },
+     "pan": {
+      "fertility": 2.740330425384081,
+      "bytes_per_token": 4.848107506585341,
+      "tokens": 70991,
+      "parity": 2.4032159783344618
+     },
+     "asm": {
+      "fertility": 3.4595365234071234,
+      "bytes_per_token": 5.021084653309556,
+      "tokens": 66731,
+      "parity": 2.259004739336493
+     },
+     "mai": {
+      "fertility": 2.4263947015562146,
+      "bytes_per_token": 5.615898586643445,
+      "tokens": 59716,
+      "parity": 2.0215301286391334
+     },
+     "sat": {
+      "fertility": 4.1318338668773125,
+      "bytes_per_token": 3.7160782025094834,
+      "tokens": 99383,
+      "parity": 3.3643534190927555
+     },
+     "kas": {
+      "fertility": 3.7749250619053827,
+      "bytes_per_token": 2.6259163358075837,
+      "tokens": 86895,
+      "parity": 2.9416046039268786
+     },
+     "npi": {
+      "fertility": 2.90642211646436,
+      "bytes_per_token": 6.24569021029198,
+      "tokens": 54353,
+      "parity": 1.8399796885578876
+     },
+     "snd": {
+      "fertility": 2.4848950938633854,
+      "bytes_per_token": 3.3628168298760457,
+      "tokens": 63007,
+      "parity": 2.1329383886255924
+     },
+     "gom": {
+      "fertility": 3.1252514557967177,
+      "bytes_per_token": 5.7253878989091405,
+      "tokens": 59036
+     },
+     "mni": {
+      "fertility": 4.091781674795061,
+      "bytes_per_token": 4.665314144424015,
+      "tokens": 78865,
+      "parity": 2.6697698036560595
+     },
+     "brx": {
+      "fertility": 3.9591348653426226,
+      "bytes_per_token": 5.183164806303349,
+      "tokens": 76150
+     },
+     "san": {
+      "fertility": 3.56,
+      "bytes_per_token": 5.737237510549221,
+      "tokens": 60431,
+      "parity": 2.045734597156398
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.461272286995913,
+      "fertility": 1.3783131424375918
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.5751920377010915,
+      "fertility": 1.342960765711129
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.775497581039129,
+      "fertility": 1.943151109648082
+     },
+     "math_web": {
+      "bytes_per_token": 3.238456671983835,
+      "fertility": 1.818170492145262
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.167930064800098,
+      "fertility": 2.1660487288135593
+     },
+     "code_github": {
+      "bytes_per_token": 3.4405476422218872,
+      "fertility": 3.2026352746499063
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.320895415701226,
+      "fertility": 3.0987265595981692
+     },
+     "agentic_tools": {
+      "bytes_per_token": 2.9397717028452397,
+      "fertility": 3.162450594113553
+     },
+     "hinglish": {
+      "bytes_per_token": 2.746649489491799,
+      "fertility": 1.8299437016185784
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.364327319891522,
+      "fertility": 2.6891369141987442
+     }
+    },
+    "mean_fertility_tier1": 3.3480713558954496,
+    "mean_fertility_tier2": 3.392017536000818,
+    "indic_bytes_per_token": 5.0322592021283725
+   },
+   {
+    "V": 49152,
+    "lang": {
+     "eng": {
+      "fertility": 1.30057988219716,
+      "bytes_per_token": 4.637550905771661,
+      "tokens": 28484
+     },
+     "hin": {
+      "fertility": 1.9477830207074056,
+      "bytes_per_token": 6.748613530342163,
+      "tokens": 49947,
+      "parity": 1.753510742873192
+     },
+     "ben": {
+      "fertility": 2.7988823951604633,
+      "bytes_per_token": 6.313435296272552,
+      "tokens": 54595,
+      "parity": 1.9166900716191546
+     },
+     "mar": {
+      "fertility": 2.6444922818439567,
+      "bytes_per_token": 7.058411261341751,
+      "tokens": 50367,
+      "parity": 1.7682558629405982
+     },
+     "tel": {
+      "fertility": 3.485653560042508,
+      "bytes_per_token": 5.9904471544715445,
+      "tokens": 59040,
+      "parity": 2.0727425923325375
+     },
+     "tam": {
+      "fertility": 3.433800298062593,
+      "bytes_per_token": 7.3199020867331,
+      "tokens": 57602,
+      "parity": 2.022258109816037
+     },
+     "guj": {
+      "fertility": 2.825337546681988,
+      "bytes_per_token": 5.610371123538384,
+      "tokens": 59010,
+      "parity": 2.07168936947058
+     },
+     "urd": {
+      "fertility": 2.0166347231765087,
+      "bytes_per_token": 4.1548613850733425,
+      "tokens": 55766,
+      "parity": 1.9578008706642325
+     },
+     "kan": {
+      "fertility": 3.84304347826087,
+      "bytes_per_token": 6.0669435779742376,
+      "tokens": 61873,
+      "parity": 2.172201937930066
+     },
+     "ory": {
+      "fertility": 3.2783384301732927,
+      "bytes_per_token": 5.6196110135103625,
+      "tokens": 64321,
+      "parity": 2.2581449234658053
+     },
+     "mal": {
+      "fertility": 4.29879437374414,
+      "bytes_per_token": 6.4154967981178235,
+      "tokens": 64181,
+      "parity": 2.2532298834433364
+     },
+     "pan": {
+      "fertility": 2.4668030572068247,
+      "bytes_per_token": 5.38568187152805,
+      "tokens": 63905,
+      "parity": 2.2435402331133267
+     },
+     "asm": {
+      "fertility": 3.1429830473326765,
+      "bytes_per_token": 5.52679587628866,
+      "tokens": 60625,
+      "parity": 2.12838786687263
+     },
+     "mai": {
+      "fertility": 2.183576449555077,
+      "bytes_per_token": 6.2403982136211384,
+      "tokens": 53740,
+      "parity": 1.8866732200533634
+     },
+     "sat": {
+      "fertility": 3.6417910447761193,
+      "bytes_per_token": 4.216117174300196,
+      "tokens": 87596,
+      "parity": 3.0752703272012356
+     },
+     "kas": {
+      "fertility": 3.554064034058821,
+      "bytes_per_token": 2.7890992653799613,
+      "tokens": 81811,
+      "parity": 2.8721738519870805
+     },
+     "npi": {
+      "fertility": 2.5735522164590128,
+      "bytes_per_token": 7.053523936170213,
+      "tokens": 48128,
+      "parity": 1.68965033000983
+     },
+     "snd": {
+      "fertility": 2.241323552610822,
+      "bytes_per_token": 3.728264503528004,
+      "tokens": 56831,
+      "parity": 1.995190282263727
+     },
+     "gom": {
+      "fertility": 2.8854949708840656,
+      "bytes_per_token": 6.201111783807584,
+      "tokens": 54507
+     },
+     "mni": {
+      "fertility": 3.637283386946145,
+      "bytes_per_token": 5.248270451465658,
+      "tokens": 70105,
+      "parity": 2.4612062912512287
+     },
+     "brx": {
+      "fertility": 3.617552251221795,
+      "bytes_per_token": 5.67257832710549,
+      "tokens": 69580
+     },
+     "san": {
+      "fertility": 3.223622974963181,
+      "bytes_per_token": 6.335903949123737,
+      "tokens": 54721,
+      "parity": 1.9211136076393764
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.6201471095276405,
+      "fertility": 1.3309165442976016
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.739992032536896,
+      "fertility": 1.2962687194514164
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.8238583298928575,
+      "fertility": 1.9098731502675557
+     },
+     "math_web": {
+      "bytes_per_token": 3.329514307013017,
+      "fertility": 1.768446030909017
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.231138545953361,
+      "fertility": 2.123675847457627
+     },
+     "code_github": {
+      "bytes_per_token": 3.5796327995322166,
+      "fertility": 3.0781982008135893
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.4228263000941896,
+      "fertility": 3.006447281884569
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.2740039842272313,
+      "fertility": 2.839606430844188
+     },
+     "hinglish": {
+      "bytes_per_token": 2.880171788047423,
+      "fertility": 1.7451090781140042
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.4438884081463517,
+      "fertility": 2.601591730610692
+     }
+    },
+    "mean_fertility_tier1": 3.003596651369141,
+    "mean_fertility_tier2": 3.0701243928807718,
+    "indic_bytes_per_token": 5.581628334341221
+   },
+   {
+    "V": 65536,
+    "lang": {
+     "eng": {
+      "fertility": 1.2754668736587371,
+      "bytes_per_token": 4.728860886375027,
+      "tokens": 27934
+     },
+     "hin": {
+      "fertility": 1.8241235424872284,
+      "bytes_per_token": 7.206109970925261,
+      "tokens": 46776,
+      "parity": 1.6745185079115057
+     },
+     "ben": {
+      "fertility": 2.5889469906695375,
+      "bytes_per_token": 6.825386138613862,
+      "tokens": 50500,
+      "parity": 1.8078327486217514
+     },
+     "mar": {
+      "fertility": 2.436942140081907,
+      "bytes_per_token": 7.659563924677899,
+      "tokens": 46414,
+      "parity": 1.6615593899906924
+     },
+     "tel": {
+      "fertility": 3.2175581532648483,
+      "bytes_per_token": 6.489586964898439,
+      "tokens": 54499,
+      "parity": 1.9509916231116202
+     },
+     "tam": {
+      "fertility": 3.1723994038748136,
+      "bytes_per_token": 7.923050904786065,
+      "tokens": 53217,
+      "parity": 1.9050977303644305
+     },
+     "guj": {
+      "fertility": 2.6178780044048646,
+      "bytes_per_token": 6.054977412806116,
+      "tokens": 54677,
+      "parity": 1.9573637860671582
+     },
+     "urd": {
+      "fertility": 1.8949842693378658,
+      "bytes_per_token": 4.421586962329682,
+      "tokens": 52402,
+      "parity": 1.8759218157084556
+     },
+     "kan": {
+      "fertility": 3.5638509316770186,
+      "bytes_per_token": 6.542228728781066,
+      "tokens": 57378,
+      "parity": 2.054055989117205
+     },
+     "ory": {
+      "fertility": 3.0051987767584096,
+      "bytes_per_token": 6.1303721040670265,
+      "tokens": 58962,
+      "parity": 2.1107610796878356
+     },
+     "mal": {
+      "fertility": 3.945144005358339,
+      "bytes_per_token": 6.990594387192068,
+      "tokens": 58901,
+      "parity": 2.108577360922174
+     },
+     "pan": {
+      "fertility": 2.3161429784605883,
+      "bytes_per_token": 5.736008799706677,
+      "tokens": 60002,
+      "parity": 2.147991694708957
+     },
+     "asm": {
+      "fertility": 2.9044533153610868,
+      "bytes_per_token": 5.9806868484935025,
+      "tokens": 56024,
+      "parity": 2.005584592253168
+     },
+     "mai": {
+      "fertility": 2.0468896022103937,
+      "bytes_per_token": 6.657118469112276,
+      "tokens": 50376,
+      "parity": 1.8033937137538483
+     },
+     "sat": {
+      "fertility": 3.278302082900262,
+      "bytes_per_token": 4.6835884493931745,
+      "tokens": 78853,
+      "parity": 2.8228323906350683
+     },
+     "kas": {
+      "fertility": 3.443850732003997,
+      "bytes_per_token": 2.878358604334334,
+      "tokens": 79274,
+      "parity": 2.8379036299849645
+     },
+     "npi": {
+      "fertility": 2.383562376343511,
+      "bytes_per_token": 7.6157487380818845,
+      "tokens": 44575,
+      "parity": 1.5957256390062289
+     },
+     "snd": {
+      "fertility": 2.1002524057422307,
+      "bytes_per_token": 3.9786870469823863,
+      "tokens": 53254,
+      "parity": 1.9064222810911433
+     },
+     "gom": {
+      "fertility": 2.696982530439386,
+      "bytes_per_token": 6.634554233894712,
+      "tokens": 50946
+     },
+     "mni": {
+      "fertility": 3.3950918335581615,
+      "bytes_per_token": 5.622659963017864,
+      "tokens": 65437,
+      "parity": 2.342557456862605
+     },
+     "brx": {
+      "fertility": 3.3301445357179995,
+      "bytes_per_token": 6.162149503528383,
+      "tokens": 64052
+     },
+     "san": {
+      "fertility": 3.0219145802650957,
+      "bytes_per_token": 6.758816305047079,
+      "tokens": 51297,
+      "parity": 1.8363642872485144
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.712998764300235,
+      "fertility": 1.3046959128732256
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.843009002016225,
+      "fertility": 1.2686954328741789
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.8490852178976995,
+      "fertility": 1.8929624044033775
+     },
+     "math_web": {
+      "bytes_per_token": 3.382150096693772,
+      "fertility": 1.7409240254735732
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.2687419181884128,
+      "fertility": 2.0992452330508473
+     },
+     "code_github": {
+      "bytes_per_token": 3.665583811986489,
+      "fertility": 3.0060202707851755
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.4918509336592574,
+      "fertility": 2.9470177913629594
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.332314246335046,
+      "fertility": 2.7899177811474596
+     },
+     "hinglish": {
+      "bytes_per_token": 3.007579745236341,
+      "fertility": 1.6711822660098523
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.5217707350814313,
+      "fertility": 2.5212442133299513
+     }
+    },
+    "mean_fertility_tier1": 2.780288108761402,
+    "mean_fertility_tier2": 2.8601443994542124,
+    "indic_bytes_per_token": 6.0065885625383055
+   },
+   {
+    "V": 98304,
+    "lang": {
+     "eng": {
+      "fertility": 1.2488470846080089,
+      "bytes_per_token": 4.829658879017221,
+      "tokens": 27351
+     },
+     "hin": {
+      "fertility": 1.6816675116016067,
+      "bytes_per_token": 7.816548013820931,
+      "tokens": 43123,
+      "parity": 1.5766516763555263
+     },
+     "ben": {
+      "fertility": 2.3473802932431047,
+      "bytes_per_token": 7.527780204420372,
+      "tokens": 45788,
+      "parity": 1.6740886987678696
+     },
+     "mar": {
+      "fertility": 2.2094928068885857,
+      "bytes_per_token": 8.448053799724347,
+      "tokens": 42082,
+      "parity": 1.5385909107528062
+     },
+     "tel": {
+      "fertility": 2.863266029047113,
+      "bytes_per_token": 7.292589385129284,
+      "tokens": 48498,
+      "parity": 1.7731709992322036
+     },
+     "tam": {
+      "fertility": 2.880834575260805,
+      "bytes_per_token": 8.724930679137524,
+      "tokens": 48326,
+      "parity": 1.76688238090015
+     },
+     "guj": {
+      "fertility": 2.377190462510773,
+      "bytes_per_token": 6.668036253776435,
+      "tokens": 49650,
+      "parity": 1.8152901173631677
+     },
+     "urd": {
+      "fertility": 1.737279861136224,
+      "bytes_per_token": 4.822963718490456,
+      "tokens": 48041,
+      "parity": 1.756462286570875
+     },
+     "kan": {
+      "fertility": 3.129503105590062,
+      "bytes_per_token": 7.450233204326684,
+      "tokens": 50385,
+      "parity": 1.8421629922123506
+     },
+     "ory": {
+      "fertility": 2.645769622833843,
+      "bytes_per_token": 6.963186283952996,
+      "tokens": 51910,
+      "parity": 1.897919637307594
+     },
+     "mal": {
+      "fertility": 3.54085733422639,
+      "bytes_per_token": 7.7887638324032915,
+      "tokens": 52865,
+      "parity": 1.9328360937442872
+     },
+     "pan": {
+      "fertility": 2.11777194472323,
+      "bytes_per_token": 6.273298944643932,
+      "tokens": 54863,
+      "parity": 2.005886439252678
+     },
+     "asm": {
+      "fertility": 2.643423712997045,
+      "bytes_per_token": 6.571260467944066,
+      "tokens": 50989,
+      "parity": 1.8642462798435158
+     },
+     "mai": {
+      "fertility": 1.8400715127382066,
+      "bytes_per_token": 7.4053570639932875,
+      "tokens": 45286,
+      "parity": 1.6557347080545501
+     },
+     "sat": {
+      "fertility": 2.9559306531409804,
+      "bytes_per_token": 5.194376854808085,
+      "tokens": 71099,
+      "parity": 2.599502760410954
+     },
+     "kas": {
+      "fertility": 3.2221642990573005,
+      "bytes_per_token": 3.0763910423211227,
+      "tokens": 74171,
+      "parity": 2.7118204087601914
+     },
+     "npi": {
+      "fertility": 2.1670498903801936,
+      "bytes_per_token": 8.376647090756551,
+      "tokens": 40526,
+      "parity": 1.4817008518884136
+     },
+     "snd": {
+      "fertility": 1.8994715254772045,
+      "bytes_per_token": 4.39924838569026,
+      "tokens": 48163,
+      "parity": 1.7609228181784944
+     },
+     "gom": {
+      "fertility": 2.474854420328216,
+      "bytes_per_token": 7.230032085561497,
+      "tokens": 46750
+     },
+     "mni": {
+      "fertility": 3.0409359759261183,
+      "bytes_per_token": 6.277490573441845,
+      "tokens": 58611,
+      "parity": 2.1429198201162665
+     },
+     "brx": {
+      "fertility": 3.021628366434439,
+      "bytes_per_token": 6.791321105337417,
+      "tokens": 58118
+     },
+     "san": {
+      "fertility": 2.793696612665685,
+      "bytes_per_token": 7.3109461653627985,
+      "tokens": 47423,
+      "parity": 1.7338671346568681
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.812526486918754,
+      "fertility": 1.2777135340186
+     },
+     "science_sciq": {
+      "bytes_per_token": 4.958616010854817,
+      "fertility": 1.2391165980136665
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.878455070296508,
+      "fertility": 1.873647867592458
+     },
+     "math_web": {
+      "bytes_per_token": 3.4499120638844,
+      "fertility": 1.7067294041293148
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.310928664984187,
+      "fertility": 2.0724973516949152
+     },
+     "code_github": {
+      "bytes_per_token": 3.759581752109502,
+      "fertility": 2.9308630506334166
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.572802841363514,
+      "fertility": 2.8802448058829744
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.36642798313163,
+      "fertility": 2.7616461171323454
+     },
+     "hinglish": {
+      "bytes_per_token": 3.1201127080511992,
+      "fertility": 1.6109078114004223
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.58544189548821,
+      "fertility": 2.4591540364005327
+     }
+    },
+    "mean_fertility_tier1": 2.502819413369249,
+    "mean_fertility_tier2": 2.605922696914539,
+    "indic_bytes_per_token": 6.626674728583676
+   },
+   {
+    "V": 131072,
+    "lang": {
+     "eng": {
+      "fertility": 1.2346468197799187,
+      "bytes_per_token": 4.885207100591716,
+      "tokens": 27040
+     },
+     "hin": {
+      "fertility": 1.6059353429785908,
+      "bytes_per_token": 8.185158204026129,
+      "tokens": 41181,
+      "parity": 1.522965976331361
+     },
+     "ben": {
+      "fertility": 2.192146006357018,
+      "bytes_per_token": 8.060851262862489,
+      "tokens": 42760,
+      "parity": 1.581360946745562
+     },
+     "mar": {
+      "fertility": 2.08652735482516,
+      "bytes_per_token": 8.945923502767991,
+      "tokens": 39740,
+      "parity": 1.4696745562130178
+     },
+     "tel": {
+      "fertility": 2.6607037430629354,
+      "bytes_per_token": 7.847782190960126,
+      "tokens": 45067,
+      "parity": 1.6666789940828401
+     },
+     "tam": {
+      "fertility": 2.684649776453055,
+      "bytes_per_token": 9.36251804152326,
+      "tokens": 45035,
+      "parity": 1.6654955621301775
+     },
+     "guj": {
+      "fertility": 2.226994158766638,
+      "bytes_per_token": 7.117752026315224,
+      "tokens": 46513,
+      "parity": 1.720155325443787
+     },
+     "urd": {
+      "fertility": 1.6360250244096481,
+      "bytes_per_token": 5.121460622002166,
+      "tokens": 45241,
+      "parity": 1.6731139053254438
+     },
+     "kan": {
+      "fertility": 2.9116149068322983,
+      "bytes_per_token": 8.00776500202658,
+      "tokens": 46877,
+      "parity": 1.7336168639053255
+     },
+     "ory": {
+      "fertility": 2.4582059123343525,
+      "bytes_per_token": 7.4944847605224965,
+      "tokens": 48230,
+      "parity": 1.7836538461538463
+     },
+     "mal": {
+      "fertility": 3.288680509042197,
+      "bytes_per_token": 8.386008146639512,
+      "tokens": 49100,
+      "parity": 1.8158284023668638
+     },
+     "pan": {
+      "fertility": 1.987377441519339,
+      "bytes_per_token": 6.684898514130329,
+      "tokens": 51485,
+      "parity": 1.9040310650887573
+     },
+     "asm": {
+      "fertility": 2.4664316449790036,
+      "bytes_per_token": 7.042816605359958,
+      "tokens": 47575,
+      "parity": 1.759430473372781
+     },
+     "mai": {
+      "fertility": 1.7384096542196579,
+      "bytes_per_token": 7.838420905011219,
+      "tokens": 42784,
+      "parity": 1.5822485207100592
+     },
+     "sat": {
+      "fertility": 2.757743316841974,
+      "bytes_per_token": 5.567674727130194,
+      "tokens": 66332,
+      "parity": 2.4531065088757398
+     },
+     "kas": {
+      "fertility": 3.1063903731699902,
+      "bytes_per_token": 3.191046905154812,
+      "tokens": 71506,
+      "parity": 2.6444526627218936
+     },
+     "npi": {
+      "fertility": 2.0418159456713543,
+      "bytes_per_token": 8.89042530902996,
+      "tokens": 38184,
+      "parity": 1.412130177514793
+     },
+     "snd": {
+      "fertility": 1.7867565862123362,
+      "bytes_per_token": 4.6767685685906635,
+      "tokens": 45305,
+      "parity": 1.6754807692307692
+     },
+     "gom": {
+      "fertility": 2.320804658549497,
+      "bytes_per_token": 7.7099452554744525,
+      "tokens": 43840
+     },
+     "mni": {
+      "fertility": 2.8677492995745566,
+      "bytes_per_token": 6.656595444430373,
+      "tokens": 55273,
+      "parity": 2.0441198224852073
+     },
+     "brx": {
+      "fertility": 2.86014349589269,
+      "bytes_per_token": 7.1747618701374245,
+      "tokens": 55012
+     },
+     "san": {
+      "fertility": 2.656377025036819,
+      "bytes_per_token": 7.68888051095538,
+      "tokens": 45092,
+      "parity": 1.667603550295858
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.872679713844505,
+      "fertility": 1.261940161527166
+     },
+     "science_sciq": {
+      "bytes_per_token": 5.0204101658325975,
+      "fertility": 1.223864823643853
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.893611865263054,
+      "fertility": 1.8638336637907937
+     },
+     "math_web": {
+      "bytes_per_token": 3.4920612282070405,
+      "fertility": 1.6861291874069224
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.340058008378988,
+      "fertility": 2.0544226694915255
+     },
+     "code_github": {
+      "bytes_per_token": 3.8208695105071095,
+      "fertility": 2.883851231452014
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.6196789574748105,
+      "fertility": 2.842944622210409
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.3755565596616726,
+      "fertility": 2.7541777493288255
+     },
+     "hinglish": {
+      "bytes_per_token": 3.173487070114636,
+      "fertility": 1.5838142153413088
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.67819497053591,
+      "fertility": 2.373986936394191
+     }
+    },
+    "mean_fertility_tier1": 2.339896379689203,
+    "mean_fertility_tier2": 2.460262200014788,
+    "indic_bytes_per_token": 7.049201092347638
+   },
+   {
+    "V": 163840,
+    "lang": {
+     "eng": {
+      "fertility": 1.225103876535318,
+      "bytes_per_token": 4.9232604077373185,
+      "tokens": 26831
+     },
+     "hin": {
+      "fertility": 1.5504426159185742,
+      "bytes_per_token": 8.478117611549877,
+      "tokens": 39758,
+      "parity": 1.4817934478774553
+     },
+     "ben": {
+      "fertility": 2.093766020711576,
+      "bytes_per_token": 8.439607257412893,
+      "tokens": 40841,
+      "parity": 1.5221572062166897
+     },
+     "mar": {
+      "fertility": 1.9978473170219468,
+      "bytes_per_token": 9.343013324222754,
+      "tokens": 38051,
+      "parity": 1.4181730088330662
+     },
+     "tel": {
+      "fertility": 2.532530405006494,
+      "bytes_per_token": 8.244964565460648,
+      "tokens": 42896,
+      "parity": 1.5987477171927993
+     },
+     "tam": {
+      "fertility": 2.5462295081967214,
+      "bytes_per_token": 9.871491115117177,
+      "tokens": 42713,
+      "parity": 1.5919272483321532
+     },
+     "guj": {
+      "fertility": 2.1127549554725653,
+      "bytes_per_token": 7.502617445101638,
+      "tokens": 44127,
+      "parity": 1.6446274831351795
+     },
+     "urd": {
+      "fertility": 1.5674610349690812,
+      "bytes_per_token": 5.345483908178568,
+      "tokens": 43345,
+      "parity": 1.6154820916104506
+     },
+     "kan": {
+      "fertility": 2.761614906832298,
+      "bytes_per_token": 8.442715127524627,
+      "tokens": 44462,
+      "parity": 1.6571130408855428
+     },
+     "ory": {
+      "fertility": 2.319164118246687,
+      "bytes_per_token": 7.943804667926685,
+      "tokens": 45502,
+      "parity": 1.6958741753941335
+     },
+     "mal": {
+      "fertility": 3.130140656396517,
+      "bytes_per_token": 8.810754712943744,
+      "tokens": 46733,
+      "parity": 1.7417539413365137
+     },
+     "pan": {
+      "fertility": 1.8953138269126844,
+      "bytes_per_token": 7.009613034623218,
+      "tokens": 49100,
+      "parity": 1.8299727926652007
+     },
+     "asm": {
+      "fertility": 2.368396495411893,
+      "bytes_per_token": 7.3343402504159005,
+      "tokens": 45684,
+      "parity": 1.702657373933137
+     },
+     "mai": {
+      "fertility": 1.6657998455974972,
+      "bytes_per_token": 8.180086347781545,
+      "tokens": 40997,
+      "parity": 1.5279713763929783
+     },
+     "sat": {
+      "fertility": 2.6417078950650645,
+      "bytes_per_token": 5.812231472592499,
+      "tokens": 63541,
+      "parity": 2.36819350750997
+     },
+     "kas": {
+      "fertility": 3.029844910725922,
+      "bytes_per_token": 3.2716649460885523,
+      "tokens": 69744,
+      "parity": 2.599381312660728
+     },
+     "npi": {
+      "fertility": 1.9472755467622052,
+      "bytes_per_token": 9.322056239015817,
+      "tokens": 36416,
+      "parity": 1.3572360329469644
+     },
+     "snd": {
+      "fertility": 1.7100489036125572,
+      "bytes_per_token": 4.88655442804428,
+      "tokens": 43360,
+      "parity": 1.6160411464350937
+     },
+     "gom": {
+      "fertility": 2.2250926416093173,
+      "bytes_per_token": 8.041587362009897,
+      "tokens": 42032
+     },
+     "mni": {
+      "fertility": 2.7235135415585763,
+      "bytes_per_token": 7.009125026193969,
+      "tokens": 52493,
+      "parity": 1.9564309939994782
+     },
+     "brx": {
+      "fertility": 2.746074659457211,
+      "bytes_per_token": 7.4727933658979895,
+      "tokens": 52818
+     },
+     "san": {
+      "fertility": 2.5664212076583213,
+      "bytes_per_token": 7.958384023872375,
+      "tokens": 43565,
+      "parity": 1.6236815623718832
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.9116391475719094,
+      "fertility": 1.251930372001958
+     },
+     "science_sciq": {
+      "bytes_per_token": 5.064390002474635,
+      "fertility": 1.2132366186696129
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.9033426608585993,
+      "fertility": 1.857586869483338
+     },
+     "math_web": {
+      "bytes_per_token": 3.514879552247067,
+      "fertility": 1.6751829681696229
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.354870035283074,
+      "fertility": 2.045352224576271
+     },
+     "code_github": {
+      "bytes_per_token": 3.863913713483668,
+      "fertility": 2.85172497632172
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.6507347207698397,
+      "fertility": 2.818760499834729
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.407068737278123,
+      "fertility": 2.7287041985681615
+     },
+     "hinglish": {
+      "bytes_per_token": 3.269138345348438,
+      "fertility": 1.5374736101337088
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.730923443177547,
+      "fertility": 2.32815016805124
+     }
+    },
+    "mean_fertility_tier1": 2.227933215062286,
+    "mean_fertility_tier2": 2.3624175647458565,
+    "indic_bytes_per_token": 7.369225493659224
+   },
+   {
+    "V": 196608,
+    "lang": {
+     "eng": {
+      "fertility": 1.2191224145016208,
+      "bytes_per_token": 4.947415730337078,
+      "tokens": 26700
+     },
+     "hin": {
+      "fertility": 1.5075459189642397,
+      "bytes_per_token": 8.719359511614671,
+      "tokens": 38658,
+      "parity": 1.4478651685393258
+     },
+     "ben": {
+      "fertility": 2.0042038347175226,
+      "bytes_per_token": 8.816749373305367,
+      "tokens": 39094,
+      "parity": 1.4641947565543072
+     },
+     "mar": {
+      "fertility": 1.9283839126325737,
+      "bytes_per_token": 9.679563275974733,
+      "tokens": 36728,
+      "parity": 1.3755805243445693
+     },
+     "tel": {
+      "fertility": 2.420061400401464,
+      "bytes_per_token": 8.62813788392574,
+      "tokens": 40991,
+      "parity": 1.5352434456928838
+     },
+     "tam": {
+      "fertility": 2.4396423248882266,
+      "bytes_per_token": 10.302773365913255,
+      "tokens": 40925,
+      "parity": 1.5327715355805243
+     },
+     "guj": {
+      "fertility": 2.02671646078713,
+      "bytes_per_token": 7.821119773210489,
+      "tokens": 42330,
+      "parity": 1.5853932584269663
+     },
+     "urd": {
+      "fertility": 1.521353921816801,
+      "bytes_per_token": 5.507487520798669,
+      "tokens": 42070,
+      "parity": 1.5756554307116104
+     },
+     "kan": {
+      "fertility": 2.6534782608695653,
+      "bytes_per_token": 8.786779335689708,
+      "tokens": 42721,
+      "parity": 1.6000374531835206
+     },
+     "ory": {
+      "fertility": 2.2113659531090724,
+      "bytes_per_token": 8.331043861064375,
+      "tokens": 43387,
+      "parity": 1.6249812734082396
+     },
+     "mal": {
+      "fertility": 2.9797722705961154,
+      "bytes_per_token": 9.255372235209494,
+      "tokens": 44488,
+      "parity": 1.6662172284644194
+     },
+     "pan": {
+      "fertility": 1.8337064772639542,
+      "bytes_per_token": 7.24511620074099,
+      "tokens": 47504,
+      "parity": 1.7791760299625468
+     },
+     "asm": {
+      "fertility": 2.282077868215045,
+      "bytes_per_token": 7.611758558804152,
+      "tokens": 44019,
+      "parity": 1.6486516853932585
+     },
+     "mai": {
+      "fertility": 1.6210637519808215,
+      "bytes_per_token": 8.40583015841187,
+      "tokens": 39896,
+      "parity": 1.4942322097378278
+     },
+     "sat": {
+      "fertility": 2.486841558225585,
+      "bytes_per_token": 6.174184164771967,
+      "tokens": 59816,
+      "parity": 2.2402996254681646
+     },
+     "kas": {
+      "fertility": 2.972500977453408,
+      "bytes_per_token": 3.334780194083947,
+      "tokens": 68424,
+      "parity": 2.562696629213483
+     },
+     "npi": {
+      "fertility": 1.8843912090262553,
+      "bytes_per_token": 9.633144154370035,
+      "tokens": 35240,
+      "parity": 1.3198501872659176
+     },
+     "snd": {
+      "fertility": 1.6596860703581007,
+      "bytes_per_token": 5.034835919492432,
+      "tokens": 42083,
+      "parity": 1.5761423220973783
+     },
+     "gom": {
+      "fertility": 2.1431974589730016,
+      "bytes_per_token": 8.348869951834013,
+      "tokens": 40485
+     },
+     "mni": {
+      "fertility": 2.628826398256719,
+      "bytes_per_token": 7.261585221441541,
+      "tokens": 50668,
+      "parity": 1.8976779026217228
+     },
+     "brx": {
+      "fertility": 2.5956639284600187,
+      "bytes_per_token": 7.905818728092139,
+      "tokens": 49925
+     },
+     "san": {
+      "fertility": 2.4813549337260676,
+      "bytes_per_token": 8.231214833455995,
+      "tokens": 42121,
+      "parity": 1.577565543071161
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.937398058443217,
+      "fertility": 1.245398923152227
+     },
+     "science_sciq": {
+      "bytes_per_token": 5.0935319123517875,
+      "fertility": 1.2062952599406742
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.9106838154181762,
+      "fertility": 1.8529017737527465
+     },
+     "math_web": {
+      "bytes_per_token": 3.5322605595735324,
+      "fertility": 1.6669399841224772
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.3608534924443867,
+      "fertility": 2.0417108050847457
+     },
+     "code_github": {
+      "bytes_per_token": 3.8928233063379873,
+      "fertility": 2.830546977345057
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.6719402048618206,
+      "fertility": 2.8024821353724736
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.4236242384851634,
+      "fertility": 2.7155090981405987
+     },
+     "hinglish": {
+      "bytes_per_token": 3.297133228695411,
+      "fertility": 1.5244194229415904
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.7545428569858617,
+      "fertility": 2.3081869490773035
+     }
+    },
+    "mean_fertility_tier1": 2.138748248731515,
+    "mean_fertility_tier2": 2.275560415467502,
+    "indic_bytes_per_token": 7.658790025043663
+   },
+   {
+    "V": 262144,
+    "lang": {
+     "eng": {
+      "fertility": 1.2119081320487648,
+      "bytes_per_token": 4.976866852535604,
+      "tokens": 26542
+     },
+     "hin": {
+      "fertility": 1.4534180868073159,
+      "bytes_per_token": 9.044083713442447,
+      "tokens": 37270,
+      "parity": 1.4041895863160274
+     },
+     "ben": {
+      "fertility": 1.9015687480775145,
+      "bytes_per_token": 9.292623746360402,
+      "tokens": 37092,
+      "parity": 1.3974832341195087
+     },
+     "mar": {
+      "fertility": 1.8390738212748083,
+      "bytes_per_token": 10.14962743026808,
+      "tokens": 35027,
+      "parity": 1.3196820134127043
+     },
+     "tel": {
+      "fertility": 2.256582831503129,
+      "bytes_per_token": 9.253204960493957,
+      "tokens": 38222,
+      "parity": 1.440057267726622
+     },
+     "tam": {
+      "fertility": 2.3019374068554397,
+      "bytes_per_token": 10.91909879580474,
+      "tokens": 38615,
+      "parity": 1.454863989149273
+     },
+     "guj": {
+      "fertility": 1.9147754476682946,
+      "bytes_per_token": 8.278355671134227,
+      "tokens": 39992,
+      "parity": 1.5067440283324542
+     },
+     "urd": {
+      "fertility": 1.4544172422521968,
+      "bytes_per_token": 5.760958750839156,
+      "tokens": 40219,
+      "parity": 1.5152965111898125
+     },
+     "kan": {
+      "fertility": 2.4882608695652175,
+      "bytes_per_token": 9.370210429095629,
+      "tokens": 40061,
+      "parity": 1.5093436817120036
+     },
+     "ory": {
+      "fertility": 2.0775229357798164,
+      "bytes_per_token": 8.867765756482912,
+      "tokens": 40761,
+      "parity": 1.5357169768668526
+     },
+     "mal": {
+      "fertility": 2.803215003348962,
+      "bytes_per_token": 9.83831119181879,
+      "tokens": 41852,
+      "parity": 1.5768216411724814
+     },
+     "pan": {
+      "fertility": 1.7438817262410253,
+      "bytes_per_token": 7.6183013480310775,
+      "tokens": 45177,
+      "parity": 1.7020947931580137
+     },
+     "asm": {
+      "fertility": 2.1614391622168077,
+      "bytes_per_token": 8.036601746138349,
+      "tokens": 41692,
+      "parity": 1.5707934594228017
+     },
+     "mai": {
+      "fertility": 1.553614237536061,
+      "bytes_per_token": 8.770765770478084,
+      "tokens": 38236,
+      "parity": 1.4405847336297188
+     },
+     "sat": {
+      "fertility": 2.315553153452792,
+      "bytes_per_token": 6.630907066934789,
+      "tokens": 55696,
+      "parity": 2.098410067063522
+     },
+     "kas": {
+      "fertility": 2.8878317911290674,
+      "bytes_per_token": 3.4325535915757803,
+      "tokens": 66475,
+      "parity": 2.5045211363122597
+     },
+     "npi": {
+      "fertility": 1.7932730870006952,
+      "bytes_per_token": 10.122614503816793,
+      "tokens": 33536,
+      "parity": 1.2635068947328763
+     },
+     "snd": {
+      "fertility": 1.5763527370247674,
+      "bytes_per_token": 5.301000750562922,
+      "tokens": 39970,
+      "parity": 1.5059151533418733
+     },
+     "gom": {
+      "fertility": 2.0267337215457912,
+      "bytes_per_token": 8.82862739976492,
+      "tokens": 38285
+     },
+     "mni": {
+      "fertility": 2.4732281830445157,
+      "bytes_per_token": 7.718433363401791,
+      "tokens": 47669,
+      "parity": 1.795983723909276
+     },
+     "brx": {
+      "fertility": 2.4400540709160863,
+      "bytes_per_token": 8.409997443109178,
+      "tokens": 46932
+     },
+     "san": {
+      "fertility": 2.360058910162003,
+      "bytes_per_token": 8.654260895611802,
+      "tokens": 40062,
+      "parity": 1.5093813578479391
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.973388593344056,
+      "fertility": 1.236386441507587
+     },
+     "science_sciq": {
+      "bytes_per_token": 5.130511516901818,
+      "fertility": 1.1976005476227647
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.919464922858883,
+      "fertility": 1.8473286533411928
+     },
+     "math_web": {
+      "bytes_per_token": 3.5555965742579456,
+      "fertility": 1.6559995596015553
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.3797039066066654,
+      "fertility": 2.030323093220339
+     },
+     "code_github": {
+      "bytes_per_token": 3.9324497410480594,
+      "fertility": 2.802024175433376
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.7001545083729814,
+      "fertility": 2.7811127354263148
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.450751171218136,
+      "fertility": 2.694162026449239
+     },
+     "hinglish": {
+      "bytes_per_token": 3.340153392882196,
+      "fertility": 1.5047853624208305
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.804157879721876,
+      "fertility": 2.267347327034054
+     }
+    },
+    "mean_fertility_tier1": 2.021332192670338,
+    "mean_fertility_tier2": 2.158813905402859,
+    "indic_bytes_per_token": 8.081548093031474
+   },
+   {
+    "V": 327680,
+    "lang": {
+     "eng": {
+      "fertility": 1.20615497009269,
+      "bytes_per_token": 5.00060569351908,
+      "tokens": 26416
+     },
+     "hin": {
+      "fertility": 1.4206606091330967,
+      "bytes_per_token": 9.25262146582487,
+      "tokens": 36430,
+      "parity": 1.3790884312537857
+     },
+     "ben": {
+      "fertility": 1.834922587921665,
+      "bytes_per_token": 9.630140813589628,
+      "tokens": 35792,
+      "parity": 1.3549364021804966
+     },
+     "mar": {
+      "fertility": 1.7785886800378032,
+      "bytes_per_token": 10.49478966789668,
+      "tokens": 33875,
+      "parity": 1.2823667474258025
+     },
+     "tel": {
+      "fertility": 2.167788404770339,
+      "bytes_per_token": 9.632223977340814,
+      "tokens": 36718,
+      "parity": 1.3899909145972138
+     },
+     "tam": {
+      "fertility": 2.217645305514158,
+      "bytes_per_token": 11.334130802935405,
+      "tokens": 37201,
+      "parity": 1.4082752877044216
+     },
+     "guj": {
+      "fertility": 1.8362539500143638,
+      "bytes_per_token": 8.632352941176471,
+      "tokens": 38352,
+      "parity": 1.451847365233192
+     },
+     "urd": {
+      "fertility": 1.4146385563953279,
+      "bytes_per_token": 5.9229530407219,
+      "tokens": 39119,
+      "parity": 1.4808827983040582
+     },
+     "kan": {
+      "fertility": 2.384223602484472,
+      "bytes_per_token": 9.779086125149794,
+      "tokens": 38386,
+      "parity": 1.4531344639612356
+     },
+     "ory": {
+      "fertility": 1.9939857288481142,
+      "bytes_per_token": 9.239277133070907,
+      "tokens": 39122,
+      "parity": 1.4809963658388856
+     },
+     "mal": {
+      "fertility": 2.683858004018754,
+      "bytes_per_token": 10.27584227601697,
+      "tokens": 40070,
+      "parity": 1.5168837068443368
+     },
+     "pan": {
+      "fertility": 1.6893383772099129,
+      "bytes_per_token": 7.864272004387168,
+      "tokens": 43764,
+      "parity": 1.6567231980617807
+     },
+     "asm": {
+      "fertility": 2.0788013893929183,
+      "bytes_per_token": 8.356077609855854,
+      "tokens": 40098,
+      "parity": 1.5179436705027256
+     },
+     "mai": {
+      "fertility": 1.5160294177400349,
+      "bytes_per_token": 8.988207231111469,
+      "tokens": 37311,
+      "parity": 1.412439430648092
+     },
+     "sat": {
+      "fertility": 2.217561218974764,
+      "bytes_per_token": 6.92392058343801,
+      "tokens": 53339,
+      "parity": 2.019192913385827
+     },
+     "kas": {
+      "fertility": 2.8028585081888875,
+      "bytes_per_token": 3.536617120538136,
+      "tokens": 64519,
+      "parity": 2.44242125984252
+     },
+     "npi": {
+      "fertility": 1.7412972568311855,
+      "bytes_per_token": 10.424763542562339,
+      "tokens": 32564,
+      "parity": 1.2327377347062387
+     },
+     "snd": {
+      "fertility": 1.5265026029342168,
+      "bytes_per_token": 5.474112540691365,
+      "tokens": 38706,
+      "parity": 1.4652483343428224
+     },
+     "gom": {
+      "fertility": 1.9626786659608257,
+      "bytes_per_token": 9.11676331759946,
+      "tokens": 37075
+     },
+     "mni": {
+      "fertility": 2.371744318771402,
+      "bytes_per_token": 8.048695119550237,
+      "tokens": 45713,
+      "parity": 1.7305042398546335
+     },
+     "brx": {
+      "fertility": 2.346677758136633,
+      "bytes_per_token": 8.74463842609004,
+      "tokens": 45136
+     },
+     "san": {
+      "fertility": 2.298379970544919,
+      "bytes_per_token": 8.886505190311418,
+      "tokens": 39015,
+      "parity": 1.4769457904300425
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 4.996519828278384,
+      "fertility": 1.2306626284875184
+     },
+     "science_sciq": {
+      "bytes_per_token": 5.1549102779820855,
+      "fertility": 1.1919321716365034
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.9240574103896537,
+      "fertility": 1.8444272623577056
+     },
+     "math_web": {
+      "bytes_per_token": 3.5736978159181234,
+      "fertility": 1.6476117076449692
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.388543778199176,
+      "fertility": 2.0250264830508473
+     },
+     "code_github": {
+      "bytes_per_token": 3.959933071810869,
+      "fertility": 2.782577140389521
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.7167175384615385,
+      "fertility": 2.7687190968353113
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.549238332998215,
+      "fertility": 2.6194022198468727
+     },
+     "hinglish": {
+      "bytes_per_token": 3.4225848188614147,
+      "fertility": 1.4685432793807178
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.850348548944687,
+      "fertility": 2.2306043503075657
+     }
+    },
+    "mean_fertility_tier1": 1.9474458005770914,
+    "mean_fertility_tier2": 2.0862531107475784,
+    "indic_bytes_per_token": 8.371090161385888
+   },
+   {
+    "V": 393216,
+    "lang": {
+     "eng": {
+      "fertility": 1.2015889685402492,
+      "bytes_per_token": 5.019607843137255,
+      "tokens": 26316
+     },
+     "hin": {
+      "fertility": 1.39601450688297,
+      "bytes_per_token": 9.415972959383206,
+      "tokens": 35798,
+      "parity": 1.36031311749506
+     },
+     "ben": {
+      "fertility": 1.778529683174408,
+      "bytes_per_token": 9.935489450017295,
+      "tokens": 34692,
+      "parity": 1.3182854537163702
+     },
+     "mar": {
+      "fertility": 1.7308621232804788,
+      "bytes_per_token": 10.784171570709216,
+      "tokens": 32966,
+      "parity": 1.2526979784161727
+     },
+     "tel": {
+      "fertility": 2.0853701735742116,
+      "bytes_per_token": 10.012909801257006,
+      "tokens": 35322,
+      "parity": 1.3422252621979025
+     },
+     "tam": {
+      "fertility": 2.147064083457526,
+      "bytes_per_token": 11.70672182580448,
+      "tokens": 36017,
+      "parity": 1.3686350509195926
+     },
+     "guj": {
+      "fertility": 1.7768840371540744,
+      "bytes_per_token": 8.920780340590644,
+      "tokens": 37112,
+      "parity": 1.4102447180422557
+     },
+     "urd": {
+      "fertility": 1.3841536180522909,
+      "bytes_per_token": 6.05340160936357,
+      "tokens": 38276,
+      "parity": 1.4544763641890865
+     },
+     "kan": {
+      "fertility": 2.3027950310559007,
+      "bytes_per_token": 10.124881995954148,
+      "tokens": 37075,
+      "parity": 1.4088387292901656
+     },
+     "ory": {
+      "fertility": 1.9251274209989806,
+      "bytes_per_token": 9.569749278547034,
+      "tokens": 37771,
+      "parity": 1.4352865177078584
+     },
+     "mal": {
+      "fertility": 2.58861352980576,
+      "bytes_per_token": 10.653927758228111,
+      "tokens": 38648,
+      "parity": 1.4686122511019912
+     },
+     "pan": {
+      "fertility": 1.6444067011503127,
+      "bytes_per_token": 8.079154929577465,
+      "tokens": 42600,
+      "parity": 1.6187870497036023
+     },
+     "asm": {
+      "fertility": 2.011820208408938,
+      "bytes_per_token": 8.63428335824357,
+      "tokens": 38806,
+      "parity": 1.4746162030703753
+     },
+     "mai": {
+      "fertility": 1.4819389703790988,
+      "bytes_per_token": 9.194971484974776,
+      "tokens": 36472,
+      "parity": 1.3859249126006992
+     },
+     "sat": {
+      "fertility": 2.1405645865380616,
+      "bytes_per_token": 7.172975702604541,
+      "tokens": 51487,
+      "parity": 1.9564903480772153
+     },
+     "kas": {
+      "fertility": 2.7648464312090013,
+      "bytes_per_token": 3.5852397712274526,
+      "tokens": 63644,
+      "parity": 2.418452652378781
+     },
+     "npi": {
+      "fertility": 1.6948291535212021,
+      "bytes_per_token": 10.710585265814798,
+      "tokens": 31695,
+      "parity": 1.2044003647970816
+     },
+     "snd": {
+      "fertility": 1.486196560971762,
+      "bytes_per_token": 5.622571913809574,
+      "tokens": 37684,
+      "parity": 1.4319805441556468
+     },
+     "gom": {
+      "fertility": 1.9064584436209635,
+      "bytes_per_token": 9.385610751673006,
+      "tokens": 36013
+     },
+     "mni": {
+      "fertility": 2.2777316592300507,
+      "bytes_per_token": 8.380902485137012,
+      "tokens": 43901,
+      "parity": 1.6682246542027663
+     },
+     "brx": {
+      "fertility": 2.2763335759592387,
+      "bytes_per_token": 9.01486878468812,
+      "tokens": 43783
+     },
+     "san": {
+      "fertility": 2.235699558173785,
+      "bytes_per_token": 9.135648599509894,
+      "tokens": 37951,
+      "parity": 1.4421264629882962
+     }
+    },
+    "domain": {
+     "eng_web": {
+      "bytes_per_token": 5.011156707487335,
+      "fertility": 1.2270680372001959
+     },
+     "science_sciq": {
+      "bytes_per_token": 5.172682236376504,
+      "fertility": 1.1878370101718527
+     },
+     "math_gsm8k": {
+      "bytes_per_token": 2.9272041317472253,
+      "fertility": 1.8424445175959028
+     },
+     "math_web": {
+      "bytes_per_token": 3.5843564639336543,
+      "fertility": 1.6427122749477028
+     },
+     "code_humaneval": {
+      "bytes_per_token": 3.391759662270511,
+      "fertility": 2.0231064618644066
+     },
+     "code_github": {
+      "bytes_per_token": 3.9765749106514945,
+      "fertility": 2.7709321440365207
+     },
+     "agentic_swe": {
+      "bytes_per_token": 3.726445280541574,
+      "fertility": 2.761491462122219
+     },
+     "agentic_tools": {
+      "bytes_per_token": 3.5663022839181693,
+      "fertility": 2.6068689718603957
+     },
+     "hinglish": {
+      "bytes_per_token": 3.4437908339159575,
+      "fertility": 1.459500351864884
+     },
+     "roman_hin": {
+      "bytes_per_token": 2.8749835115992317,
+      "fertility": 2.2114908998668272
+     }
+    },
+    "mean_fertility_tier1": 1.887256446235174,
+    "mean_fertility_tier2": 2.0276419148012104,
+    "indic_bytes_per_token": 8.619801791200572
+   }
+  ],
+  "cost": [
+   {
+    "V": 32768,
+    "tokens_per_byte": 0.2456943037141473,
+    "flops_per_byte": 65268799431.14824,
+    "head_share": 0.005305039787798408,
+    "embed_params_B": 0.469762048,
+    "rel_cost": 1.0
+   },
+   {
+    "V": 49152,
+    "tokens_per_byte": 0.2342311670108953,
+    "flops_per_byte": 62388661512.50548,
+    "head_share": 0.007936507936507936,
+    "embed_params_B": 0.704643072,
+    "rel_cost": 0.9558726689667242
+   },
+   {
+    "V": 65536,
+    "tokens_per_byte": 0.22723721169306388,
+    "flops_per_byte": 60685907102.723526,
+    "head_share": 0.010554089709762533,
+    "embed_params_B": 0.939524096,
+    "rel_cost": 0.9297843323553211
+   },
+   {
+    "V": 98304,
+    "tokens_per_byte": 0.21946833999530255,
+    "flops_per_byte": 58920448059.692604,
+    "head_share": 0.015748031496062992,
+    "embed_params_B": 1.409286144,
+    "rel_cost": 0.9027352819910149
+   },
+   {
+    "V": 131072,
+    "tokens_per_byte": 0.214922638536586,
+    "flops_per_byte": 58002955583.8732,
+    "head_share": 0.020887728459530026,
+    "embed_params_B": 1.879048192,
+    "rel_cost": 0.8886781446786111
+   },
+   {
+    "V": 163840,
+    "tokens_per_byte": 0.21175358192655658,
+    "flops_per_byte": 57446117373.15701,
+    "head_share": 0.025974025974025976,
+    "embed_params_B": 2.34881024,
+    "rel_cost": 0.880146683772798
+   },
+   {
+    "V": 196608,
+    "tokens_per_byte": 0.2095237334643256,
+    "flops_per_byte": 57136466068.416885,
+    "head_share": 0.031007751937984496,
+    "embed_params_B": 2.818572288,
+    "rel_cost": 0.8754024367904896
+   },
+   {
+    "V": 262144,
+    "tokens_per_byte": 0.2065139868824615,
+    "flops_per_byte": 56897792199.97972,
+    "head_share": 0.04092071611253197,
+    "embed_params_B": 3.758096384,
+    "rel_cost": 0.8717456532964261
+   },
+   {
+    "V": 327680,
+    "tokens_per_byte": 0.2044294946904381,
+    "flops_per_byte": 56899681722.70081,
+    "head_share": 0.05063291139240506,
+    "embed_params_B": 4.69762048,
+    "rel_cost": 0.8717746031581909
+   },
+   {
+    "V": 393216,
+    "tokens_per_byte": 0.20305273716201644,
+    "flops_per_byte": 57088802092.24888,
+    "head_share": 0.06015037593984962,
+    "embed_params_B": 5.637144576,
+    "rel_cost": 0.8746721647986125
+   }
+  ],
+  "unused_share": {
+   "32768": 0.0294189453125,
+   "49152": 0.06524658203125,
+   "65536": 0.1105804443359375,
+   "98304": 0.20240275065104163,
+   "131072": 0.282135009765625,
+   "163840": 0.348028564453125,
+   "196608": 0.40210469563802087,
+   "262144": 0.4882965087890625,
+   "327680": 0.552911376953125,
+   "393216": 0.6019668579101562
+  }
+ },
+ "pretok": {
+  "gpt2": {
+   "eng": 1.285603397105155,
+   "hin": 3.332176422415474,
+   "ben": 4.723059571413924,
+   "mar": 4.985088732542266,
+   "tel": 5.780670681308301,
+   "tam": 6.832727272727273,
+   "guj": 4.117734367518912,
+   "urd": 1.4461722055473185,
+   "kan": 6.255155279503105,
+   "ory": 4.967737003058104,
+   "mal": 7.532217012726055,
+   "pan": 3.3621940863120514,
+   "asm": 4.602778785836487,
+   "mai": 3.3910040225915243,
+   "sat": 2.656508543632811,
+   "kas": 2.894912898040749,
+   "npi": 4.750494625955831,
+   "snd": 1.590511121628017,
+   "gom": 4.664902064584436,
+   "mni": 4.800300923523918,
+   "brx": 5.737964022044297,
+   "san": 5.2706921944035345
+  },
+  "ours": {
+   "eng": 1.3753253276106114,
+   "hin": 1.5757906641188628,
+   "ben": 2.1285245565467035,
+   "mar": 2.0437362175784943,
+   "tel": 2.5796434053607276,
+   "tam": 2.60602086438152,
+   "guj": 2.135928373072872,
+   "urd": 1.5936788051929267,
+   "kan": 2.8391304347826085,
+   "ory": 2.3839959225280327,
+   "mal": 3.1858673811118554,
+   "pan": 1.944993437813634,
+   "asm": 2.4132407071387836,
+   "mai": 1.7216691723213198,
+   "sat": 2.942418825094583,
+   "kas": 3.05856031973587,
+   "npi": 1.9890914924335596,
+   "snd": 1.7444391859914814,
+   "gom": 2.2646903123345687,
+   "mni": 2.783594479609837,
+   "brx": 2.7763335759592387,
+   "san": 2.563298969072165
+  }
+ },
+ "chosen_V": 262144
+}

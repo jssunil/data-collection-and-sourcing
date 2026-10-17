@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>India-First 40B Data Plan</title>
+<meta name="description" content="Data, cleaning, evaluation, fertility targets and vocabulary size for a 40B India-first model. ERA V5 Session 3.">
+<style>
+:root{
+  color-scheme:light;
+  --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#eb6834; --accent:#2a78d6; --good:#006300; --tag:#eef3fb;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --page:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+    --s1:#3987e5; --s2:#d95926; --accent:#3987e5; --good:#0ca30c; --tag:#1d2633;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#d95926; --accent:#3987e5; --good:#0ca30c; --tag:#1d2633;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:15.5px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:880px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:26px;line-height:1.25;margin:0 0 6px}
+h2{font-size:19px;margin:36px 0 10px;padding-top:8px;border-top:1px solid var(--grid)}
+h3{font-size:15.5px;margin:18px 0 6px}
+p,li{color:var(--ink)}
+.sub{color:var(--ink2);margin:0 0 18px}
+.muted{color:var(--muted);font-size:13px}
+a{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin:14px 0}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.tile b{display:block;font-size:12.5px;color:var(--ink2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px}
+.tile span{font-size:14.5px}
+.scroll{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+th,td{padding:6px 8px;border-bottom:1px solid var(--grid);text-align:left;vertical-align:top}
+th{color:var(--ink2);font-weight:600;font-size:12.5px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.best{font-weight:700}
+.fig{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;margin:12px 0}
+.fig svg{width:100%;height:auto;display:block}
+.cap{font-size:13px;color:var(--ink2);margin:6px 2px 0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin:2px 2px 6px}
+.sw{display:inline-block;width:12px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+ol,ul{padding-left:22px}
+li{margin:3px 0}
+code{font-size:13px}
+.tag{display:inline-block;background:var(--tag);border-radius:5px;padding:0 6px;font-size:12.5px}
+</style>
+</head>
+<body>
+<main>
+<h1>Data plan for a 40B India-first model</h1>
+<p class="sub">ERA V5 · Session 3 assignment · 17 Oct 2026. Every number below is either measured in the
+<a href="https://github.com/jssunil/data-collection-and-sourcing">evidence repository</a> (experiments E1–E5, code and logs) or cited.</p>
+
+<div class="grid">
+  <div class="tile"><b>Budget</b><span>40B dense, <b style="display:inline;text-transform:none;font-size:inherit;color:inherit">20 T tokens</b> (500/weight), 4.8e24 FLOPs ≈ 3.3 M H100-hours.</span></div>
+  <div class="tile"><b>Indic</b><span>8% of every batch (always-on): 2% native + 6% translated, plus 4% India-centric English. Native supply is the limit (E4).</span></div>
+  <div class="tile"><b>Cleaning</b><span>Per-language calibrated filters. English rules delete 75–100% of <i>clean</i> Indic text (E3).</span></div>
+  <div class="tile"><b>Testing</b><span>Gemma 4 benchmark set + bits-per-byte on a sealed golden proxy + an India-default paired test.</span></div>
+  <div class="tile"><b>Tokenizer</b><span>Byte-level BPE, <b style="display:inline;text-transform:none;font-size:inherit;color:inherit">V = 262,144</b>, trained on the India-first mix, single digits, exact round trip.</span></div>
+  <div class="tile"><b>Fertility</b><span>Parity vs English ≤ 1.5 for every tier-1 language (worst measured 1.48), ≤ 2.5 tier-2 (2.35); tier-1 mean ≤ 1.8 tok/word (1.77); English ≤ 1.30 (1.25).</span></div>
+</div>
+
+<h2>1. Pre-training data: what and why</h2>
+<p>A 40B model at Gemma 4 quality needs ~20 T tokens (Gemma 3 27B: 14 T). Each source's share is capped by its unique supply:
+<i>share × 20 T ≤ 4 × unique tokens</i> (repeats beyond ~4 epochs lose value; Muennighoff et al., 2023).</p>
+<div class="scroll"><table>
+<thead><tr><th>Pool</th><th class="n">Share</th><th class="n">Tokens</th><th>Main sources</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>English web, top quality tiers</td><td class="n">33%</td><td class="n">6.6 T</td><td>FineWeb-Edu, DCLM, Nemotron-CC (high)</td><td>Knowledge, reasoning breadth</td></tr>
+<tr><td>Code + code-adjacent</td><td class="n">22%</td><td class="n">4.4 T</td><td>The Stack v2 (permissive), issues, PRs, commits, notebooks, docs</td><td>Coding; precision</td></tr>
+<tr><td>Math</td><td class="n">8%</td><td class="n">1.6 T</td><td>FineMath, MegaMath, OpenWebMath, Proof-Pile-2</td><td>Multi-step reasoning</td></tr>
+<tr><td>Books, papers, reference</td><td class="n">6%</td><td class="n">1.2 T</td><td>arXiv, PMC-OA, peS2o, Wikipedia (all langs), public-domain books</td><td>Depth, long coherence</td></tr>
+<tr><td><b>Native Indic, 22 languages</b></td><td class="n">2%</td><td class="n">0.4 T</td><td>Sangraha, IndicCorp v2, FineWeb-2, new crawls, OCR of govt/library PDFs</td><td>Language skill; 4 epochs of ~100 B unique tokens</td></tr>
+<tr><td><b>Indic synthetic</b></td><td class="n">6%</td><td class="n">1.2 T</td><td>Translation of edu/math/code-explanation text (IndicTrans2 + LLM), rephrasing of native text</td><td>Fills the supply gap with high-value content</td></tr>
+<tr><td><b>India-centric English</b></td><td class="n">4%</td><td class="n">0.8 T</td><td>Court judgments, Gazette, PIB, Sansad, NCERT/state textbooks, Indian news</td><td>Most Indian knowledge is written in English</td></tr>
+<tr><td>Romanized / code-mixed Indic</td><td class="n">1%</td><td class="n">0.2 T</td><td>Sangraha <code>*_Latn</code>, forums, transliteration corpora</td><td>How Indians actually type</td></tr>
+<tr><td>Other languages</td><td class="n">5%</td><td class="n">1.0 T</td><td>FineWeb-2, top 30 languages</td><td>Multilingual parity with Gemma 4</td></tr>
+<tr><td>Synthetic reasoning + agent traces</td><td class="n">13%</td><td class="n">2.6 T</td><td>Rephrased web, verified code-execution traces, SWE/terminal/tool-call trajectories</td><td>Agentic loop format; reasoning density</td></tr>
+</tbody></table></div>
+<p><b>Indic supply (E4).</b> Sangraha (verified + unverified, parquet footers) and FineWeb-2 hold <b>67–111 B unique native Indic tokens</b> under our tokenizer (they overlap; both are Common Crawl). Four epochs of that is 0.27–0.44 T = <b>at most 2.2% of 20 T</b>. A 10% native share would need 18–30 epochs. So the always-on 8% is 2% native (repeated ≤ 4×, growing with new crawls and OCR) + 6% high-value English content translated into the 22 languages. A better tokenizer does not create supply: it carries the same bytes in fewer tokens.</p>
+<p><b>Schedule.</b> Phase 1 (0–16 T): the mix above. Phase 2 anneal (16–19.5 T): up-weight curated, reasoning, agentic and native Indic data. Phase 3 (0.5 T): context 8 K → 128 K with long Indic and code documents.
+Weights are set by mixture regression on 1B-parameter proxies (RegMix), scored by bits per byte per domain and language.</p>
+
+<h2>2. Post-training and RL data</h2>
+<div class="scroll"><table>
+<thead><tr><th>Stage</th><th>Data</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>SFT (~5 M dialogues)</td><td>Multilingual instruction following; verified code solutions; agent trajectories (SWE-Gym, SWE-smith, APIGen-MT, terminal); Indic instructions <i>written</i> by native speakers (IndicAlign, Aya, Anudesh) not only translated; India-default answers (₹, lakh/crore, IST, Indian law and maps)</td><td>Format, tool syntax, and the Indian default</td></tr>
+<tr><td>Preference</td><td>Pairs rated by Indian annotators per tier-1 language; safety pairs for caste, religion, region and Indian law (IT Rules 2021, DPDP Act 2023)</td><td>"Better" as an Indian user judges it</td></tr>
+<tr><td>RL with verifiers (GRPO)</td><td>Math (exact answer), code (unit tests), SWE (tests in Docker), tool use (simulated APIs, Indian tasks: UPI, IRCTC-style booking, GST), IFEval-style constraints in Indic languages</td><td>Rewards that style cannot game</td></tr>
+</tbody></table></div>
+
+<h2>3. Cleaning for these objectives</h2>
+<ol>
+<li><b>Extract</b> (trafilatura / resiliparse); OCR for Indic PDFs; detect legacy fonts (Krutidev, Shree-Lipi) and convert or drop.</li>
+<li><b>Normalize to NFC</b> in the pipeline, not in the tokenizer. E3: 43% of Marathi, 59% of Manipuri, 27% of Konkani documents were not NFC. Keep ZWJ/ZWNJ: they are spelling.</li>
+<li><b>Language + script ID per document</b> (GlotLID / IndicLID incl. romanized) and a script-purity check. E3 found Sangraha <code>verified/kas</code> is mostly mojibake and <code>verified/doi</code> contains English.</li>
+<li><b>Heuristics calibrated per language</b> on its own clean text (FineWeb-2 method): Unicode letters include marks; <code>।</code>, <code>॥</code>, <code>۔</code> end sentences; stop words from the language's own frequency list.</li>
+<li><b>Quality classifiers per domain and language</b>, grown from seeds by the DeepSeekMath loop (Indian legal, government, educational, each Indic language). Never an English classifier on Indic text.</li>
+<li><b>Dedup</b>: exact + MinHash (word 5-grams) per language after NFC; URL-level for crawls.</li>
+<li><b>PII</b>: Aadhaar (12 digits + Verhoeff check), PAN, +91 mobiles, UPI IDs, emails.</li>
+<li><b>Licence + opt-out filter</b>; code: permissive only.</li>
+<li><b>Decontaminate</b> against every eval set, incl. translated copies; ignore n-grams frequent in training (E5: 13-gram hits were generic phrases).</li>
+</ol>
+<div class="fig">
+<div class="legend"><span><i class="sw" style="background:var(--s2)"></i>English rules (Gopher + C4 + FineWeb)</span><span><i class="sw" style="background:var(--s1)"></i>Same rules, language-aware</span></div>
+<svg id="chart-clean" viewBox="0 0 840 230" role="img" aria-label="Share of already-clean documents rejected per language"></svg>
+<p class="cap">E3. Share of <i>already-clean</i> documents (Sangraha verified; English = FineWeb-Edu) rejected. Every rejection is a false positive (the <code>doi</code> pool is partly English, so its bars are not meaningful).</p>
+</div>
+
+<h2>4. Testing against the objectives</h2>
+<div class="scroll"><table>
+<thead><tr><th>Objective</th><th>Benchmarks (target = Gemma 4 31B where reported)</th></tr></thead>
+<tbody>
+<tr><td>General reasoning</td><td>MMLU-Pro (85.2), GPQA-Diamond (84.3), AIME 2026 (89.2), IFEval / IFBench</td></tr>
+<tr><td>Coding</td><td>LiveCodeBench v6, post-cutoff window (80.0); HumanEval+/MBPP+; BigCodeBench</td></tr>
+<tr><td>Agentic</td><td>SWE-bench Verified, Terminal-Bench, τ²-bench (retail 86.4), BFCL v3 — also translated into tier-1 languages, scored on exact tool arguments</td></tr>
+<tr><td>Indic language</td><td>MMMLU (88.4), MILU (11 languages), IndicGenBench, IN22 / FLORES chrF++, per-language bits per byte</td></tr>
+<tr><td>India-first</td><td>BhashaBench V1 (law, finance, agriculture, Ayurveda); <b>paired default test</b>: same question with no country named, Indian vs global default (₹, lakh, IST, map, law), rubric by Indian annotators</td></tr>
+<tr><td>Data ablations</td><td>Bits per byte (not per-token loss) on a sealed golden proxy, per language and domain; 1B proxies before any full-scale change</td></tr>
+<tr><td>Tokenizer gates</td><td>Fertility targets (section 5); exact round trip on 1,000 docs per script; zero byte fallback on all 22 languages</td></tr>
+</tbody></table></div>
+
+<h2>5. Languages, fertility targets and vocabulary size</h2>
+<p><b>Languages:</b> all 22 scheduled languages. <span class="tag">Tier 1</span> 11 languages with ≥ 30 M speakers (Hindi, Bengali, Marathi, Telugu, Tamil, Gujarati, Urdu, Kannada, Odia, Malayalam, Punjabi): full targets. <span class="tag">Tier 2</span> the other 11: looser targets, guaranteed vocabulary slots per script. Plus English, romanized Indic and Hinglish.</p>
+<div class="scroll"><table>
+<thead><tr><th>Group</th><th class="n">Target</th><th class="n">Ours, 262K</th><th class="n">Gemma 4</th><th class="n">Sarvam-30B</th><th>Basis</th></tr></thead>
+<tbody>
+<tr><td>English (tok/word)</td><td class="n">≤ 1.30</td><td class="n" id="t-eng"></td><td class="n" id="g-eng"></td><td class="n" id="s-eng"></td><td>o200k 1.23</td></tr>
+<tr><td>Tier-1 Indic, mean (tok/word)</td><td class="n">≤ 1.8</td><td class="n" id="t-t1"></td><td class="n" id="g-t1"></td><td class="n" id="s-t1"></td><td>Malayalam (2.39) is highest: long agglutinated words</td></tr>
+<tr><td>Tier-1 parity, worst language</td><td class="n">≤ 1.5</td><td class="n" id="t-p1"></td><td class="n" id="g-p1"></td><td class="n">–</td><td>same FLORES sentence vs English; fair across word lengths</td></tr>
+<tr><td>Tier-2 Indic, mean (tok/word)</td><td class="n">≤ 2.2</td><td class="n" id="t-t2"></td><td class="n" id="g-t2"></td><td class="n" id="s-t2"></td><td>Santali, Kashmiri: data-starved scripts</td></tr>
+<tr><td>Tier-2 parity, worst language</td><td class="n">≤ 2.5</td><td class="n" id="t-p2"></td><td class="n" id="g-p2"></td><td class="n">–</td><td>needs guaranteed slots for Ol Chiki, Perso-Arabic</td></tr>
+<tr><td>Code (bytes/tok)</td><td class="n">≥ 3.8</td><td class="n" id="t-code"></td><td class="n" id="g-code"></td><td class="n" id="s-code"></td><td>o200k 3.96</td></tr>
+<tr><td>Math (bytes/tok)</td><td class="n">≥ 3.4</td><td class="n" id="t-math"></td><td class="n" id="g-math"></td><td class="n" id="s-math"></td><td>web math; single digits cost 13% on GSM8K vs o200k (a deliberate trade)</td></tr>
+<tr><td>Agent traces (bytes/tok)</td><td class="n">≥ 3.6</td><td class="n" id="t-agent"></td><td class="n" id="g-agent"></td><td class="n" id="s-agent"></td><td>SWE-smith held out; JSON tool calls 3.37 vs o200k 3.63: add tool-call data to the tokenizer mix</td></tr>
+<tr><td>Science (bytes/tok)</td><td class="n">≥ 4.6</td><td class="n" id="t-sci"></td><td class="n" id="g-sci"></td><td class="n" id="s-sci"></td><td>SciQ</td></tr>
+</tbody></table></div>
+<p class="muted">FLORES-200 devtest (Bodo, Konkani: FLORES-IN). Dogri: no public evaluation text found.</p>
+
+<div class="fig">
+<div class="legend"><span><i class="sw" style="background:var(--s1)"></i>Tier-1 Indic, India-first tokenizer mix</span><span><i class="sw" style="background:var(--s2)"></i>Tier-1 Indic, English-first mix (5% Indic)</span><span>● released tokenizers</span></div>
+<svg id="chart-sweep" viewBox="0 0 840 300" role="img" aria-label="Tier-1 Indic fertility against vocabulary size"></svg>
+<p class="cap">E2. One BPE trained at 384K and cut to each size (a size-k BPE is the first k merges). The tokenizer's training mix moves Indic cost more than V does.</p>
+</div>
+<div class="fig">
+<svg id="chart-cost" viewBox="0 0 840 220" role="img" aria-label="Relative training cost per byte against vocabulary size"></svg>
+<p class="cap">E2. 40B training FLOPs per byte of the planned mix: (6N + 6dV + attention) × tokens/byte. d = 7,168, 60 layers, 8K context.</p>
+</div>
+<p><b>Why 262,144.</b> Cost per byte falls 14.5% from 32K to 256K and is flat (±0.7%) from 192K to 384K; 262K is 0.15% above the minimum (320K) and saves 0.8 B embedding weights against it.
+It is 2<sup>18</sup> (clean tensor-parallel sharding), equals Gemma 4's V (direct comparison), and at that size our tokenizer spends <b>32% fewer tokens on tier-1 Indic than Gemma 4</b> at the same English cost.
+Two cheaper levers matter more than V: the tokenizer's <b>training mix</b> (English-first mix at the same V: tier-1 2.02, +14% Indic tokens) and the <b>pre-tokenizer</b> (GPT-2's <code>\p{L}+</code> splits words at every Indic vowel sign: at 64K, Hindi 3.33 vs 1.58 tok/word, Tamil 6.83 vs 2.61). Released tokenizers miss whole script families: BrahmicTokenizer-131K drops Arabic script (Urdu, Kashmiri, Sindhi: 7.4–8.9 tok/word); every o200k-family tokenizer is in byte fallback on Ol Chiki (Santali, 15.3).</p>
+
+<details class="fig"><summary><b>Per-language fertility</b> (tokens per word, FLORES devtest)</summary>
+<div class="scroll"><table id="lang-table"><thead><tr><th>Language</th><th class="n">Tier</th><th class="n">Ours 262K</th><th class="n">Gemma 4</th><th class="n">Sarvam-30B</th><th class="n">Brahmic-131K</th><th class="n">o200k</th><th class="n">Llama 3.1</th></tr></thead><tbody></tbody></table></div>
+</details>
+
+<h2>6. Risks and next measurements</h2>
+<ul>
+<li>Tokenizer trained on 300 M characters; retrain on ≥ 10 GB of the final mix before the freeze.</li>
+<li>Confirm with two 1B proxies (ours vs Gemma 4 tokenizer) on equal bytes: bits per byte per language.</li>
+<li>Native Indic supply is the hard limit: fund new crawls, OCR of government and library archives, and licensed news.</li>
+</ul>
+</main>
+<script>
+const DATA=/*DATA*/null;
+const NS="http://www.w3.org/2000/svg";
+function el(tag,attrs,parent,text){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;if(parent)parent.appendChild(e);return e;}
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+function axes(svg,x0,x1,y0,y1,yticks,ylabel){
+  for(const t of yticks){const y=y1(t);el("line",{x1:x0,x2:x1,y1:y,y2:y,stroke:"var(--grid)","stroke-width":1},svg);
+    el("text",{x:x0-6,y:y+4,"text-anchor":"end","font-size":11,fill:"var(--muted)"},svg,ylabel(t));}
+}
+function lineChart(id,series,opts){
+  const svg=document.getElementById(id),W=840,H=+svg.getAttribute("viewBox").split(" ")[3],L=56,R=20,T=14,B=34;
+  const lx=v=>Math.log2(v),xs=opts.xticks,xmin=lx(xs[0]),xmax=lx(xs[xs.length-1]);
+  const X=v=>L+(lx(v)-xmin)/(xmax-xmin)*(W-L-R),Y=v=>T+(opts.ymax-v)/(opts.ymax-opts.ymin)*(H-T-B);
+  axes(svg,L,W-R,0,Y,opts.yticks,opts.yfmt);
+  for(const t of xs){el("text",{x:X(t),y:H-12,"text-anchor":"middle","font-size":11,fill:"var(--muted)"},svg,(t/1024)+"K");}
+  el("line",{x1:L,x2:W-R,y1:H-B,y2:H-B,stroke:"var(--axis)"},svg);
+  for(const s of series){
+    el("path",{d:s.pts.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+","+Y(p[1]).toFixed(1)).join(""),fill:"none",stroke:s.color,"stroke-width":2},svg);
+    for(const p of s.pts){const c=el("circle",{cx:X(p[0]),cy:Y(p[1]),r:4,fill:s.color,stroke:"var(--surface)","stroke-width":2},svg);
+      el("title",{},c,`${s.name}: V=${(p[0]/1024)}K → ${p[1].toFixed(3)}`);
+      const hit=el("circle",{cx:X(p[0]),cy:Y(p[1]),r:10,fill:"transparent"},svg);el("title",{},hit,`${s.name}: V=${(p[0]/1024)}K → ${p[1].toFixed(3)}`);}
+  }
+  for(const m of (opts.marks||[])){
+    const c=el("circle",{cx:X(m.V),cy:Y(m.y),r:5,fill:"none",stroke:"var(--ink2)","stroke-width":2},svg);el("title",{},c,`${m.name}: ${m.y.toFixed(2)}`);
+    el("text",{x:X(m.V)+(m.dx||8),y:Y(m.y)+(m.dy||4),"font-size":11,fill:"var(--ink2)","text-anchor":m.anchor||"start"},svg,`${m.name} ${m.y.toFixed(2)}`);
+  }
+  if(opts.vline){const x=X(opts.vline);el("line",{x1:x,x2:x,y1:T,y2:H-B,stroke:"var(--ink2)","stroke-dasharray":"4 4"},svg);
+    el("text",{x:x+6,y:T+12,"font-size":11,fill:"var(--ink)"},svg,"chosen: 262,144");}
+  if(opts.ylabel)el("text",{x:14,y:T+(H-T-B)/2,"font-size":11,fill:"var(--muted)",transform:`rotate(-90 14 ${T+(H-T-B)/2})`,"text-anchor":"middle"},svg,opts.ylabel);
+}
+function render(){
+  if(!DATA)return;
+  const xt=[32768,65536,131072,262144,393216];
+  lineChart("chart-sweep",[
+    {name:"India-first mix",color:"var(--s1)",pts:DATA.sweep.india.map(r=>[r.V,r.t1])},
+    {name:"English-first mix",color:"var(--s2)",pts:DATA.sweep.english.map(r=>[r.V,r.t1])}],
+    {xticks:xt,ymin:1.5,ymax:3.6,yticks:[1.5,2,2.5,3,3.5],yfmt:t=>t.toFixed(1),vline:262144,ylabel:"tier-1 tokens per word",
+     marks:[{name:"Gemma 4",V:262144,y:DATA.ref["gemma-4"],dx:-8,anchor:"end"},{name:"Sarvam-30B",V:262144,y:DATA.ref["sarvam-30b"],dx:10,dy:-10},
+            {name:"Brahmic-131K",V:131072,y:DATA.ref["brahmic-131k"]},{name:"o200k",V:204800,y:DATA.ref["gpt-oss"],dy:-6}]});
+  lineChart("chart-cost",[{name:"relative FLOPs per byte",color:"var(--s1)",pts:DATA.cost.map(r=>[r.V,r.rel])}],
+    {xticks:xt,ymin:0.84,ymax:1.01,yticks:[0.85,0.9,0.95,1.0],yfmt:t=>t.toFixed(2),vline:262144,ylabel:"cost per byte (32K = 1)"});
+  // cleaning bars
+  const svg=document.getElementById("chart-clean"),W=840,H=230,L=40,R=8,T=10,B=28,d=DATA.cleaning,n=d.length,bw=(W-L-R)/n;
+  const Y=v=>T+(1-v)*(H-T-B);
+  for(const t of [0,.25,.5,.75,1]){el("line",{x1:L,x2:W-R,y1:Y(t),y2:Y(t),stroke:"var(--grid)"},svg);el("text",{x:L-5,y:Y(t)+4,"text-anchor":"end","font-size":11,fill:"var(--muted)"},svg,(t*100)+"%");}
+  d.forEach((r,i)=>{const x=L+i*bw,w=(bw-6)/2;
+    for(const [k,col,off] of [["en","var(--s2)",0],["aware","var(--s1)",w+2]]){
+      const h=Math.max(r[k]*(H-T-B),1),b=el("rect",{x:x+2+off,y:Y(r[k]),width:w,height:h,rx:2,fill:col},svg);
+      el("title",{},b,`${r.lang}: ${k==="en"?"English rules":"language-aware"} reject ${(r[k]*100).toFixed(1)}%`);}
+    el("text",{x:x+bw/2,y:H-10,"text-anchor":"middle","font-size":10.5,fill:r.lang==="eng"?"var(--ink)":"var(--muted)","font-weight":r.lang==="eng"?700:400},svg,r.lang);});
+  el("line",{x1:L,x2:W-R,y1:H-B,y2:H-B,stroke:"var(--axis)"},svg);
+  // tables
+  const L1=DATA.langs,mean=(k,t)=>{const a=L1.filter(r=>r.tier===t);return a.reduce((s,r)=>s+r[k],0)/a.length;};
+  const set=(id,v,d=2)=>{const e=document.getElementById(id);if(e)e.textContent=v.toFixed(d);};
+  const eng=L1.find(r=>r.lang==="eng");
+  set("t-eng",eng.ours);set("g-eng",eng["gemma-4"]);set("s-eng",eng["sarvam-30b"]);
+  set("t-t1",mean("ours",1));set("g-t1",mean("gemma-4",1));set("s-t1",mean("sarvam-30b",1));
+  set("t-t2",mean("ours",2));set("g-t2",mean("gemma-4",2));set("s-t2",mean("sarvam-30b",2));
+  const worst=(k,t)=>Math.max(...L1.filter(r=>r.tier===t&&r[k]!=null).map(r=>r[k]));
+  set("t-p1",worst("ours_parity",1));set("g-p1",worst("gemma4_parity",1));set("t-p2",worst("ours_parity",2));set("g-p2",worst("gemma4_parity",2));
+  const D=DATA.domains;
+  for(const [k,key] of [["code","code_github"],["math","math_web"],["agent","agentic_swe"],["sci","science_sciq"]]){set("t-"+k,D[key].ours);set("g-"+k,D[key]["gemma-4"]);set("s-"+k,D[key]["sarvam-30b"]);}
+  const tb=document.querySelector("#lang-table tbody");
+  for(const r of L1){const tr=document.createElement("tr");const vals=[r.ours,r["gemma-4"],r["sarvam-30b"],r["brahmic-131k"],r["gpt-oss"],r["llama-3.1"]];const best=Math.min(...vals);
+    tr.innerHTML=`<td>${r.name}</td><td class="n">${r.tier||"–"}</td>`+vals.map(v=>`<td class="n${v===best?" best":""}">${v.toFixed(2)}</td>`).join("");tb.appendChild(tr);}
+}
+render();
+</script>
+</body>
+</html>

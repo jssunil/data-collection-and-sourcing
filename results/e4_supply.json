@@ -1,0 +1,506 @@
+{
+ "run_tokens": 20000000000000.0,
+ "indic_share": 0.1,
+ "max_epochs": 4,
+ "gemma-4": {
+  "per_lang": {
+   "hin": {
+    "bytes_per_token": 9.305972235110499,
+    "tokens_per_word": 1.3999276902513311,
+    "verified_B": 10.418040968811123,
+    "unverified_B": 11.982627626943046,
+    "fineweb2_B": 15.64234634528811
+   },
+   "ben": {
+    "bytes_per_token": 9.888583924462804,
+    "tokens_per_word": 1.733816778905073,
+    "verified_B": 7.7988921962038695,
+    "unverified_B": 3.5748293456406484,
+    "fineweb2_B": 10.669178979979346
+   },
+   "mar": {
+    "bytes_per_token": 9.130718488473807,
+    "tokens_per_word": 1.9673451914638584,
+    "verified_B": 3.6546959630969598,
+    "unverified_B": 0.7217394784779433,
+    "fineweb2_B": 3.032121730428049
+   },
+   "tel": {
+    "bytes_per_token": 7.047762223056303,
+    "tokens_per_word": 2.9839785003177295,
+    "verified_B": 5.414484596991937,
+    "unverified_B": 0.8513340561308076,
+    "fineweb2_B": 2.6587322649376275
+   },
+   "tam": {
+    "bytes_per_token": 9.893648234292044,
+    "tokens_per_word": 2.406727468192029,
+    "verified_B": 5.32968211030935,
+    "unverified_B": 1.7000806579822354,
+    "fineweb2_B": 4.662194276249456
+   },
+   "guj": {
+    "bytes_per_token": 6.407931340052384,
+    "tokens_per_word": 2.3505472666330496,
+    "verified_B": 3.8608403690851274,
+    "unverified_B": 0.5649249044498045,
+    "fineweb2_B": 2.1957027371247886
+   },
+   "urd": {
+    "bytes_per_token": 5.5667970516424266,
+    "tokens_per_word": 1.4389962647324186,
+    "verified_B": 4.701087493800193,
+    "unverified_B": 1.417332072070444,
+    "fineweb2_B": 3.933160273945277
+   },
+   "kan": {
+    "bytes_per_token": 6.821011076093693,
+    "tokens_per_word": 3.10585790121659,
+    "verified_B": 2.8939991124167546,
+    "unverified_B": 0.5571021594317968,
+    "fineweb2_B": 2.3258227049415776
+   },
+   "ory": {
+    "bytes_per_token": 3.7839354889290076,
+    "tokens_per_word": 4.3928078172822325,
+    "verified_B": 2.6348229321483165,
+    "unverified_B": 0.055497774899814084,
+    "fineweb2_B": 1.466147714656352
+   },
+   "mal": {
+    "bytes_per_token": 7.93907668298456,
+    "tokens_per_word": 3.3587849564706214,
+    "verified_B": 4.139020356161473,
+    "unverified_B": 0.7192272134413272,
+    "fineweb2_B": 3.5407893883609547
+   },
+   "pan": {
+    "bytes_per_token": 4.681222587023362,
+    "tokens_per_word": 2.7088598140793034,
+    "verified_B": 2.257957147626496,
+    "unverified_B": 0.2499347079208137,
+    "fineweb2_B": 1.416160669520424
+   },
+   "asm": {
+    "bytes_per_token": 6.014102674536475,
+    "tokens_per_word": 2.653610122355412,
+    "verified_B": 0.3990620263537445,
+    "unverified_B": 0.023278618203968426,
+    "fineweb2_B": 0.0
+   },
+   "mai": {
+    "bytes_per_token": 6.460935077680118,
+    "tokens_per_word": 1.9231272744458623,
+    "verified_B": 0.017025399369822627,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "sat": {
+    "bytes_per_token": 2.5821667602228073,
+    "tokens_per_word": 5.3725699438593235,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "kas": {
+    "bytes_per_token": 5.140203841257089,
+    "tokens_per_word": 1.6545831408906062,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "npi": {
+    "bytes_per_token": 8.330895704602149,
+    "tokens_per_word": 2.057654855318734,
+    "verified_B": 5.316355115997112,
+    "unverified_B": 0.5965745072591024,
+    "fineweb2_B": 3.3804313431110584
+   },
+   "snd": {
+    "bytes_per_token": 3.872086165934516,
+    "tokens_per_word": 2.091425337482094,
+    "verified_B": 0.7205418165911713,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "doi": {
+    "bytes_per_token": 6.692266452218202,
+    "tokens_per_word": 1.6880090497737557,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "gom": {
+    "bytes_per_token": 5.183858735782058,
+    "tokens_per_word": 2.643890143407292,
+    "verified_B": 0.015432519302231888,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "mni": {
+    "bytes_per_token": 5.21268515513976,
+    "tokens_per_word": 2.942844672521426,
+    "verified_B": 0.00191839708372563,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "brx": {
+    "bytes_per_token": 5.876487823972891,
+    "tokens_per_word": 2.9967596971883834,
+    "verified_B": 0.0017016967106109554,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "san": {
+    "bytes_per_token": 6.682292104140278,
+    "tokens_per_word": 3.3468706755809876,
+    "verified_B": 1.5758065998754713,
+    "unverified_B": 0.011971939980060561,
+    "fineweb2_B": 0.0
+   }
+  },
+  "verified_B": 61.15136681793549,
+  "unverified_B": 23.02645506283181,
+  "fineweb2_B": 54.92278842854302,
+  "unique_lo_B": 84.1778218807673,
+  "unique_hi_B": 139.10061030931033,
+  "need_B": 2000.0,
+  "epochs_needed_lo": 14.378082134598193,
+  "epochs_needed_hi": 23.759227256234748,
+  "max_native_share_at_4_epochs": 0.027820122061862067
+ },
+ "sarvam-30b": {
+  "per_lang": {
+   "hin": {
+    "bytes_per_token": 9.306138706182645,
+    "tokens_per_word": 1.3999026479141299,
+    "verified_B": 10.417854607689234,
+    "unverified_B": 11.98241327801368,
+    "fineweb2_B": 15.642066530184428
+   },
+   "ben": {
+    "bytes_per_token": 9.88844063226546,
+    "tokens_per_word": 1.733841903434337,
+    "verified_B": 7.799005209007526,
+    "unverified_B": 3.5748811480603737,
+    "fineweb2_B": 10.669333585761668
+   },
+   "mar": {
+    "bytes_per_token": 9.130306239735935,
+    "tokens_per_word": 1.9674340204199576,
+    "verified_B": 3.6548609787884967,
+    "unverified_B": 0.7217720662336289,
+    "fineweb2_B": 3.0322586358421306
+   },
+   "tel": {
+    "bytes_per_token": 7.9909599614474125,
+    "tokens_per_word": 2.6317702817199744,
+    "verified_B": 4.775396220742424,
+    "unverified_B": 0.7508484623808843,
+    "fineweb2_B": 2.3449138662251876
+   },
+   "tam": {
+    "bytes_per_token": 9.893179219249653,
+    "tokens_per_word": 2.4068415661337026,
+    "verified_B": 5.329934779448917,
+    "unverified_B": 1.7001612552689316,
+    "fineweb2_B": 4.662415301179628
+   },
+   "guj": {
+    "bytes_per_token": 7.550748013949544,
+    "tokens_per_word": 1.9947885253627846,
+    "verified_B": 3.2764965741532315,
+    "unverified_B": 0.4794227000175707,
+    "fineweb2_B": 1.8633799401949893
+   },
+   "urd": {
+    "bytes_per_token": 5.5647325503246465,
+    "tokens_per_word": 1.4395301286078075,
+    "verified_B": 4.702831585045941,
+    "unverified_B": 1.4178578985866441,
+    "fineweb2_B": 3.9346194661877005
+   },
+   "kan": {
+    "bytes_per_token": 8.362940944688493,
+    "tokens_per_word": 2.5332106593944848,
+    "verified_B": 2.360413654784607,
+    "unverified_B": 0.4543856073040277,
+    "fineweb2_B": 1.8969956306474454
+   },
+   "ory": {
+    "bytes_per_token": 8.546043846893642,
+    "tokens_per_word": 1.945005395906188,
+    "verified_B": 1.166621676487647,
+    "unverified_B": 0.024572773526821048,
+    "fineweb2_B": 0.6491668506377808
+   },
+   "mal": {
+    "bytes_per_token": 8.89414201231774,
+    "tokens_per_word": 2.9981139601937126,
+    "verified_B": 3.6945665983847893,
+    "unverified_B": 0.6419955957631511,
+    "fineweb2_B": 3.1605745032589403
+   },
+   "pan": {
+    "bytes_per_token": 7.745598879817519,
+    "tokens_per_word": 1.6371588489806603,
+    "verified_B": 1.3646459317099342,
+    "unverified_B": 0.1510535231883276,
+    "fineweb2_B": 0.855887764894084
+   },
+   "asm": {
+    "bytes_per_token": 6.003162945099709,
+    "tokens_per_word": 2.658445869283276,
+    "verified_B": 0.39978924809280475,
+    "unverified_B": 0.023321039472080276,
+    "fineweb2_B": 0.0
+   },
+   "mai": {
+    "bytes_per_token": 6.4557973831867494,
+    "tokens_per_word": 1.9246577500511997,
+    "verified_B": 0.017038948633437617,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "sat": {
+    "bytes_per_token": 6.8561142830937145,
+    "tokens_per_word": 2.023430612907716,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "kas": {
+    "bytes_per_token": 5.136147488009796,
+    "tokens_per_word": 1.65588987394532,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "npi": {
+    "bytes_per_token": 8.328766655504248,
+    "tokens_per_word": 2.0581808453475956,
+    "verified_B": 5.3177141144577496,
+    "unverified_B": 0.5967270071992552,
+    "fineweb2_B": 3.3812954691694848
+   },
+   "snd": {
+    "bytes_per_token": 3.8719728120444796,
+    "tokens_per_word": 2.091486564977542,
+    "verified_B": 0.7205629108038142,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "doi": {
+    "bytes_per_token": 6.692266452218202,
+    "tokens_per_word": 1.6880090497737557,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "gom": {
+    "bytes_per_token": 5.1107875262361935,
+    "tokens_per_word": 2.6816910204137043,
+    "verified_B": 0.01565316491623268,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "mni": {
+    "bytes_per_token": 5.21268515513976,
+    "tokens_per_word": 2.942844672521426,
+    "verified_B": 0.00191839708372563,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "brx": {
+    "bytes_per_token": 5.876487823972891,
+    "tokens_per_word": 2.9967596971883834,
+    "verified_B": 0.0017016967106109554,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "san": {
+    "bytes_per_token": 6.680415154307835,
+    "tokens_per_word": 3.347811022581681,
+    "verified_B": 1.5762493433076203,
+    "unverified_B": 0.011975303652859414,
+    "fineweb2_B": 0.0
+   }
+  },
+  "verified_B": 56.59325564024874,
+  "unverified_B": 22.531387658668237,
+  "fineweb2_B": 52.09290754418347,
+  "unique_lo_B": 79.12464329891698,
+  "unique_hi_B": 131.21755084310044,
+  "need_B": 2000.0,
+  "epochs_needed_lo": 15.241863509489228,
+  "epochs_needed_hi": 25.276575244003343,
+  "max_native_share_at_4_epochs": 0.026243510168620088
+ },
+ "ours-256k": {
+  "per_lang": {
+   "hin": {
+    "bytes_per_token": 9.949425258503682,
+    "tokens_per_word": 1.3093910329651066,
+    "verified_B": 9.74428145154794,
+    "unverified_B": 11.207682564849003,
+    "fineweb2_B": 14.630718559026148
+   },
+   "ben": {
+    "bytes_per_token": 10.924325827440759,
+    "tokens_per_word": 1.5694325671592626,
+    "verified_B": 7.059474535836588,
+    "unverified_B": 3.2358976250236435,
+    "fineweb2_B": 9.657627703086957
+   },
+   "mar": {
+    "bytes_per_token": 11.332862720949814,
+    "tokens_per_word": 1.585060681949528,
+    "verified_B": 2.9445340353688882,
+    "unverified_B": 0.5814947345843865,
+    "fineweb2_B": 2.4429352604919092
+   },
+   "tel": {
+    "bytes_per_token": 10.659621540010065,
+    "tokens_per_word": 1.9729003389112476,
+    "verified_B": 3.579864431093486,
+    "unverified_B": 0.5628717658952022,
+    "fineweb2_B": 1.7578591085730646
+   },
+   "tam": {
+    "bytes_per_token": 12.234659506542927,
+    "tokens_per_word": 1.9462180335600079,
+    "verified_B": 4.309887003541105,
+    "unverified_B": 1.3747828446721295,
+    "fineweb2_B": 3.770118011414563
+   },
+   "guj": {
+    "bytes_per_token": 9.344120043468527,
+    "tokens_per_word": 1.6119383554645916,
+    "verified_B": 2.647654341437221,
+    "unverified_B": 0.38740940646737027,
+    "fineweb2_B": 1.5057503881808008
+   },
+   "urd": {
+    "bytes_per_token": 6.462308455749701,
+    "tokens_per_word": 1.2395880231791832,
+    "verified_B": 4.049636469567744,
+    "unverified_B": 1.2209259359911921,
+    "fineweb2_B": 3.388124408879769
+   },
+   "kan": {
+    "bytes_per_token": 10.727658484788357,
+    "tokens_per_word": 1.9748103628589206,
+    "verified_B": 1.8401033205886443,
+    "unverified_B": 0.35422455006265696,
+    "fineweb2_B": 1.4788373859898913
+   },
+   "ory": {
+    "bytes_per_token": 10.249961998922151,
+    "tokens_per_word": 1.621674441096165,
+    "verified_B": 0.9726865329889427,
+    "unverified_B": 0.020487880835273618,
+    "fineweb2_B": 0.5412516036726495
+   },
+   "mal": {
+    "bytes_per_token": 12.19129912420121,
+    "tokens_per_word": 2.1872690563502504,
+    "verified_B": 2.6953649209352024,
+    "unverified_B": 0.4683668197973222,
+    "fineweb2_B": 2.3057918755100233
+   },
+   "pan": {
+    "bytes_per_token": 8.978905964879578,
+    "tokens_per_word": 1.4122851710829796,
+    "verified_B": 1.1772035525646314,
+    "unverified_B": 0.13030540742673782,
+    "fineweb2_B": 0.7383263995573036
+   },
+   "asm": {
+    "bytes_per_token": 9.045727982019375,
+    "tokens_per_word": 1.764267482479838,
+    "verified_B": 0.2653186128049168,
+    "unverified_B": 0.015476919080286812,
+    "fineweb2_B": 0.0
+   },
+   "mai": {
+    "bytes_per_token": 8.098087533106115,
+    "tokens_per_word": 1.5343376341036912,
+    "verified_B": 0.013583454062493719,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "sat": {
+    "bytes_per_token": 6.332909730164782,
+    "tokens_per_word": 2.190599916484944,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "kas": {
+    "bytes_per_token": 5.813682005790674,
+    "tokens_per_word": 1.4629101846323687,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "npi": {
+    "bytes_per_token": 11.83499240445699,
+    "tokens_per_word": 1.4484257707907762,
+    "verified_B": 3.742292220088003,
+    "unverified_B": 0.4199411229134652,
+    "fineweb2_B": 2.3795554735988453
+   },
+   "snd": {
+    "bytes_per_token": 5.971523842528192,
+    "tokens_per_word": 1.3561327610676972,
+    "verified_B": 0.46721742616685,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "doi": {
+    "bytes_per_token": 7.409259534055498,
+    "tokens_per_word": 1.5246606334841628,
+    "verified_B": 0.0,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "gom": {
+    "bytes_per_token": 6.313906257035976,
+    "tokens_per_word": 2.1706931427873237,
+    "verified_B": 0.012670444688793258,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "mni": {
+    "bytes_per_token": 7.970472097341472,
+    "tokens_per_word": 1.9246190879272034,
+    "verified_B": 0.001254630827116937,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "brx": {
+    "bytes_per_token": 10.16980254899747,
+    "tokens_per_word": 1.731638523663986,
+    "verified_B": 0.0009833032600014234,
+    "unverified_B": 0.0,
+    "fineweb2_B": 0.0
+   },
+   "san": {
+    "bytes_per_token": 8.893139878556992,
+    "tokens_per_word": 2.5148336576757404,
+    "verified_B": 1.1840587400845657,
+    "unverified_B": 0.008995697930367072,
+    "fineweb2_B": 0.0
+   }
+  },
+  "verified_B": 46.70806942745313,
+  "unverified_B": 19.988863275529038,
+  "fineweb2_B": 44.596896177981925,
+  "unique_lo_B": 66.69693270298217,
+  "unique_hi_B": 111.2938288809641,
+  "need_B": 2000.0,
+  "epochs_needed_lo": 17.97044831784095,
+  "epochs_needed_hi": 29.986386464074616,
+  "max_native_share_at_4_epochs": 0.022258765776192818
+ }
+}

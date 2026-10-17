@@ -1,0 +1,3 @@
+gemma-4: Sangraha verified 61 B + unverified 23 B, FineWeb-2 55 B tokens; unique 84-139 B; 10% of the run needs 2000 B = 14-24 epochs; max native share at 4 epochs 2.8%
+sarvam-30b: Sangraha verified 57 B + unverified 23 B, FineWeb-2 52 B tokens; unique 79-131 B; 10% of the run needs 2000 B = 15-25 epochs; max native share at 4 epochs 2.6%
+ours-256k: Sangraha verified 47 B + unverified 20 B, FineWeb-2 45 B tokens; unique 67-111 B; 10% of the run needs 2000 B = 18-30 epochs; max native share at 4 epochs 2.2%

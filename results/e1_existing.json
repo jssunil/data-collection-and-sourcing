@@ -1,0 +1,3753 @@
+{
+ "gemma-4": {
+  "vocab": 262144,
+  "lang": {
+   "eng": {
+    "tokens": 27114,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.2380256609287248,
+    "bytes_per_token": 4.871874308475326,
+    "tokens_per_kchar": 205.46201294272768,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 35521,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 1.385212338649924,
+    "bytes_per_token": 9.48940063624335,
+    "tokens_per_kchar": 271.03267255718845,
+    "parity": 1.3100612229844362,
+    "byte_fallback": 0.0
+   },
+   "ben": {
+    "tokens": 32836,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 1.683379472982672,
+    "bytes_per_token": 10.497076379583383,
+    "tokens_per_kchar": 254.45978828598442,
+    "parity": 1.2110348897248653,
+    "byte_fallback": 0.0
+   },
+   "mar": {
+    "tokens": 37835,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 1.9865063530400084,
+    "bytes_per_token": 9.396352583586626,
+    "tokens_per_kchar": 284.36464212970964,
+    "parity": 1.395404588035701,
+    "byte_fallback": 0.0
+   },
+   "tel": {
+    "tokens": 48148,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 2.8426024324005197,
+    "bytes_per_token": 7.345601063387887,
+    "tokens_per_kchar": 363.4634256812863,
+    "parity": 1.7757615991738585,
+    "byte_fallback": 0.006146911177133491
+   },
+   "tam": {
+    "tokens": 39830,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 2.3743666169895676,
+    "bytes_per_token": 10.586015566156163,
+    "tokens_per_kchar": 258.41318860983694,
+    "parity": 1.4689828133067788,
+    "byte_fallback": 0.0
+   },
+   "guj": {
+    "tokens": 50443,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 2.4151584793641674,
+    "bytes_per_token": 6.5632099597565565,
+    "tokens_per_kchar": 398.98598411744234,
+    "parity": 1.8604042192225418,
+    "byte_fallback": 0.0
+   },
+   "urd": {
+    "tokens": 41163,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 1.4885545872057282,
+    "bytes_per_token": 5.628841435269538,
+    "tokens_per_kchar": 316.8358746603653,
+    "parity": 1.5181456074352733,
+    "byte_fallback": 0.0
+   },
+   "kan": {
+    "tokens": 52180,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 3.2409937888198757,
+    "bytes_per_token": 7.193944039862016,
+    "tokens_per_kchar": 378.0063749637786,
+    "parity": 1.9244670649848787,
+    "byte_fallback": 0.0
+   },
+   "ory": {
+    "tokens": 95199,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 4.852140672782874,
+    "bytes_per_token": 3.796878118467631,
+    "tokens_per_kchar": 706.0197717277642,
+    "parity": 3.5110643947776055,
+    "byte_fallback": 0.008559867192363561
+   },
+   "mal": {
+    "tokens": 50113,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 3.356530475552579,
+    "bytes_per_token": 8.216490730948058,
+    "tokens_per_kchar": 335.5721326404886,
+    "parity": 1.8482333849671757,
+    "byte_fallback": 0.0
+   },
+   "pan": {
+    "tokens": 73045,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 2.8196170771249904,
+    "bytes_per_token": 4.71178040933671,
+    "tokens_per_kchar": 547.4611204796702,
+    "parity": 2.6939957217673527,
+    "byte_fallback": 0.0
+   },
+   "asm": {
+    "tokens": 54371,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 2.818756804396288,
+    "bytes_per_token": 6.1625131044122785,
+    "tokens_per_kchar": 431.73516706898744,
+    "parity": 2.0052740281773254,
+    "byte_fallback": 0.00017793594306049823
+   },
+   "mai": {
+    "tokens": 44446,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 1.805940433139653,
+    "bytes_per_token": 7.545313414030509,
+    "tokens_per_kchar": 343.45635509396635,
+    "parity": 1.6392269676182045,
+    "byte_fallback": 0.0
+   },
+   "sat": {
+    "tokens": 142388,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 5.919760528832162,
+    "bytes_per_token": 2.5937227856280023,
+    "tokens_per_kchar": 1018.5777339027549,
+    "parity": 5.251456811979051,
+    "byte_fallback": 0.03350652104760895
+   },
+   "kas": {
+    "tokens": 63890,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 2.7755332551370606,
+    "bytes_per_token": 3.5714352793864457,
+    "tokens_per_kchar": 506.641290987669,
+    "parity": 2.356347274470753,
+    "byte_fallback": 0.07865086864868794
+   },
+   "npi": {
+    "tokens": 41449,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 2.2164055398107054,
+    "bytes_per_token": 8.190113151101354,
+    "tokens_per_kchar": 326.6195440612121,
+    "parity": 1.528693663789924,
+    "byte_fallback": 0.0
+   },
+   "snd": {
+    "tokens": 54916,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 2.1657990219277488,
+    "bytes_per_token": 3.858274455532085,
+    "tokens_per_kchar": 459.20995417600426,
+    "parity": 2.025374345356642,
+    "byte_fallback": 0.0
+   },
+   "gom": {
+    "tokens": 49441,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 2.6173107464266807,
+    "bytes_per_token": 6.836512206468316,
+    "tokens_per_kchar": 388.638221607345,
+    "parity": 1.823449140665339,
+    "byte_fallback": 0.0
+   },
+   "mni": {
+    "tokens": 68043,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 3.530299885856594,
+    "bytes_per_token": 5.407315961965228,
+    "tokens_per_kchar": 497.4558055884546,
+    "parity": 2.509515379508741,
+    "byte_fallback": 0.0
+   },
+   "brx": {
+    "tokens": 66252,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 3.444525319746283,
+    "bytes_per_token": 5.9575258105415685,
+    "tokens_per_kchar": 455.11499464182674,
+    "parity": 2.443460942686435,
+    "byte_fallback": 0.0
+   },
+   "san": {
+    "tokens": 47977,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 2.8263328424153165,
+    "bytes_per_token": 7.226525209996456,
+    "tokens_per_kchar": 374.06925158081043,
+    "parity": 1.7694548941506234,
+    "byte_fallback": 0.0
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 421285,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.2888062897699462,
+    "bytes_per_token": 4.771105071388727,
+    "tokens_per_kchar": 210.62828259092512
+   },
+   "science_sciq": {
+    "tokens": 103889,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.247631171264216,
+    "bytes_per_token": 4.924775481523549,
+    "tokens_per_kchar": 203.43865352040967
+   },
+   "math_gsm8k": {
+    "tokens": 247211,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.8924954259073545,
+    "bytes_per_token": 2.8497882375784247,
+    "tokens_per_kchar": 351.1425117788014
+   },
+   "math_web": {
+    "tokens": 604572,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.7516616349212788,
+    "bytes_per_token": 3.36141766406648,
+    "tokens_per_kchar": 301.92791349459543
+   },
+   "code_humaneval": {
+    "tokens": 34588,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.289989406779661,
+    "bytes_per_token": 2.9964727651208514,
+    "tokens_per_kchar": 333.98995751255313
+   },
+   "code_github": {
+    "tokens": 925364,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 3.358011967964466,
+    "bytes_per_token": 3.281351986893806,
+    "tokens_per_kchar": 306.7906342664057
+   },
+   "agentic_swe": {
+    "tokens": 1071891,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 3.652633946370337,
+    "bytes_per_token": 2.8172948555403488,
+    "tokens_per_kchar": 355.1736535081107
+   },
+   "agentic_tools": {
+    "tokens": 1794581,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.788140412150741,
+    "bytes_per_token": 3.3344385123881284,
+    "tokens_per_kchar": 299.90337347239176
+   },
+   "hinglish": {
+    "tokens": 36739,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.292716396903589,
+    "bytes_per_token": 3.8881025613108684,
+    "tokens_per_kchar": 257.2993339729807
+   },
+   "roman_hin": {
+    "tokens": 327016,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.0737903481514364,
+    "bytes_per_token": 3.065883626489224,
+    "tokens_per_kchar": 326.20180030643513
+   }
+  },
+  "mean_fertility_tier1": 2.585914754082992,
+  "mean_fertility_tier2": 3.012066437768849,
+  "mean_parity_22": 2.0890385216563576
+ },
+ "gemma-3": {
+  "vocab": 262145,
+  "lang": {
+   "eng": {
+    "tokens": 27114,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.2380256609287248,
+    "bytes_per_token": 4.871874308475326,
+    "tokens_per_kchar": 205.46201294272768,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 35521,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 1.385212338649924,
+    "bytes_per_token": 9.48940063624335,
+    "tokens_per_kchar": 271.03267255718845,
+    "parity": 1.3100612229844362,
+    "byte_fallback": 0.0
+   },
+   "ben": {
+    "tokens": 32836,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 1.683379472982672,
+    "bytes_per_token": 10.497076379583383,
+    "tokens_per_kchar": 254.45978828598442,
+    "parity": 1.2110348897248653,
+    "byte_fallback": 0.0
+   },
+   "mar": {
+    "tokens": 37835,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 1.9865063530400084,
+    "bytes_per_token": 9.396352583586626,
+    "tokens_per_kchar": 284.36464212970964,
+    "parity": 1.395404588035701,
+    "byte_fallback": 0.0
+   },
+   "tel": {
+    "tokens": 48148,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 2.8426024324005197,
+    "bytes_per_token": 7.345601063387887,
+    "tokens_per_kchar": 363.4634256812863,
+    "parity": 1.7757615991738585,
+    "byte_fallback": 0.006146911177133491
+   },
+   "tam": {
+    "tokens": 39830,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 2.3743666169895676,
+    "bytes_per_token": 10.586015566156163,
+    "tokens_per_kchar": 258.41318860983694,
+    "parity": 1.4689828133067788,
+    "byte_fallback": 0.0
+   },
+   "guj": {
+    "tokens": 50443,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 2.4151584793641674,
+    "bytes_per_token": 6.5632099597565565,
+    "tokens_per_kchar": 398.98598411744234,
+    "parity": 1.8604042192225418,
+    "byte_fallback": 0.0
+   },
+   "urd": {
+    "tokens": 41163,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 1.4885545872057282,
+    "bytes_per_token": 5.628841435269538,
+    "tokens_per_kchar": 316.8358746603653,
+    "parity": 1.5181456074352733,
+    "byte_fallback": 0.0
+   },
+   "kan": {
+    "tokens": 52180,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 3.2409937888198757,
+    "bytes_per_token": 7.193944039862016,
+    "tokens_per_kchar": 378.0063749637786,
+    "parity": 1.9244670649848787,
+    "byte_fallback": 0.0
+   },
+   "ory": {
+    "tokens": 95199,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 4.852140672782874,
+    "bytes_per_token": 3.796878118467631,
+    "tokens_per_kchar": 706.0197717277642,
+    "parity": 3.5110643947776055,
+    "byte_fallback": 0.008559867192363561
+   },
+   "mal": {
+    "tokens": 50113,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 3.356530475552579,
+    "bytes_per_token": 8.216490730948058,
+    "tokens_per_kchar": 335.5721326404886,
+    "parity": 1.8482333849671757,
+    "byte_fallback": 0.0
+   },
+   "pan": {
+    "tokens": 73045,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 2.8196170771249904,
+    "bytes_per_token": 4.71178040933671,
+    "tokens_per_kchar": 547.4611204796702,
+    "parity": 2.6939957217673527,
+    "byte_fallback": 0.0
+   },
+   "asm": {
+    "tokens": 54371,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 2.818756804396288,
+    "bytes_per_token": 6.1625131044122785,
+    "tokens_per_kchar": 431.73516706898744,
+    "parity": 2.0052740281773254,
+    "byte_fallback": 0.00017793594306049823
+   },
+   "mai": {
+    "tokens": 44446,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 1.805940433139653,
+    "bytes_per_token": 7.545313414030509,
+    "tokens_per_kchar": 343.45635509396635,
+    "parity": 1.6392269676182045,
+    "byte_fallback": 0.0
+   },
+   "sat": {
+    "tokens": 142388,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 5.919760528832162,
+    "bytes_per_token": 2.5937227856280023,
+    "tokens_per_kchar": 1018.5777339027549,
+    "parity": 5.251456811979051,
+    "byte_fallback": 0.03350652104760895
+   },
+   "kas": {
+    "tokens": 63890,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 2.7755332551370606,
+    "bytes_per_token": 3.5714352793864457,
+    "tokens_per_kchar": 506.641290987669,
+    "parity": 2.356347274470753,
+    "byte_fallback": 0.07865086864868794
+   },
+   "npi": {
+    "tokens": 41449,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 2.2164055398107054,
+    "bytes_per_token": 8.190113151101354,
+    "tokens_per_kchar": 326.6195440612121,
+    "parity": 1.528693663789924,
+    "byte_fallback": 0.0
+   },
+   "snd": {
+    "tokens": 54916,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 2.1657990219277488,
+    "bytes_per_token": 3.858274455532085,
+    "tokens_per_kchar": 459.20995417600426,
+    "parity": 2.025374345356642,
+    "byte_fallback": 0.0
+   },
+   "gom": {
+    "tokens": 49441,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 2.6173107464266807,
+    "bytes_per_token": 6.836512206468316,
+    "tokens_per_kchar": 388.638221607345,
+    "parity": 1.823449140665339,
+    "byte_fallback": 0.0
+   },
+   "mni": {
+    "tokens": 68043,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 3.530299885856594,
+    "bytes_per_token": 5.407315961965228,
+    "tokens_per_kchar": 497.4558055884546,
+    "parity": 2.509515379508741,
+    "byte_fallback": 0.0
+   },
+   "brx": {
+    "tokens": 66252,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 3.444525319746283,
+    "bytes_per_token": 5.9575258105415685,
+    "tokens_per_kchar": 455.11499464182674,
+    "parity": 2.443460942686435,
+    "byte_fallback": 0.0
+   },
+   "san": {
+    "tokens": 47977,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 2.8263328424153165,
+    "bytes_per_token": 7.226525209996456,
+    "tokens_per_kchar": 374.06925158081043,
+    "parity": 1.7694548941506234,
+    "byte_fallback": 0.0
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 421285,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.2888062897699462,
+    "bytes_per_token": 4.771105071388727,
+    "tokens_per_kchar": 210.62828259092512
+   },
+   "science_sciq": {
+    "tokens": 103889,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.247631171264216,
+    "bytes_per_token": 4.924775481523549,
+    "tokens_per_kchar": 203.43865352040967
+   },
+   "math_gsm8k": {
+    "tokens": 247211,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.8924954259073545,
+    "bytes_per_token": 2.8497882375784247,
+    "tokens_per_kchar": 351.1425117788014
+   },
+   "math_web": {
+    "tokens": 604566,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.751644250772146,
+    "bytes_per_token": 3.3614510243712017,
+    "tokens_per_kchar": 301.9249170483806
+   },
+   "code_humaneval": {
+    "tokens": 34588,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.289989406779661,
+    "bytes_per_token": 2.9964727651208514,
+    "tokens_per_kchar": 333.98995751255313
+   },
+   "code_github": {
+    "tokens": 915939,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 3.3238100076568844,
+    "bytes_per_token": 3.3151170547383613,
+    "tokens_per_kchar": 303.6659160712297
+   },
+   "agentic_swe": {
+    "tokens": 1071798,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 3.6523170345229454,
+    "bytes_per_token": 2.817539312445069,
+    "tokens_per_kchar": 355.14283773507384
+   },
+   "agentic_tools": {
+    "tokens": 1794581,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.788140412150741,
+    "bytes_per_token": 3.3344385123881284,
+    "tokens_per_kchar": 299.90337347239176
+   },
+   "hinglish": {
+    "tokens": 36739,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.292716396903589,
+    "bytes_per_token": 3.8881025613108684,
+    "tokens_per_kchar": 257.2993339729807
+   },
+   "roman_hin": {
+    "tokens": 327016,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.0737903481514364,
+    "bytes_per_token": 3.065883626489224,
+    "tokens_per_kchar": 326.20180030643513
+   }
+  },
+  "mean_fertility_tier1": 2.585914754082992,
+  "mean_fertility_tier2": 3.012066437768849,
+  "mean_parity_22": 2.0890385216563576
+ },
+ "sarvam-30b": {
+  "vocab": 262144,
+  "lang": {
+   "eng": {
+    "tokens": 27122,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.23839094105292,
+    "bytes_per_token": 4.870437283386181,
+    "tokens_per_kchar": 205.52263461800766,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 35521,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 1.385212338649924,
+    "bytes_per_token": 9.48940063624335,
+    "tokens_per_kchar": 271.03267255718845,
+    "parity": 1.3096748027431606,
+    "byte_fallback": 0.0
+   },
+   "ben": {
+    "tokens": 32840,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 1.6835845380908439,
+    "bytes_per_token": 10.495797807551766,
+    "tokens_per_kchar": 254.49078594566112,
+    "parity": 1.2108251603864022,
+    "byte_fallback": 0.0002906554279901177
+   },
+   "mar": {
+    "tokens": 37835,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 1.9865063530400084,
+    "bytes_per_token": 9.396352583586626,
+    "tokens_per_kchar": 284.36464212970964,
+    "parity": 1.3949929946169162,
+    "byte_fallback": 0.0
+   },
+   "tel": {
+    "tokens": 39385,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 2.325245011217381,
+    "bytes_per_token": 8.979966992509839,
+    "tokens_per_kchar": 297.3125990790368,
+    "parity": 1.4521421724061647,
+    "byte_fallback": 0.0
+   },
+   "tam": {
+    "tokens": 39830,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 2.3743666169895676,
+    "bytes_per_token": 10.586015566156163,
+    "tokens_per_kchar": 258.41318860983694,
+    "parity": 1.4685495169972715,
+    "byte_fallback": 0.0
+   },
+   "guj": {
+    "tokens": 40614,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 1.9445561620224074,
+    "bytes_per_token": 8.151573349091446,
+    "tokens_per_kchar": 321.24212990793177,
+    "parity": 1.4974559398274463,
+    "byte_fallback": 0.0
+   },
+   "urd": {
+    "tokens": 41163,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 1.4885545872057282,
+    "bytes_per_token": 5.628841435269538,
+    "tokens_per_kchar": 316.8358746603653,
+    "parity": 1.5176978098960254,
+    "byte_fallback": 0.0
+   },
+   "kan": {
+    "tokens": 40850,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 2.5372670807453415,
+    "bytes_per_token": 9.18922888616891,
+    "tokens_per_kchar": 295.92871631411185,
+    "parity": 1.5061573630263254,
+    "byte_fallback": 0.0
+   },
+   "ory": {
+    "tokens": 38802,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 1.9776758409785933,
+    "bytes_per_token": 9.31547342920468,
+    "tokens_per_kchar": 287.7654091175402,
+    "parity": 1.4306467074699505,
+    "byte_fallback": 0.0
+   },
+   "mal": {
+    "tokens": 44237,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 2.9629604822505025,
+    "bytes_per_token": 9.307887062865927,
+    "tokens_per_kchar": 296.2246209889109,
+    "parity": 1.6310375341051544,
+    "byte_fallback": 0.0
+   },
+   "pan": {
+    "tokens": 42253,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 1.6310121207442292,
+    "bytes_per_token": 8.14550446122169,
+    "tokens_per_kchar": 316.67978264942855,
+    "parity": 1.5578865865349163,
+    "byte_fallback": 0.0
+   },
+   "asm": {
+    "tokens": 54372,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 2.8188086474156253,
+    "bytes_per_token": 6.162399764584713,
+    "tokens_per_kchar": 431.74310761021474,
+    "parity": 2.004719415972273,
+    "byte_fallback": 0.00017793594306049823
+   },
+   "mai": {
+    "tokens": 44446,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 1.805940433139653,
+    "bytes_per_token": 7.545313414030509,
+    "tokens_per_kchar": 343.45635509396635,
+    "parity": 1.638743455497382,
+    "byte_fallback": 0.0
+   },
+   "sat": {
+    "tokens": 49128,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 2.0424895023489795,
+    "bytes_per_token": 7.517403517342452,
+    "tokens_per_kchar": 351.4389338369423,
+    "parity": 1.8113708428581963,
+    "byte_fallback": 0.0
+   },
+   "kas": {
+    "tokens": 63893,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 2.7756635822581344,
+    "bytes_per_token": 3.5712675879986855,
+    "tokens_per_kchar": 506.6650806867293,
+    "parity": 2.355762849347393,
+    "byte_fallback": 0.07865086864868794
+   },
+   "npi": {
+    "tokens": 41453,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 2.21661943211593,
+    "bytes_per_token": 8.1893228475623,
+    "tokens_per_kchar": 326.6510641986399,
+    "parity": 1.5283902367082074,
+    "byte_fallback": 0.00023515579071134627
+   },
+   "snd": {
+    "tokens": 54916,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 2.1657990219277488,
+    "bytes_per_token": 3.858274455532085,
+    "tokens_per_kchar": 459.20995417600426,
+    "parity": 2.0247769338544357,
+    "byte_fallback": 0.0
+   },
+   "gom": {
+    "tokens": 49444,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 2.6174695606140816,
+    "bytes_per_token": 6.836097403122725,
+    "tokens_per_kchar": 388.66180354672366,
+    "parity": 1.8230219010397464,
+    "byte_fallback": 0.0
+   },
+   "mni": {
+    "tokens": 68043,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 3.530299885856594,
+    "bytes_per_token": 5.407315961965228,
+    "tokens_per_kchar": 497.4558055884546,
+    "parity": 2.508775164073446,
+    "byte_fallback": 0.0
+   },
+   "brx": {
+    "tokens": 66252,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 3.444525319746283,
+    "bytes_per_token": 5.9575258105415685,
+    "tokens_per_kchar": 455.11499464182674,
+    "parity": 2.442740210898901,
+    "byte_fallback": 0.0
+   },
+   "san": {
+    "tokens": 47977,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 2.8263328424153165,
+    "bytes_per_token": 7.226525209996456,
+    "tokens_per_kchar": 374.06925158081043,
+    "parity": 1.7689329695450189,
+    "byte_fallback": 0.0
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 421364,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.2890479686735192,
+    "bytes_per_token": 4.770210554295099,
+    "tokens_per_kchar": 210.66777992485507
+   },
+   "science_sciq": {
+    "tokens": 103906,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.2478353288738906,
+    "bytes_per_token": 4.923969741882086,
+    "tokens_per_kchar": 203.47194344629062
+   },
+   "math_gsm8k": {
+    "tokens": 247211,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.8924954259073545,
+    "bytes_per_token": 2.8497882375784247,
+    "tokens_per_kchar": 351.1425117788014
+   },
+   "math_web": {
+    "tokens": 607773,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.7609360784836385,
+    "bytes_per_token": 3.3437138536920856,
+    "tokens_per_kchar": 303.5265175501855
+   },
+   "code_humaneval": {
+    "tokens": 34588,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.289989406779661,
+    "bytes_per_token": 2.9964727651208514,
+    "tokens_per_kchar": 333.98995751255313
+   },
+   "code_github": {
+    "tokens": 931390,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 3.379879449430088,
+    "bytes_per_token": 3.260121968241016,
+    "tokens_per_kchar": 308.7884647007962
+   },
+   "agentic_swe": {
+    "tokens": 1066779,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 3.6352140177266175,
+    "bytes_per_token": 2.830795319367929,
+    "tokens_per_kchar": 353.47978004827803
+   },
+   "agentic_tools": {
+    "tokens": 1789928,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.7809113055583174,
+    "bytes_per_token": 3.3431065383635543,
+    "tokens_per_kchar": 299.12578227045265
+   },
+   "hinglish": {
+    "tokens": 36739,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.292716396903589,
+    "bytes_per_token": 3.8881025613108684,
+    "tokens_per_kchar": 257.2993339729807
+   },
+   "roman_hin": {
+    "tokens": 327035,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.0739108377195765,
+    "bytes_per_token": 3.0657055055269313,
+    "tokens_per_kchar": 326.22075300051074
+   }
+  },
+  "mean_fertility_tier1": 2.026994648357684,
+  "mean_fertility_tier2": 2.6243948227838345,
+  "mean_parity_22": 1.7087762175145111
+ },
+ "sarvam-1": {
+  "vocab": 68096,
+  "lang": {
+   "eng": {
+    "tokens": 31422,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.4347290078078627,
+    "bytes_per_token": 4.203933549742219,
+    "tokens_per_kchar": 238.1067850810057,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 35938,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 1.4014740864953399,
+    "bytes_per_token": 9.379292114196671,
+    "tokens_per_kchar": 274.21446992934426,
+    "parity": 1.1437209598370568,
+    "byte_fallback": 0.010180534817429076
+   },
+   "ben": {
+    "tokens": 40283,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 2.0651594381216034,
+    "bytes_per_token": 8.55651267283966,
+    "tokens_per_kchar": 312.1696811890702,
+    "parity": 1.2819998727006556,
+    "byte_fallback": 0.1132296174991227
+   },
+   "mar": {
+    "tokens": 33666,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 1.7676152472960203,
+    "bytes_per_token": 10.559941781025367,
+    "tokens_per_kchar": 253.03079270354976,
+    "parity": 1.071414932213099,
+    "byte_fallback": 0.00042619690296917176
+   },
+   "tel": {
+    "tokens": 36228,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 2.138859369465108,
+    "bytes_per_token": 9.762504140443856,
+    "tokens_per_kchar": 273.4807881029667,
+    "parity": 1.152950162306664,
+    "byte_fallback": 0.04771319362066693
+   },
+   "tam": {
+    "tokens": 36390,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 2.1692995529061103,
+    "bytes_per_token": 11.586727122835944,
+    "tokens_per_kchar": 236.0948012430823,
+    "parity": 1.1581057857552033,
+    "byte_fallback": 0.0031397174254317113
+   },
+   "guj": {
+    "tokens": 37791,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 1.8093938523412811,
+    "bytes_per_token": 8.760498531396363,
+    "tokens_per_kchar": 298.9132154269624,
+    "parity": 1.2026923811342372,
+    "byte_fallback": 0.025589563472152535
+   },
+   "urd": {
+    "tokens": 232248,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 8.398654757169204,
+    "bytes_per_token": 0.9976404533085322,
+    "tokens_per_kchar": 1787.636912229928,
+    "parity": 7.3912545350391445,
+    "byte_fallback": 0.8717091874986612
+   },
+   "kan": {
+    "tokens": 38190,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 2.3720496894409937,
+    "bytes_per_token": 9.829274679235402,
+    "tokens_per_kchar": 276.6589394378441,
+    "parity": 1.2153904907389728,
+    "byte_fallback": 0.053664596273291926
+   },
+   "ory": {
+    "tokens": 46015,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 2.3453109072375127,
+    "bytes_per_token": 7.855242855590569,
+    "tokens_per_kchar": 341.25883461016474,
+    "parity": 1.4644198332378588,
+    "byte_fallback": 0.05661557710353456
+   },
+   "mal": {
+    "tokens": 42626,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 2.8550569323509714,
+    "bytes_per_token": 9.659667808379861,
+    "tokens_per_kchar": 285.43686719880003,
+    "parity": 1.356565463687862,
+    "byte_fallback": 0.032738433556894396
+   },
+   "pan": {
+    "tokens": 43590,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 1.6826217864587354,
+    "bytes_per_token": 7.895664143152099,
+    "tokens_per_kchar": 326.70039347948284,
+    "parity": 1.3872446056902807,
+    "byte_fallback": 0.0769757098871023
+   },
+   "asm": {
+    "tokens": 91792,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 4.758774431022863,
+    "bytes_per_token": 3.6502309569461393,
+    "tokens_per_kchar": 728.8781603354084,
+    "parity": 2.921265355483419,
+    "byte_fallback": 0.4138428647781935
+   },
+   "mai": {
+    "tokens": 46484,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 1.8887489334037626,
+    "bytes_per_token": 7.214503915325704,
+    "tokens_per_kchar": 359.2049950544016,
+    "parity": 1.479345681369741,
+    "byte_fallback": 0.004584652330531601
+   },
+   "sat": {
+    "tokens": 369935,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 15.379994179520226,
+    "bytes_per_token": 0.9983240298971441,
+    "tokens_per_kchar": 2646.3434698943424,
+    "parity": 11.773120743428171,
+    "byte_fallback": 0.9276983094928478
+   },
+   "kas": {
+    "tokens": 228400,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 9.922238151092575,
+    "bytes_per_token": 0.9990323992994746,
+    "tokens_per_kchar": 1811.189088458031,
+    "parity": 7.268792565718287,
+    "byte_fallback": 0.8930246251550901
+   },
+   "npi": {
+    "tokens": 48421,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 2.5892198278166942,
+    "bytes_per_token": 7.010842403089568,
+    "tokens_per_kchar": 381.55914359786607,
+    "parity": 1.5409903888994971,
+    "byte_fallback": 0.02049469964664311
+   },
+   "snd": {
+    "tokens": 212306,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 8.373008360940212,
+    "bytes_per_token": 0.9979981724492006,
+    "tokens_per_kchar": 1775.3119042044352,
+    "parity": 6.756603653491185,
+    "byte_fallback": 0.8651241935102687
+   },
+   "gom": {
+    "tokens": 47905,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 2.5359978824775014,
+    "bytes_per_token": 7.0557144348189125,
+    "tokens_per_kchar": 376.5642686454534,
+    "parity": 1.5245687734708167,
+    "byte_fallback": 0.0008422825858075384
+   },
+   "mni": {
+    "tokens": 82849,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 4.29848500570717,
+    "bytes_per_token": 4.440970923004502,
+    "tokens_per_kchar": 605.7010425348365,
+    "parity": 2.636655846222392,
+    "byte_fallback": 0.09851169383416017
+   },
+   "brx": {
+    "tokens": 67271,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 3.497504419257565,
+    "bytes_per_token": 5.867283078889863,
+    "tokens_per_kchar": 462.11496716401507,
+    "parity": 2.1408885494239707,
+    "byte_fallback": 0.02067711883662804
+   },
+   "san": {
+    "tokens": 50414,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 2.9698969072164947,
+    "bytes_per_token": 6.8771968104098065,
+    "tokens_per_kchar": 393.0701638117218,
+    "parity": 1.6044172872509705,
+    "byte_fallback": 0.028655597214783075
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 489226,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.4966532060695057,
+    "bytes_per_token": 4.108520397525888,
+    "tokens_per_kchar": 244.59648973694274
+   },
+   "science_sciq": {
+    "tokens": 120833,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.451116261754074,
+    "bytes_per_token": 4.234190990871699,
+    "tokens_per_kchar": 236.61891846905505
+   },
+   "math_gsm8k": {
+    "tokens": 267879,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 2.050716926822173,
+    "bytes_per_token": 2.6299149989360866,
+    "tokens_per_kchar": 380.4996740144797
+   },
+   "math_web": {
+    "tokens": 724064,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 2.0978727596177804,
+    "bytes_per_token": 2.8066842157599328,
+    "tokens_per_kchar": 361.6031386775285
+   },
+   "code_humaneval": {
+    "tokens": 39142,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.5914989406779663,
+    "bytes_per_token": 2.64784630320372,
+    "tokens_per_kchar": 377.9644650444187
+   },
+   "code_github": {
+    "tokens": 1160853,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 4.212567451346124,
+    "bytes_per_token": 2.6157015573892646,
+    "tokens_per_kchar": 384.8635003739716
+   },
+   "agentic_swe": {
+    "tokens": 1224153,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 4.171490201290138,
+    "bytes_per_token": 2.4668754640964,
+    "tokens_per_kchar": 405.6260323698158
+   },
+   "agentic_tools": {
+    "tokens": 2313276,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 3.5940079049418316,
+    "bytes_per_token": 2.586773043942876,
+    "tokens_per_kchar": 386.5856576954289
+   },
+   "hinglish": {
+    "tokens": 55137,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.9400774102744547,
+    "bytes_per_token": 2.590728548887317,
+    "tokens_per_kchar": 386.1485989620904
+   },
+   "roman_hin": {
+    "tokens": 451752,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.864810704546896,
+    "bytes_per_token": 2.2193437992526874,
+    "tokens_per_kchar": 450.62723442288046
+   }
+  },
+  "mean_fertility_tier1": 2.6368632381166255,
+  "mean_fertility_tier2": 5.621386809845506,
+  "mean_parity_22": 2.832019422242832
+ },
+ "brahmic-131k": {
+  "vocab": 131072,
+  "lang": {
+   "eng": {
+    "tokens": 27143,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.2393498013789324,
+    "bytes_per_token": 4.86666912279409,
+    "tokens_per_kchar": 205.68176651561765,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 42268,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 1.6483250789689194,
+    "bytes_per_token": 7.974661682596763,
+    "tokens_per_kchar": 322.5136962260984,
+    "parity": 1.5572339092952143,
+    "byte_fallback": 0.0025412960609911056
+   },
+   "ben": {
+    "tokens": 45531,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 2.3342048600430636,
+    "bytes_per_token": 7.570270804506819,
+    "tokens_per_kchar": 352.8386106848933,
+    "parity": 1.677449066057547,
+    "byte_fallback": 0.01318982800464282
+   },
+   "mar": {
+    "tokens": 48751,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 2.5596450698309354,
+    "bytes_per_token": 7.292383745974441,
+    "tokens_per_kchar": 366.4083697228882,
+    "parity": 1.7960800206314704,
+    "byte_fallback": 0.005149534561299267
+   },
+   "tel": {
+    "tokens": 51494,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 3.040146416341953,
+    "bytes_per_token": 6.868295335378879,
+    "tokens_per_kchar": 388.72197478674417,
+    "parity": 1.8971373834874554,
+    "byte_fallback": 0.029051249879355274
+   },
+   "tam": {
+    "tokens": 52651,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 3.1386587183308494,
+    "bytes_per_token": 8.008223965356784,
+    "tokens_per_kchar": 341.5945968741282,
+    "parity": 1.9397634749290793,
+    "byte_fallback": 0.011955122310097481
+   },
+   "guj": {
+    "tokens": 47835,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 2.2902901465096237,
+    "bytes_per_token": 6.9210410787080585,
+    "tokens_per_kchar": 378.35764229442844,
+    "parity": 1.7623328298272114,
+    "byte_fallback": 0.019762048800161323
+   },
+   "urd": {
+    "tokens": 204586,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 7.398329295194012,
+    "bytes_per_token": 1.1325310627315652,
+    "tokens_per_kchar": 1574.7196330021013,
+    "parity": 7.537339277161699,
+    "byte_fallback": 0.9909896746541983
+   },
+   "kan": {
+    "tokens": 52407,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 3.2550931677018635,
+    "bytes_per_token": 7.162783597611006,
+    "tokens_per_kchar": 379.6508258475804,
+    "parity": 1.9307740485576392,
+    "byte_fallback": 0.011987263532496722
+   },
+   "ory": {
+    "tokens": 81332,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 4.145361875637105,
+    "bytes_per_token": 4.444240889194905,
+    "tokens_per_kchar": 603.1786055963038,
+    "parity": 2.996426334598239,
+    "byte_fallback": 0.03142563606696078
+   },
+   "mal": {
+    "tokens": 52253,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 3.4998660415271265,
+    "bytes_per_token": 7.879987751899413,
+    "tokens_per_kchar": 349.90223388868054,
+    "parity": 1.9251003942084515,
+    "byte_fallback": 0.018147086914995225
+   },
+   "pan": {
+    "tokens": 67186,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 2.593453254072416,
+    "bytes_per_token": 5.122674366683535,
+    "tokens_per_kchar": 503.54881019299233,
+    "parity": 2.4752606565228605,
+    "byte_fallback": 0.041469194312796206
+   },
+   "asm": {
+    "tokens": 53245,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 2.7603815646223238,
+    "bytes_per_token": 6.29283500798197,
+    "tokens_per_kchar": 422.79411764705884,
+    "parity": 1.961647570275946,
+    "byte_fallback": 0.011762560408498221
+   },
+   "mai": {
+    "tokens": 47250,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 1.9198732274186339,
+    "bytes_per_token": 7.097544973544974,
+    "tokens_per_kchar": 365.1242581602374,
+    "parity": 1.7407803116825702,
+    "byte_fallback": 0.003394865266284744
+   },
+   "sat": {
+    "tokens": 368169,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 15.306572984658878,
+    "bytes_per_token": 1.0031127009607002,
+    "tokens_per_kchar": 2633.710324699015,
+    "parity": 13.564049662896512,
+    "byte_fallback": 0.930135988009955
+   },
+   "kas": {
+    "tokens": 205505,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 8.927625005430297,
+    "bytes_per_token": 1.110333081920148,
+    "tokens_per_kchar": 1629.6340351294557,
+    "parity": 7.571196993700033,
+    "byte_fallback": 0.9903220540565751
+   },
+   "npi": {
+    "tokens": 43388,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 2.3200898347681944,
+    "bytes_per_token": 7.824098829169356,
+    "tokens_per_kchar": 341.89893067933775,
+    "parity": 1.5984968500165788,
+    "byte_fallback": 0.006524184476940383
+   },
+   "snd": {
+    "tokens": 186975,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 7.3739943208708,
+    "bytes_per_token": 1.1332049739269956,
+    "tokens_per_kchar": 1563.492992607954,
+    "parity": 6.888516376229599,
+    "byte_fallback": 0.9832921456967874
+   },
+   "gom": {
+    "tokens": 54749,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 2.898305982001059,
+    "bytes_per_token": 6.173701802772653,
+    "tokens_per_kchar": 430.36253301471515,
+    "parity": 2.017057804958921,
+    "byte_fallback": 0.0027611596870685687
+   },
+   "mni": {
+    "tokens": 78832,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 4.0900695237106985,
+    "bytes_per_token": 4.667267099654962,
+    "tokens_per_kchar": 576.3331432498428,
+    "parity": 2.9043215562023357,
+    "byte_fallback": 0.01555790652809758
+   },
+   "brx": {
+    "tokens": 75453,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 3.9228969533118434,
+    "bytes_per_token": 5.231044491272713,
+    "tokens_per_kchar": 518.3208309290249,
+    "parity": 2.7798327377224332,
+    "byte_fallback": 0.006877486346166813
+   },
+   "san": {
+    "tokens": 55978,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 3.297673048600884,
+    "bytes_per_token": 6.193629640215799,
+    "tokens_per_kchar": 436.45181159702787,
+    "parity": 2.062336514018347,
+    "byte_fallback": 0.03949201147070872
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 416714,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.2748225648556044,
+    "bytes_per_token": 4.823440057209501,
+    "tokens_per_kchar": 208.34293685176252
+   },
+   "science_sciq": {
+    "tokens": 106602,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.2802123239140617,
+    "bytes_per_token": 4.799440911052326,
+    "tokens_per_kchar": 208.7513340448239
+   },
+   "math_gsm8k": {
+    "tokens": 213094,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.6313166496972296,
+    "bytes_per_token": 3.306048035139422,
+    "tokens_per_kchar": 302.6821719300189
+   },
+   "math_web": {
+    "tokens": 564932,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.6368103563171101,
+    "bytes_per_token": 3.5972807346724918,
+    "tokens_per_kchar": 282.1313921688877
+   },
+   "code_humaneval": {
+    "tokens": 30565,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.023636122881356,
+    "bytes_per_token": 3.3908719123180107,
+    "tokens_per_kchar": 295.1429123213596
+   },
+   "code_github": {
+    "tokens": 788810,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 2.8624772742942786,
+    "bytes_per_token": 3.849399728705265,
+    "tokens_per_kchar": 261.51819199329503
+   },
+   "agentic_swe": {
+    "tokens": 814430,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 2.775295869582256,
+    "bytes_per_token": 3.7079098265044266,
+    "tokens_per_kchar": 269.8633337033435
+   },
+   "agentic_tools": {
+    "tokens": 1650970,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.5650200109376553,
+    "bytes_per_token": 3.624487422545534,
+    "tokens_per_kchar": 275.9036635859371
+   },
+   "hinglish": {
+    "tokens": 39946,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.4055594651653764,
+    "bytes_per_token": 3.5759525359234967,
+    "tokens_per_kchar": 279.7593618466667
+   },
+   "roman_hin": {
+    "tokens": 329920,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.092206227408206,
+    "bytes_per_token": 3.0388973084384094,
+    "tokens_per_kchar": 329.0985699693565
+   }
+  },
+  "mean_fertility_tier1": 3.2639430840143517,
+  "mean_fertility_tier2": 5.2817482445393615,
+  "mean_parity_22": 3.361101608237149
+ },
+ "krutrim-2": {
+  "vocab": 131072,
+  "lang": {
+   "eng": {
+    "tokens": 27827,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.2705812519976256,
+    "bytes_per_token": 4.747044237610953,
+    "tokens_per_kchar": 210.86491975205735,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 49985,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 1.9492649066021916,
+    "bytes_per_token": 6.743483044913474,
+    "tokens_per_kchar": 381.39602313479526,
+    "parity": 1.7962769971610306,
+    "byte_fallback": 0.010148396361895644
+   },
+   "ben": {
+    "tokens": 57089,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 2.9267404901056087,
+    "bytes_per_token": 6.0376254619979335,
+    "tokens_per_kchar": 442.4063483207018,
+    "parity": 2.051568620404643,
+    "byte_fallback": 0.07778795702506872
+   },
+   "mar": {
+    "tokens": 59629,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 3.1307886170324477,
+    "bytes_per_token": 5.962048667594627,
+    "tokens_per_kchar": 448.16649254797034,
+    "parity": 2.142846875336903,
+    "byte_fallback": 0.026622030926191614
+   },
+   "tel": {
+    "tokens": 62896,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 3.713307356240406,
+    "bytes_per_token": 5.623187484100738,
+    "tokens_per_kchar": 474.7942930474824,
+    "parity": 2.2602508355194595,
+    "byte_fallback": 0.04448636327910084
+   },
+   "tam": {
+    "tokens": 60618,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 3.613591654247392,
+    "bytes_per_token": 6.955706225873503,
+    "tokens_per_kchar": 393.28372249939986,
+    "parity": 2.1783878966471413,
+    "byte_fallback": 0.0343463121240899
+   },
+   "guj": {
+    "tokens": 75785,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 3.6285071339653356,
+    "bytes_per_token": 4.368516197136636,
+    "tokens_per_kchar": 599.4320878286455,
+    "parity": 2.72343407481942,
+    "byte_fallback": 0.1987824415251522
+   },
+   "urd": {
+    "tokens": 48821,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 1.7654865656529128,
+    "bytes_per_token": 4.745908522971672,
+    "tokens_per_kchar": 375.78029387541466,
+    "parity": 1.7544471197038847,
+    "byte_fallback": 0.0005993407252022775
+   },
+   "kan": {
+    "tokens": 61425,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 3.8152173913043477,
+    "bytes_per_token": 6.111192511192511,
+    "tokens_per_kchar": 444.97971602434075,
+    "parity": 2.2073885075645956,
+    "byte_fallback": 0.03172866520787746
+   },
+   "ory": {
+    "tokens": 358040,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 18.248725790010194,
+    "bytes_per_token": 1.0095492123785053,
+    "tokens_per_kchar": 2655.314856977581,
+    "parity": 12.866640313364718,
+    "byte_fallback": 0.9364306522422966
+   },
+   "mal": {
+    "tokens": 71316,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 4.776691225720027,
+    "bytes_per_token": 5.773641258623591,
+    "tokens_per_kchar": 477.5539722504955,
+    "parity": 2.5628346569878175,
+    "byte_fallback": 0.08444107720917418
+   },
+   "pan": {
+    "tokens": 82569,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 3.1872539180112716,
+    "bytes_per_token": 4.16829560731025,
+    "tokens_per_kchar": 618.8420460933108,
+    "parity": 2.967226075394401,
+    "byte_fallback": 0.15921587377480279
+   },
+   "asm": {
+    "tokens": 91309,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 4.7337342526828765,
+    "bytes_per_token": 3.669539694882213,
+    "tokens_per_kchar": 725.0428789226273,
+    "parity": 3.28130951953139,
+    "byte_fallback": 0.2931467336146573
+   },
+   "mai": {
+    "tokens": 62910,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 2.5561740685059524,
+    "bytes_per_token": 5.330774121761246,
+    "tokens_per_kchar": 486.1368694362018,
+    "parity": 2.260753944011212,
+    "byte_fallback": 0.0069160641307764855
+   },
+   "sat": {
+    "tokens": 346246,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 14.395127426932191,
+    "bytes_per_token": 1.0666260404452326,
+    "tokens_per_kchar": 2476.883347282729,
+    "parity": 12.44280734538398,
+    "byte_fallback": 0.991105129180443
+   },
+   "kas": {
+    "tokens": 72612,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 3.154437638472566,
+    "bytes_per_token": 3.142442020602655,
+    "tokens_per_kchar": 575.8058760556679,
+    "parity": 2.6094081287957738,
+    "byte_fallback": 0.19630337794773742
+   },
+   "npi": {
+    "tokens": 59248,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 3.168172824982621,
+    "bytes_per_token": 5.729678638941399,
+    "tokens_per_kchar": 466.8762755805615,
+    "parity": 2.129155137097064,
+    "byte_fallback": 0.0255863539445629
+   },
+   "snd": {
+    "tokens": 69477,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 2.740061523899669,
+    "bytes_per_token": 3.0496567209292285,
+    "tokens_per_kchar": 580.9696625079439,
+    "parity": 2.4967477629640276,
+    "byte_fallback": 0.3184768498485504
+   },
+   "gom": {
+    "tokens": 62402,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 3.3034409740603494,
+    "bytes_per_token": 5.416557161629435,
+    "tokens_per_kchar": 490.5200603697648,
+    "parity": 2.2424982930247603,
+    "byte_fallback": 0.012594865170353626
+   },
+   "mni": {
+    "tokens": 94229,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 4.888917712981218,
+    "bytes_per_token": 3.9046365768500144,
+    "tokens_per_kchar": 688.899124153763,
+    "parity": 3.38624357638265,
+    "byte_fallback": 0.08102746162681425
+   },
+   "brx": {
+    "tokens": 83248,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 4.328168867630239,
+    "bytes_per_token": 4.741231020565059,
+    "tokens_per_kchar": 571.8682164152447,
+    "parity": 2.991626837244403,
+    "byte_fallback": 0.02131699846860643
+   },
+   "san": {
+    "tokens": 63527,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 3.7423858615611194,
+    "bytes_per_token": 5.457632187888614,
+    "tokens_per_kchar": 495.31019749409387,
+    "parity": 2.2829266539691666,
+    "byte_fallback": 0.05089279259741199
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 426112,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.30357317670093,
+    "bytes_per_token": 4.717057956593572,
+    "tokens_per_kchar": 213.04161969067087
+   },
+   "science_sciq": {
+    "tokens": 105043,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.2614898701797788,
+    "bytes_per_token": 4.870672010509981,
+    "tokens_per_kchar": 205.69845201844655
+   },
+   "math_gsm8k": {
+    "tokens": 247231,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.8926485336109686,
+    "bytes_per_token": 2.8495577010973543,
+    "tokens_per_kchar": 351.1709201030086
+   },
+   "math_web": {
+    "tokens": 601014,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.741352834485516,
+    "bytes_per_token": 3.3813172405301706,
+    "tokens_per_kchar": 300.1510208892254
+   },
+   "code_humaneval": {
+    "tokens": 31826,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.1071239406779663,
+    "bytes_per_token": 3.2565198265569033,
+    "tokens_per_kchar": 307.3194283507146
+   },
+   "code_github": {
+    "tokens": 846904,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 3.0732919885763637,
+    "bytes_per_token": 3.5853473357074708,
+    "tokens_per_kchar": 280.77839133871214
+   },
+   "agentic_swe": {
+    "tokens": 1029157,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 3.507011248666755,
+    "bytes_per_token": 2.9342782490912467,
+    "tokens_per_kchar": 341.01364012147377
+   },
+   "agentic_tools": {
+    "tokens": 1799617,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.7959645644824502,
+    "bytes_per_token": 3.325107508986634,
+    "tokens_per_kchar": 300.7449701396957
+   },
+   "hinglish": {
+    "tokens": 43321,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.524313863476425,
+    "bytes_per_token": 3.2973615567507677,
+    "tokens_per_kchar": 303.3959674200032
+   },
+   "roman_hin": {
+    "tokens": 366372,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.323368634662946,
+    "bytes_per_token": 2.7365437315078665,
+    "tokens_per_kchar": 365.45981230847804
+   }
+  },
+  "mean_fertility_tier1": 4.614143186262921,
+  "mean_fertility_tier2": 4.70106211517088,
+  "mean_parity_22": 3.411179960538497
+ },
+ "llama-3.1": {
+  "vocab": 128256,
+  "lang": {
+   "eng": {
+    "tokens": 27171,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.2406282818136158,
+    "bytes_per_token": 4.861653969305509,
+    "tokens_per_kchar": 205.89394237909764,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 68512,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 2.6717622743048786,
+    "bytes_per_token": 4.91991184026156,
+    "tokens_per_kchar": 522.7609150147263,
+    "parity": 2.5215119060763316,
+    "byte_fallback": 0.004575677414742261
+   },
+   "ben": {
+    "tokens": 156453,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 8.0207628422024,
+    "bytes_per_token": 2.203102529194071,
+    "tokens_per_kchar": 1212.4192123494677,
+    "parity": 5.758087666997902,
+    "byte_fallback": 0.8329486619674381
+   },
+   "mar": {
+    "tokens": 76019,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 3.991336763624908,
+    "bytes_per_token": 4.676607163998474,
+    "tokens_per_kchar": 571.3523385769366,
+    "parity": 2.7977991240661,
+    "byte_fallback": 0.03488224061107575
+   },
+   "tel": {
+    "tokens": 225261,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 13.299149840595112,
+    "bytes_per_token": 1.5700720497556169,
+    "tokens_per_kchar": 1700.468030497471,
+    "parity": 8.290493540907585,
+    "byte_fallback": 0.9751836410561843
+   },
+   "tam": {
+    "tokens": 207772,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 12.385812220566319,
+    "bytes_per_token": 2.029344666268795,
+    "tokens_per_kchar": 1348.0046453387658,
+    "parity": 7.646829340105259,
+    "byte_fallback": 0.8909281594126901
+   },
+   "guj": {
+    "tokens": 208278,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 9.97213444412525,
+    "bytes_per_token": 1.589548584103938,
+    "tokens_per_kchar": 1647.4040560635303,
+    "parity": 7.665452136469029,
+    "byte_fallback": 0.9803608719115887
+   },
+   "urd": {
+    "tokens": 83511,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 3.0199616678118106,
+    "bytes_per_token": 2.7744847984097905,
+    "tokens_per_kchar": 642.7928170629392,
+    "parity": 3.073534282875124,
+    "byte_fallback": 0.3484739245373708
+   },
+   "kan": {
+    "tokens": 240671,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 14.948509316770187,
+    "bytes_per_token": 1.5597226088726934,
+    "tokens_per_kchar": 1743.4873949579833,
+    "parity": 8.857642339258769,
+    "byte_fallback": 0.9792308008044986
+   },
+   "ory": {
+    "tokens": 330494,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 16.844750254841998,
+    "bytes_per_token": 1.0936930776352976,
+    "tokens_per_kchar": 2451.02678008588,
+    "parity": 12.163483125391043,
+    "byte_fallback": 0.9864872865050469
+   },
+   "mal": {
+    "tokens": 242782,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 16.26135298057602,
+    "bytes_per_token": 1.6959782850458436,
+    "tokens_per_kchar": 1625.7432902983876,
+    "parity": 8.935335467962165,
+    "byte_fallback": 0.9664487479955594
+   },
+   "pan": {
+    "tokens": 212281,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 8.194279317532619,
+    "bytes_per_token": 1.6213038378375833,
+    "tokens_per_kchar": 1591.0136780963087,
+    "parity": 7.812778329836958,
+    "byte_fallback": 0.9785387369868861
+   },
+   "asm": {
+    "tokens": 166126,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 8.612473430452589,
+    "bytes_per_token": 2.016914871844263,
+    "tokens_per_kchar": 1319.1303519247872,
+    "parity": 6.114092230687129,
+    "byte_fallback": 0.8823494825964252
+   },
+   "mai": {
+    "tokens": 70333,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 2.8577871683393603,
+    "bytes_per_token": 4.7681600386731695,
+    "tokens_per_kchar": 543.4980835806133,
+    "parity": 2.5885318906186745,
+    "byte_fallback": 0.003974732060472709
+   },
+   "sat": {
+    "tokens": 346235,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 14.39467010352139,
+    "bytes_per_token": 1.0666599275058848,
+    "tokens_per_kchar": 2476.8046583828714,
+    "parity": 12.74281402966398,
+    "byte_fallback": 0.9912066367214362
+   },
+   "kas": {
+    "tokens": 89510,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 3.8885268691081283,
+    "bytes_per_token": 2.5492012065690983,
+    "tokens_per_kchar": 709.8053209626898,
+    "parity": 3.2943211512274115,
+    "byte_fallback": 0.36620159899670796
+   },
+   "npi": {
+    "tokens": 70188,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 3.753168279771135,
+    "bytes_per_token": 4.8366102467658285,
+    "tokens_per_kchar": 553.0838514455924,
+    "parity": 2.5831953185381473,
+    "byte_fallback": 0.01963651556298308
+   },
+   "snd": {
+    "tokens": 77695,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 3.0641662722826943,
+    "bytes_per_token": 2.7270866851148723,
+    "tokens_per_kchar": 649.6889319998662,
+    "parity": 2.8594825365279157,
+    "byte_fallback": 0.2979161306920504
+   },
+   "gom": {
+    "tokens": 71674,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 3.7942826892535733,
+    "bytes_per_token": 4.715852331389346,
+    "tokens_per_kchar": 563.40397434285,
+    "parity": 2.6378859813772038,
+    "byte_fallback": 0.029987329297479937
+   },
+   "mni": {
+    "tokens": 181215,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 9.402044204627996,
+    "bytes_per_token": 2.030350688408796,
+    "tokens_per_kchar": 1324.8453743913674,
+    "parity": 6.6694269625703875,
+    "byte_fallback": 0.8536598669139304
+   },
+   "brx": {
+    "tokens": 84427,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 4.389466569616305,
+    "bytes_per_token": 4.6750210240799746,
+    "tokens_per_kchar": 579.9673014041161,
+    "parity": 3.107246696845902,
+    "byte_fallback": 0.020588766480043343
+   },
+   "san": {
+    "tokens": 71579,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 4.216730486008837,
+    "bytes_per_token": 4.843697173752078,
+    "tokens_per_kchar": 558.0903966255253,
+    "parity": 2.634389606565824,
+    "byte_fallback": 0.053516519463526334
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 416840,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.2752080274106705,
+    "bytes_per_token": 4.821982055464926,
+    "tokens_per_kchar": 208.40593259954954
+   },
+   "science_sciq": {
+    "tokens": 106436,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.2782187849019444,
+    "bytes_per_token": 4.806926227967981,
+    "tokens_per_kchar": 208.42626770975102
+   },
+   "math_gsm8k": {
+    "tokens": 213427,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.6338658929624044,
+    "bytes_per_token": 3.300889765587297,
+    "tokens_per_kchar": 303.15517052806814
+   },
+   "math_web": {
+    "tokens": 559114,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.6199535263746516,
+    "bytes_per_token": 3.6347131354249758,
+    "tokens_per_kchar": 279.22583815594703
+   },
+   "code_humaneval": {
+    "tokens": 30363,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.0102621822033897,
+    "bytes_per_token": 3.4134308204064157,
+    "tokens_per_kchar": 293.1923522595597
+   },
+   "code_github": {
+    "tokens": 761115,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 2.761976129390461,
+    "bytes_per_token": 3.9894693968716948,
+    "tokens_per_kchar": 252.33632775823932
+   },
+   "agentic_swe": {
+    "tokens": 808746,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 2.755926762694364,
+    "bytes_per_token": 3.733969627052251,
+    "tokens_per_kchar": 267.9799266717143
+   },
+   "agentic_tools": {
+    "tokens": 1640959,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.5494664785721386,
+    "bytes_per_token": 3.646599336119915,
+    "tokens_per_kchar": 274.2306643332803
+   },
+   "hinglish": {
+    "tokens": 42660,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.5010555946516537,
+    "bytes_per_token": 3.34845288326301,
+    "tokens_per_kchar": 298.7666944469735
+   },
+   "roman_hin": {
+    "tokens": 358979,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.276485509544042,
+    "bytes_per_token": 2.7929015346301593,
+    "tokens_per_kchar": 358.08521929264555
+   }
+  },
+  "mean_fertility_tier1": 9.964528356631954,
+  "mean_fertility_tier2": 5.8373316072982,
+  "mean_parity_22": 5.750206364979468
+ },
+ "qwen3": {
+  "vocab": 151669,
+  "lang": {
+   "eng": {
+    "tokens": 27621,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.2611752887995982,
+    "bytes_per_token": 4.782448137286847,
+    "tokens_per_kchar": 209.30391161359745,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 121957,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 4.755956791327068,
+    "bytes_per_token": 2.763867592676107,
+    "tokens_per_kchar": 930.557463107937,
+    "parity": 4.415372361608921,
+    "byte_fallback": 0.511147274206672
+   },
+   "ben": {
+    "tokens": 138814,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 7.116476981441608,
+    "bytes_per_token": 2.4830492601610787,
+    "tokens_per_kchar": 1075.7272825901644,
+    "parity": 5.025668875131241,
+    "byte_fallback": 0.6719279254111813
+   },
+   "mar": {
+    "tokens": 127476,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 6.693058910007351,
+    "bytes_per_token": 2.788846527973893,
+    "tokens_per_kchar": 958.0987741542717,
+    "parity": 4.6151840990550665,
+    "byte_fallback": 0.5735782759805981
+   },
+   "tel": {
+    "tokens": 193169,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 11.404475144645177,
+    "bytes_per_token": 1.8309148983532555,
+    "tokens_per_kchar": 1458.2094059032233,
+    "parity": 6.99355562796423,
+    "byte_fallback": 0.8016615810661812
+   },
+   "tam": {
+    "tokens": 168828,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 10.064262295081967,
+    "bytes_per_token": 2.4974589523064896,
+    "tokens_per_kchar": 1095.3397390565292,
+    "parity": 6.112305854241338,
+    "byte_fallback": 0.637012438463107
+   },
+   "guj": {
+    "tokens": 186119,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 8.911184525519486,
+    "bytes_per_token": 1.7787974360489793,
+    "tokens_per_kchar": 1472.1343373303382,
+    "parity": 6.738315050143007,
+    "byte_fallback": 0.8557294665759305
+   },
+   "urd": {
+    "tokens": 86961,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 3.1447220916356273,
+    "bytes_per_token": 2.664412782741689,
+    "tokens_per_kchar": 669.3478244136732,
+    "parity": 3.1483653741718256,
+    "byte_fallback": 0.002164995442114859
+   },
+   "kan": {
+    "tokens": 191127,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 11.871242236024845,
+    "bytes_per_token": 1.9640343855132973,
+    "tokens_per_kchar": 1384.5769342219646,
+    "parity": 6.919626371239274,
+    "byte_fallback": 0.7135324227692466
+   },
+   "ory": {
+    "tokens": 267893,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 13.65407747196738,
+    "bytes_per_token": 1.3492663115497605,
+    "tokens_per_kchar": 1986.7619902253798,
+    "parity": 9.698888526845517,
+    "byte_fallback": 0.975635129215944
+   },
+   "mal": {
+    "tokens": 199583,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 13.367916945746819,
+    "bytes_per_token": 2.063066493639238,
+    "tokens_per_kchar": 1336.4694380457493,
+    "parity": 7.225770247275624,
+    "byte_fallback": 0.741341964396863
+   },
+   "pan": {
+    "tokens": 200987,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 7.7583185362464295,
+    "bytes_per_token": 1.7124092603004175,
+    "tokens_per_kchar": 1506.3668727749673,
+    "parity": 7.276601136816191,
+    "byte_fallback": 0.9033631332481907
+   },
+   "asm": {
+    "tokens": 148763,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 7.712323085696511,
+    "bytes_per_token": 2.2523208055766557,
+    "tokens_per_kchar": 1181.25873459535,
+    "parity": 5.385865826726042,
+    "byte_fallback": 0.7297634691195795
+   },
+   "mai": {
+    "tokens": 121141,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 4.922229897200439,
+    "bytes_per_token": 2.7683360711897707,
+    "tokens_per_kchar": 936.1167779426311,
+    "parity": 4.385829622388762,
+    "byte_fallback": 0.5341022236973116
+   },
+   "sat": {
+    "tokens": 246373,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 10.242921880846463,
+    "bytes_per_token": 1.4990076022940826,
+    "tokens_per_kchar": 1762.4382113297709,
+    "parity": 8.919771188588394,
+    "byte_fallback": 0.9582035731847238
+   },
+   "kas": {
+    "tokens": 95734,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 4.15891220296277,
+    "bytes_per_token": 2.3834687780725763,
+    "tokens_per_kchar": 759.1610166131399,
+    "parity": 3.46598602512581,
+    "byte_fallback": 0.14283604862922675
+   },
+   "npi": {
+    "tokens": 121958,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 6.521469440136891,
+    "bytes_per_token": 2.783515636530609,
+    "tokens_per_kchar": 961.0332301048833,
+    "parity": 4.4154085659462,
+    "byte_fallback": 0.5716593304526915
+   },
+   "snd": {
+    "tokens": 78582,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 3.0991481306199717,
+    "bytes_per_token": 2.6963044972131023,
+    "tokens_per_kchar": 657.106064153594,
+    "parity": 2.845009232106006,
+    "byte_fallback": 0.09246726962241478
+   },
+   "gom": {
+    "tokens": 121947,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 6.455637903652726,
+    "bytes_per_token": 2.7717287018130827,
+    "tokens_per_kchar": 958.5822538045529,
+    "parity": 4.415010318236125,
+    "byte_fallback": 0.5855960264900663
+   },
+   "mni": {
+    "tokens": 154859,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 8.034606205250597,
+    "bytes_per_token": 2.3759032410127925,
+    "tokens_per_kchar": 1132.1592022342122,
+    "parity": 5.60656746678252,
+    "byte_fallback": 0.6446647451936781
+   },
+   "brx": {
+    "tokens": 142239,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 7.395185608817719,
+    "bytes_per_token": 2.7748929618459073,
+    "tokens_per_kchar": 977.1041134284065,
+    "parity": 5.149668730313891,
+    "byte_fallback": 0.593099004939509
+   },
+   "san": {
+    "tokens": 124486,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 7.333490427098675,
+    "bytes_per_token": 2.7851083655993447,
+    "tokens_per_kchar": 970.5980960103542,
+    "parity": 4.5069331305890445,
+    "byte_fallback": 0.5942112325091049
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 423905,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.2968214635340185,
+    "bytes_per_token": 4.741616635802833,
+    "tokens_per_kchar": 211.9381941718934
+   },
+   "science_sciq": {
+    "tokens": 107266,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.288186479962531,
+    "bytes_per_token": 4.769731322133761,
+    "tokens_per_kchar": 210.05159938511548
+   },
+   "math_gsm8k": {
+    "tokens": 244625,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.8726985998300505,
+    "bytes_per_token": 2.8799141543178335,
+    "tokens_per_kchar": 347.46931545881574
+   },
+   "math_web": {
+    "tokens": 591572,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.713995978466834,
+    "bytes_per_token": 3.4352859837855747,
+    "tokens_per_kchar": 295.43561336255203
+   },
+   "code_humaneval": {
+    "tokens": 30863,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.043365995762712,
+    "bytes_per_token": 3.3581310954865047,
+    "tokens_per_kchar": 298.020471224411
+   },
+   "code_github": {
+    "tokens": 782693,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 2.840279567004997,
+    "bytes_per_token": 3.8794840378028166,
+    "tokens_per_kchar": 259.49019186598554
+   },
+   "agentic_swe": {
+    "tokens": 892181,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 3.0402443969644617,
+    "bytes_per_token": 3.3847761833080954,
+    "tokens_per_kchar": 295.6263140193543
+   },
+   "agentic_tools": {
+    "tokens": 1746352,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.713209704683305,
+    "bytes_per_token": 3.4265256947053055,
+    "tokens_per_kchar": 291.84353120324926
+   },
+   "hinglish": {
+    "tokens": 43456,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.529064039408867,
+    "bytes_per_token": 3.287118004418262,
+    "tokens_per_kchar": 304.3414316429367
+   },
+   "roman_hin": {
+    "tokens": 368467,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.336654194939438,
+    "bytes_per_token": 2.7209845115030653,
+    "tokens_per_kchar": 367.5495962078652
+   }
+  },
+  "mean_fertility_tier1": 8.976517448149433,
+  "mean_fertility_tier2": 6.587592478228276,
+  "mean_parity_22": 5.584081125299764
+ },
+ "deepseek-v3": {
+  "vocab": 128815,
+  "lang": {
+   "eng": {
+    "tokens": 27041,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.234692479795443,
+    "bytes_per_token": 4.885026441329832,
+    "tokens_per_kchar": 204.90884015579772,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 75573,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 2.9471200717544748,
+    "bytes_per_token": 4.460230505603853,
+    "tokens_per_kchar": 576.6378244746601,
+    "parity": 2.794756111090566,
+    "byte_fallback": 0.06528652086442988
+   },
+   "ben": {
+    "tokens": 54532,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 2.795652619706757,
+    "bytes_per_token": 6.320729113181251,
+    "tokens_per_kchar": 422.59109437237487,
+    "parity": 2.0166413963980623,
+    "byte_fallback": 0.026210029704700332
+   },
+   "mar": {
+    "tokens": 80999,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 4.252808988764045,
+    "bytes_per_token": 4.389078877517006,
+    "tokens_per_kchar": 608.7815950274706,
+    "parity": 2.9954143707703116,
+    "byte_fallback": 0.07864698499970119
+   },
+   "tel": {
+    "tokens": 101180,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 5.973550596292361,
+    "bytes_per_token": 3.4955129472227715,
+    "tokens_per_kchar": 763.7955763569109,
+    "parity": 3.7417255279020747,
+    "byte_fallback": 0.3168645848604799
+   },
+   "tam": {
+    "tokens": 83021,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 4.949090909090909,
+    "bytes_per_token": 5.078727069054818,
+    "tokens_per_kchar": 538.6322202253898,
+    "parity": 3.070189711918938,
+    "byte_fallback": 0.10838014981273408
+   },
+   "guj": {
+    "tokens": 104419,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 4.999473331418175,
+    "bytes_per_token": 3.1705724054051467,
+    "tokens_per_kchar": 825.916727307242,
+    "parity": 3.861506601087238,
+    "byte_fallback": 0.4194196532872296
+   },
+   "urd": {
+    "tokens": 63945,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 2.3124073337431743,
+    "bytes_per_token": 3.6234263820470716,
+    "tokens_per_kchar": 492.19128841816826,
+    "parity": 2.364742428164639,
+    "byte_fallback": 0.008679479231246125
+   },
+   "kan": {
+    "tokens": 99649,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 6.189378881987578,
+    "bytes_per_token": 3.767022248090799,
+    "tokens_per_kchar": 721.884960880904,
+    "parity": 3.6851077992677785,
+    "byte_fallback": 0.2393575088687426
+   },
+   "ory": {
+    "tokens": 149957,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 7.643068297655454,
+    "bytes_per_token": 2.410417653060544,
+    "tokens_per_kchar": 1112.1188973516564,
+    "parity": 5.545541954809363,
+    "byte_fallback": 0.7623971024036879
+   },
+   "mal": {
+    "tokens": 119408,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 7.997856664434026,
+    "bytes_per_token": 3.4482865469650275,
+    "tokens_per_kchar": 799.5928644131354,
+    "parity": 4.415813024666248,
+    "byte_fallback": 0.4669801592212185
+   },
+   "pan": {
+    "tokens": 121018,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 4.671427468540107,
+    "bytes_per_token": 2.843973623758449,
+    "tokens_per_kchar": 907.011429642121,
+    "parity": 4.475352242890426,
+    "byte_fallback": 0.435273746701847
+   },
+   "asm": {
+    "tokens": 72837,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 3.7760899994815698,
+    "bytes_per_token": 4.60016200557409,
+    "tokens_per_kchar": 578.3652013721255,
+    "parity": 2.693576420990348,
+    "byte_fallback": 0.04053605785178797
+   },
+   "mai": {
+    "tokens": 84404,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 3.429523383852749,
+    "bytes_per_token": 3.973259561158239,
+    "tokens_per_kchar": 652.2317012858556,
+    "parity": 3.1213342701823157,
+    "byte_fallback": 0.09500652354406358
+   },
+   "sat": {
+    "tokens": 173564,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 7.215898224753669,
+    "bytes_per_token": 2.127831808439538,
+    "tokens_per_kchar": 1241.596383172021,
+    "parity": 6.4185496098517065,
+    "byte_fallback": 0.8709705447910331
+   },
+   "kas": {
+    "tokens": 82439,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 3.5813458447369566,
+    "bytes_per_token": 2.767852594039229,
+    "tokens_per_kchar": 653.7330002775465,
+    "parity": 3.048666839244111,
+    "byte_fallback": 0.20403079710144928
+   },
+   "npi": {
+    "tokens": 80239,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 4.290626169723544,
+    "bytes_per_token": 4.230760602699435,
+    "tokens_per_kchar": 632.2860767672947,
+    "parity": 2.9673089012980287,
+    "byte_fallback": 0.10025833435846968
+   },
+   "snd": {
+    "tokens": 78131,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 3.0813614134721563,
+    "bytes_per_token": 2.7118685284970114,
+    "tokens_per_kchar": 653.3347827541224,
+    "parity": 2.8893532043933288,
+    "byte_fallback": 0.2816431322207959
+   },
+   "gom": {
+    "tokens": 79654,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 4.216728427739545,
+    "bytes_per_token": 4.2434027167499435,
+    "tokens_per_kchar": 626.1319330901773,
+    "parity": 2.945675085980548,
+    "byte_fallback": 0.0522751724574394
+   },
+   "mni": {
+    "tokens": 88638,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 4.5988378125972815,
+    "bytes_per_token": 4.150928495679054,
+    "tokens_per_kchar": 648.0238627889635,
+    "parity": 3.2779113198476386,
+    "byte_fallback": 0.030226981205733087
+   },
+   "brx": {
+    "tokens": 100522,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 5.2262659873141315,
+    "bytes_per_token": 3.9264837547999445,
+    "tokens_per_kchar": 690.5311460995247,
+    "parity": 3.7173921082800194,
+    "byte_fallback": 0.0745752365449181
+   },
+   "san": {
+    "tokens": 77218,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 4.548924889543446,
+    "bytes_per_token": 4.489976430365977,
+    "tokens_per_kchar": 602.0568078155578,
+    "parity": 2.8555896601457045,
+    "byte_fallback": 0.06512362553915314
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 413758,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.2657794909446891,
+    "bytes_per_token": 4.857900028519086,
+    "tokens_per_kchar": 206.86503661002882
+   },
+   "science_sciq": {
+    "tokens": 102846,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.2351055014471173,
+    "bytes_per_token": 4.974719483499602,
+    "tokens_per_kchar": 201.3962186560661
+   },
+   "math_gsm8k": {
+    "tokens": 213457,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.6340955545178255,
+    "bytes_per_token": 3.30042584689188,
+    "tokens_per_kchar": 303.1977830143789
+   },
+   "math_web": {
+    "tokens": 554117,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.6054754275052008,
+    "bytes_per_token": 3.667490800679279,
+    "tokens_per_kchar": 276.73029786673004
+   },
+   "code_humaneval": {
+    "tokens": 30815,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.040188029661017,
+    "bytes_per_token": 3.363361999026448,
+    "tokens_per_kchar": 297.55697180378525
+   },
+   "code_github": {
+    "tokens": 833275,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 3.0238343209867584,
+    "bytes_per_token": 3.6439890792355465,
+    "tokens_per_kchar": 276.2598996376985
+   },
+   "agentic_swe": {
+    "tokens": 921137,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 3.1389164340942624,
+    "bytes_per_token": 3.278375529372938,
+    "tokens_per_kchar": 305.2209540629603
+   },
+   "agentic_tools": {
+    "tokens": 1697115,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.6367129238341454,
+    "bytes_per_token": 3.525936663101793,
+    "tokens_per_kchar": 283.61523590776795
+   },
+   "hinglish": {
+    "tokens": 42806,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.5061928219563687,
+    "bytes_per_token": 3.33703219174882,
+    "tokens_per_kchar": 299.7891964954793
+   },
+   "roman_hin": {
+    "tokens": 360828,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.2882110469909316,
+    "bytes_per_token": 2.7785897990178148,
+    "tokens_per_kchar": 359.92961567926454
+   }
+  },
+  "mean_fertility_tier1": 4.975621378489733,
+  "mean_fertility_tier2": 4.396560215321505,
+  "mean_parity_22": 3.4715308851990194
+ },
+ "mistral-nemo": {
+  "vocab": 131072,
+  "lang": {
+   "eng": {
+    "tokens": 27827,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.2705812519976256,
+    "bytes_per_token": 4.747044237610953,
+    "tokens_per_kchar": 210.86491975205735,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 49985,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 1.9492649066021916,
+    "bytes_per_token": 6.743483044913474,
+    "tokens_per_kchar": 381.39602313479526,
+    "parity": 1.7962769971610306,
+    "byte_fallback": 0.010148396361895644
+   },
+   "ben": {
+    "tokens": 57089,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 2.9267404901056087,
+    "bytes_per_token": 6.0376254619979335,
+    "tokens_per_kchar": 442.4063483207018,
+    "parity": 2.051568620404643,
+    "byte_fallback": 0.07778795702506872
+   },
+   "mar": {
+    "tokens": 59629,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 3.1307886170324477,
+    "bytes_per_token": 5.962048667594627,
+    "tokens_per_kchar": 448.16649254797034,
+    "parity": 2.142846875336903,
+    "byte_fallback": 0.026622030926191614
+   },
+   "tel": {
+    "tokens": 62896,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 3.713307356240406,
+    "bytes_per_token": 5.623187484100738,
+    "tokens_per_kchar": 474.7942930474824,
+    "parity": 2.2602508355194595,
+    "byte_fallback": 0.04448636327910084
+   },
+   "tam": {
+    "tokens": 60618,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 3.613591654247392,
+    "bytes_per_token": 6.955706225873503,
+    "tokens_per_kchar": 393.28372249939986,
+    "parity": 2.1783878966471413,
+    "byte_fallback": 0.0343463121240899
+   },
+   "guj": {
+    "tokens": 75785,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 3.6285071339653356,
+    "bytes_per_token": 4.368516197136636,
+    "tokens_per_kchar": 599.4320878286455,
+    "parity": 2.72343407481942,
+    "byte_fallback": 0.1987824415251522
+   },
+   "urd": {
+    "tokens": 48821,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 1.7654865656529128,
+    "bytes_per_token": 4.745908522971672,
+    "tokens_per_kchar": 375.78029387541466,
+    "parity": 1.7544471197038847,
+    "byte_fallback": 0.0005993407252022775
+   },
+   "kan": {
+    "tokens": 61425,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 3.8152173913043477,
+    "bytes_per_token": 6.111192511192511,
+    "tokens_per_kchar": 444.97971602434075,
+    "parity": 2.2073885075645956,
+    "byte_fallback": 0.03172866520787746
+   },
+   "ory": {
+    "tokens": 358040,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 18.248725790010194,
+    "bytes_per_token": 1.0095492123785053,
+    "tokens_per_kchar": 2655.314856977581,
+    "parity": 12.866640313364718,
+    "byte_fallback": 0.9364306522422966
+   },
+   "mal": {
+    "tokens": 71316,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 4.776691225720027,
+    "bytes_per_token": 5.773641258623591,
+    "tokens_per_kchar": 477.5539722504955,
+    "parity": 2.5628346569878175,
+    "byte_fallback": 0.08444107720917418
+   },
+   "pan": {
+    "tokens": 82569,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 3.1872539180112716,
+    "bytes_per_token": 4.16829560731025,
+    "tokens_per_kchar": 618.8420460933108,
+    "parity": 2.967226075394401,
+    "byte_fallback": 0.15921587377480279
+   },
+   "asm": {
+    "tokens": 91309,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 4.7337342526828765,
+    "bytes_per_token": 3.669539694882213,
+    "tokens_per_kchar": 725.0428789226273,
+    "parity": 3.28130951953139,
+    "byte_fallback": 0.2931467336146573
+   },
+   "mai": {
+    "tokens": 62910,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 2.5561740685059524,
+    "bytes_per_token": 5.330774121761246,
+    "tokens_per_kchar": 486.1368694362018,
+    "parity": 2.260753944011212,
+    "byte_fallback": 0.0069160641307764855
+   },
+   "sat": {
+    "tokens": 346246,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 14.395127426932191,
+    "bytes_per_token": 1.0666260404452326,
+    "tokens_per_kchar": 2476.883347282729,
+    "parity": 12.44280734538398,
+    "byte_fallback": 0.991105129180443
+   },
+   "kas": {
+    "tokens": 72612,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 3.154437638472566,
+    "bytes_per_token": 3.142442020602655,
+    "tokens_per_kchar": 575.8058760556679,
+    "parity": 2.6094081287957738,
+    "byte_fallback": 0.19630337794773742
+   },
+   "npi": {
+    "tokens": 59248,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 3.168172824982621,
+    "bytes_per_token": 5.729678638941399,
+    "tokens_per_kchar": 466.8762755805615,
+    "parity": 2.129155137097064,
+    "byte_fallback": 0.0255863539445629
+   },
+   "snd": {
+    "tokens": 69477,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 2.740061523899669,
+    "bytes_per_token": 3.0496567209292285,
+    "tokens_per_kchar": 580.9696625079439,
+    "parity": 2.4967477629640276,
+    "byte_fallback": 0.3184768498485504
+   },
+   "gom": {
+    "tokens": 62402,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 3.3034409740603494,
+    "bytes_per_token": 5.416557161629435,
+    "tokens_per_kchar": 490.5200603697648,
+    "parity": 2.2424982930247603,
+    "byte_fallback": 0.012594865170353626
+   },
+   "mni": {
+    "tokens": 94229,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 4.888917712981218,
+    "bytes_per_token": 3.9046365768500144,
+    "tokens_per_kchar": 688.899124153763,
+    "parity": 3.38624357638265,
+    "byte_fallback": 0.08102746162681425
+   },
+   "brx": {
+    "tokens": 83248,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 4.328168867630239,
+    "bytes_per_token": 4.741231020565059,
+    "tokens_per_kchar": 571.8682164152447,
+    "parity": 2.991626837244403,
+    "byte_fallback": 0.02131699846860643
+   },
+   "san": {
+    "tokens": 63527,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 3.7423858615611194,
+    "bytes_per_token": 5.457632187888614,
+    "tokens_per_kchar": 495.31019749409387,
+    "parity": 2.2829266539691666,
+    "byte_fallback": 0.05089279259741199
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 426112,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.30357317670093,
+    "bytes_per_token": 4.717057956593572,
+    "tokens_per_kchar": 213.04161969067087
+   },
+   "science_sciq": {
+    "tokens": 105043,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.2614898701797788,
+    "bytes_per_token": 4.870672010509981,
+    "tokens_per_kchar": 205.69845201844655
+   },
+   "math_gsm8k": {
+    "tokens": 247231,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.8926485336109686,
+    "bytes_per_token": 2.8495577010973543,
+    "tokens_per_kchar": 351.1709201030086
+   },
+   "math_web": {
+    "tokens": 601014,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.741352834485516,
+    "bytes_per_token": 3.3813172405301706,
+    "tokens_per_kchar": 300.1510208892254
+   },
+   "code_humaneval": {
+    "tokens": 31826,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.1071239406779663,
+    "bytes_per_token": 3.2565198265569033,
+    "tokens_per_kchar": 307.3194283507146
+   },
+   "code_github": {
+    "tokens": 846904,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 3.0732919885763637,
+    "bytes_per_token": 3.5853473357074708,
+    "tokens_per_kchar": 280.77839133871214
+   },
+   "agentic_swe": {
+    "tokens": 1029157,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 3.507011248666755,
+    "bytes_per_token": 2.9342782490912467,
+    "tokens_per_kchar": 341.01364012147377
+   },
+   "agentic_tools": {
+    "tokens": 1799617,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.7959645644824502,
+    "bytes_per_token": 3.325107508986634,
+    "tokens_per_kchar": 300.7449701396957
+   },
+   "hinglish": {
+    "tokens": 43321,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.524313863476425,
+    "bytes_per_token": 3.2973615567507677,
+    "tokens_per_kchar": 303.3959674200032
+   },
+   "roman_hin": {
+    "tokens": 366372,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.323368634662946,
+    "bytes_per_token": 2.7365437315078665,
+    "tokens_per_kchar": 365.45981230847804
+   }
+  },
+  "mean_fertility_tier1": 4.614143186262921,
+  "mean_fertility_tier2": 4.70106211517088,
+  "mean_parity_22": 3.411179960538497
+ },
+ "gpt-oss": {
+  "vocab": 200019,
+  "lang": {
+   "eng": {
+    "tokens": 26873,
+    "words": 21901,
+    "chars": 131966,
+    "bytes": 132096,
+    "fertility": 1.227021597187343,
+    "bytes_per_token": 4.915565809548617,
+    "tokens_per_kchar": 203.63578497491778,
+    "parity": 1.0
+   },
+   "hin": {
+    "tokens": 42276,
+    "words": 25643,
+    "chars": 131058,
+    "bytes": 337073,
+    "fertility": 1.648637054946769,
+    "bytes_per_token": 7.9731526161415465,
+    "tokens_per_kchar": 322.5747379023028,
+    "parity": 1.5731775387935847,
+    "byte_fallback": 0.002541883304448296
+   },
+   "ben": {
+    "tokens": 45592,
+    "words": 19506,
+    "chars": 129042,
+    "bytes": 344682,
+    "fertility": 2.337332102942684,
+    "bytes_per_token": 7.5601421301982805,
+    "tokens_per_kchar": 353.3113249949629,
+    "parity": 1.696572768206006,
+    "byte_fallback": 0.013182872811643114
+   },
+   "mar": {
+    "tokens": 48783,
+    "words": 19046,
+    "chars": 133051,
+    "bytes": 355511,
+    "fertility": 2.5613252126430748,
+    "bytes_per_token": 7.287600188590288,
+    "tokens_per_kchar": 366.6488790012852,
+    "parity": 1.8153164886689241,
+    "byte_fallback": 0.005351833498513379
+   },
+   "tel": {
+    "tokens": 51849,
+    "words": 16938,
+    "chars": 132470,
+    "bytes": 353676,
+    "fertility": 3.061105207226355,
+    "bytes_per_token": 6.82126945553434,
+    "tokens_per_kchar": 391.4018268287159,
+    "parity": 1.9294087001823392,
+    "byte_fallback": 0.03585848875216305
+   },
+   "tam": {
+    "tokens": 53199,
+    "words": 16775,
+    "chars": 154133,
+    "bytes": 421641,
+    "fertility": 3.171326378539493,
+    "bytes_per_token": 7.92573168668584,
+    "tokens_per_kchar": 345.14996788487866,
+    "parity": 1.9796449968369738,
+    "byte_fallback": 0.01639941690962099
+   },
+   "guj": {
+    "tokens": 48135,
+    "words": 20886,
+    "chars": 126428,
+    "bytes": 331068,
+    "fertility": 2.304653835104855,
+    "bytes_per_token": 6.87790588968526,
+    "tokens_per_kchar": 380.7305343752966,
+    "parity": 1.7912030662746996,
+    "byte_fallback": 0.021671516002809272
+   },
+   "urd": {
+    "tokens": 44412,
+    "words": 27653,
+    "chars": 129919,
+    "bytes": 231700,
+    "fertility": 1.6060463602502442,
+    "bytes_per_token": 5.217058452670449,
+    "tokens_per_kchar": 341.8437641915347,
+    "parity": 1.6526625237226957,
+    "byte_fallback": 0.00044218439089100157
+   },
+   "kan": {
+    "tokens": 52904,
+    "words": 16100,
+    "chars": 138040,
+    "bytes": 375380,
+    "fertility": 3.2859627329192547,
+    "bytes_per_token": 7.095493724482081,
+    "tokens_per_kchar": 383.2512315270936,
+    "parity": 1.9686674357161462,
+    "byte_fallback": 0.01412639405204461
+   },
+   "ory": {
+    "tokens": 133961,
+    "words": 19620,
+    "chars": 134839,
+    "bytes": 361459,
+    "fertility": 6.8277777777777775,
+    "bytes_per_token": 2.698240532692351,
+    "tokens_per_kchar": 993.4885307663213,
+    "parity": 4.984966323075206,
+    "byte_fallback": 0.2563255113657229
+   },
+   "mal": {
+    "tokens": 52584,
+    "words": 14930,
+    "chars": 149336,
+    "bytes": 411753,
+    "fertility": 3.522036168787676,
+    "bytes_per_token": 7.830385668644454,
+    "tokens_per_kchar": 352.11871216585416,
+    "parity": 1.9567595728054181,
+    "byte_fallback": 0.020134865609269637
+   },
+   "pan": {
+    "tokens": 70345,
+    "words": 25906,
+    "chars": 133425,
+    "bytes": 344172,
+    "fertility": 2.715394117192928,
+    "bytes_per_token": 4.892629184732391,
+    "tokens_per_kchar": 527.2250327899569,
+    "parity": 2.6176831764224313,
+    "byte_fallback": 0.05363713557882819
+   },
+   "asm": {
+    "tokens": 53433,
+    "words": 19289,
+    "chars": 125936,
+    "bytes": 335062,
+    "fertility": 2.7701280522577636,
+    "bytes_per_token": 6.270694140325267,
+    "tokens_per_kchar": 424.28693939778935,
+    "parity": 1.988352621590444,
+    "byte_fallback": 0.012811193894239506
+   },
+   "mai": {
+    "tokens": 47256,
+    "words": 24611,
+    "chars": 129408,
+    "bytes": 335359,
+    "fertility": 1.9201170208443379,
+    "bytes_per_token": 7.096643812425936,
+    "tokens_per_kchar": 365.1706231454006,
+    "parity": 1.758493655341793,
+    "byte_fallback": 0.003397388257776834
+   },
+   "sat": {
+    "tokens": 368158,
+    "words": 24053,
+    "chars": 139791,
+    "bytes": 369315,
+    "fertility": 15.306115661248077,
+    "bytes_per_token": 1.0031426724395505,
+    "tokens_per_kchar": 2633.6316357991573,
+    "parity": 13.699921854649649,
+    "byte_fallback": 0.9300732958374015
+   },
+   "kas": {
+    "tokens": 70050,
+    "words": 23019,
+    "chars": 126105,
+    "bytes": 228179,
+    "fertility": 3.0431382770754594,
+    "bytes_per_token": 3.2573733047822984,
+    "tokens_per_kchar": 555.4894730581658,
+    "parity": 2.6067056153016037,
+    "byte_fallback": 0.20367676233302473
+   },
+   "npi": {
+    "tokens": 43377,
+    "words": 18701,
+    "chars": 126903,
+    "bytes": 339472,
+    "fertility": 2.319501630928827,
+    "bytes_per_token": 7.826082947183991,
+    "tokens_per_kchar": 341.8122503014113,
+    "parity": 1.614148029620809,
+    "byte_fallback": 0.0065293256782618485
+   },
+   "snd": {
+    "tokens": 45957,
+    "words": 25356,
+    "chars": 119588,
+    "bytes": 211881,
+    "fertility": 1.8124704212020823,
+    "bytes_per_token": 4.61041843462367,
+    "tokens_per_kchar": 384.2944108104492,
+    "parity": 1.7101551743385555,
+    "byte_fallback": 0.0028102031993082577
+   },
+   "gom": {
+    "tokens": 54890,
+    "words": 18890,
+    "chars": 127216,
+    "bytes": 338004,
+    "fertility": 2.9057702488088935,
+    "bytes_per_token": 6.1578429586445615,
+    "tokens_per_kchar": 431.4708841655138,
+    "parity": 2.0425706099058534,
+    "byte_fallback": 0.002755326965466569
+   },
+   "mni": {
+    "tokens": 82559,
+    "words": 19274,
+    "chars": 136782,
+    "bytes": 367930,
+    "fertility": 4.283438829511259,
+    "bytes_per_token": 4.456570452645987,
+    "tokens_per_kchar": 603.5808805252153,
+    "parity": 3.0721914188962898,
+    "byte_fallback": 0.03228892609423583
+   },
+   "brx": {
+    "tokens": 75466,
+    "words": 19234,
+    "chars": 145572,
+    "bytes": 394698,
+    "fertility": 3.9235728397629197,
+    "bytes_per_token": 5.230143375824875,
+    "tokens_per_kchar": 518.4101338169428,
+    "parity": 2.808246195065679,
+    "byte_fallback": 0.006876095456383983
+   },
+   "san": {
+    "tokens": 56029,
+    "words": 16975,
+    "chars": 128257,
+    "bytes": 346707,
+    "fertility": 3.300677466863034,
+    "bytes_per_token": 6.187991932749112,
+    "tokens_per_kchar": 436.84945071224183,
+    "parity": 2.084955159453727,
+    "byte_fallback": 0.0397936624907885
+   }
+  },
+  "domain": {
+   "eng_web": {
+    "tokens": 412180,
+    "words": 326880,
+    "chars": 2000135,
+    "bytes": 2009995,
+    "fertility": 1.2609520313264806,
+    "bytes_per_token": 4.876498131884128,
+    "tokens_per_kchar": 206.0760898639342
+   },
+   "science_sciq": {
+    "tokens": 105116,
+    "words": 83269,
+    "chars": 510665,
+    "bytes": 511630,
+    "fertility": 1.2623665469742642,
+    "bytes_per_token": 4.867289470680011,
+    "tokens_per_kchar": 205.84140287664124
+   },
+   "math_gsm8k": {
+    "tokens": 212156,
+    "words": 130627,
+    "chars": 704019,
+    "bytes": 704499,
+    "fertility": 1.6241358983977279,
+    "bytes_per_token": 3.3206649823714627,
+    "tokens_per_kchar": 301.34982152470315
+   },
+   "math_web": {
+    "tokens": 556259,
+    "words": 345142,
+    "chars": 2002372,
+    "bytes": 2032219,
+    "fertility": 1.6116815687456179,
+    "bytes_per_token": 3.653368305052143,
+    "tokens_per_kchar": 277.8000291654098
+   },
+   "code_humaneval": {
+    "tokens": 30387,
+    "words": 15104,
+    "chars": 103560,
+    "bytes": 103642,
+    "fertility": 2.0118511652542375,
+    "bytes_per_token": 3.410734853720341,
+    "tokens_per_kchar": 293.42410196987254
+   },
+   "code_github": {
+    "tokens": 767627,
+    "words": 275569,
+    "chars": 3016272,
+    "bytes": 3036445,
+    "fertility": 2.7856072344857368,
+    "bytes_per_token": 3.955625583779622,
+    "tokens_per_kchar": 254.4952842449222
+   },
+   "agentic_swe": {
+    "tokens": 811551,
+    "words": 293457,
+    "chars": 3017935,
+    "bytes": 3019833,
+    "fertility": 2.765485232930208,
+    "bytes_per_token": 3.7210637409109224,
+    "tokens_per_kchar": 268.9093701487938
+   },
+   "agentic_tools": {
+    "tokens": 1646544,
+    "words": 643648,
+    "chars": 5983864,
+    "bytes": 5983920,
+    "fertility": 2.558143581584966,
+    "bytes_per_token": 3.634230242252864,
+    "tokens_per_kchar": 275.16400773814377
+   },
+   "hinglish": {
+    "tokens": 39497,
+    "words": 28420,
+    "chars": 142787,
+    "bytes": 142845,
+    "fertility": 1.3897607318789584,
+    "bytes_per_token": 3.616603792693116,
+    "tokens_per_kchar": 276.61481787557693
+   },
+   "roman_hin": {
+    "tokens": 321326,
+    "words": 157690,
+    "chars": 1002496,
+    "bytes": 1002593,
+    "fertility": 2.0377068932716087,
+    "bytes_per_token": 3.12017390438371,
+    "tokens_per_kchar": 320.525967185904
+   }
+  },
+  "mean_fertility_tier1": 3.003781540757373,
+  "mean_fertility_tier2": 4.158493044850266,
+  "mean_parity_22": 2.731038234517563
+ }
+}

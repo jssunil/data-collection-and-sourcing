@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>India-First 40B Data Plan</title>
+<meta name="description" content="Data, cleaning, evaluation, fertility targets and vocabulary size for a 40B India-first model. ERA V5 Session 3.">
+<style>
+:root{
+  color-scheme:light;
+  --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#eb6834; --accent:#2a78d6; --good:#006300; --tag:#eef3fb;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --page:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+    --s1:#3987e5; --s2:#d95926; --accent:#3987e5; --good:#0ca30c; --tag:#1d2633;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#d95926; --accent:#3987e5; --good:#0ca30c; --tag:#1d2633;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:15.5px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:880px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:26px;line-height:1.25;margin:0 0 6px}
+h2{font-size:19px;margin:36px 0 10px;padding-top:8px;border-top:1px solid var(--grid)}
+h3{font-size:15.5px;margin:18px 0 6px}
+p,li{color:var(--ink)}
+.sub{color:var(--ink2);margin:0 0 18px}
+.muted{color:var(--muted);font-size:13px}
+a{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin:14px 0}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.tile b{display:block;font-size:12.5px;color:var(--ink2);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px}
+.tile span{font-size:14.5px}
+.scroll{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+th,td{padding:6px 8px;border-bottom:1px solid var(--grid);text-align:left;vertical-align:top}
+th{color:var(--ink2);font-weight:600;font-size:12.5px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.best{font-weight:700}
+.fig{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;margin:12px 0}
+.fig svg{width:100%;height:auto;display:block}
+.cap{font-size:13px;color:var(--ink2);margin:6px 2px 0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin:2px 2px 6px}
+.sw{display:inline-block;width:12px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+ol,ul{padding-left:22px}
+li{margin:3px 0}
+code{font-size:13px}
+.tag{display:inline-block;background:var(--tag);border-radius:5px;padding:0 6px;font-size:12.5px}
+</style>
+</head>
+<body>
+<main>
+<h1>Data plan for a 40B India-first model</h1>
+<p class="sub">ERA V5 · Session 3 assignment · 17 Oct 2026. Every number below is either measured in the
+<a href="https://github.com/jssunil/data-collection-and-sourcing">evidence repository</a> (experiments E1–E5, code and logs) or cited.</p>
+
+<div class="grid">
+  <div class="tile"><b>Budget</b><span>40B dense, <b style="display:inline;text-transform:none;font-size:inherit;color:inherit">20 T tokens</b> (500/weight), 4.8e24 FLOPs ≈ 3.3 M H100-hours.</span></div>
+  <div class="tile"><b>Indic</b><span>8% of every batch (always-on): 2% native + 6% translated, plus 4% India-centric English. Native supply is the limit (E4).</span></div>
+  <div class="tile"><b>Cleaning</b><span>Per-language calibrated filters. English rules delete 75–100% of <i>clean</i> Indic text (E3).</span></div>
+  <div class="tile"><b>Testing</b><span>Gemma 4 benchmark set + bits-per-byte on a sealed golden proxy + an India-default paired test.</span></div>
+  <div class="tile"><b>Tokenizer</b><span>Byte-level BPE, <b style="display:inline;text-transform:none;font-size:inherit;color:inherit">V = 262,144</b>, trained on the India-first mix, single digits, exact round trip.</span></div>
+  <div class="tile"><b>Fertility</b><span>Parity vs English ≤ 1.5 for every tier-1 language (worst measured 1.48), ≤ 2.5 tier-2 (2.35); tier-1 mean ≤ 1.8 tok/word (1.77); English ≤ 1.30 (1.25).</span></div>
+</div>
+
+<h2>1. Pre-training data: what and why</h2>
+<p>A 40B model at Gemma 4 quality needs ~20 T tokens (Gemma 3 27B: 14 T). Each source's share is capped by its unique supply:
+<i>share × 20 T ≤ 4 × unique tokens</i> (repeats beyond ~4 epochs lose value; Muennighoff et al., 2023).</p>
+<div class="scroll"><table>
+<thead><tr><th>Pool</th><th class="n">Share</th><th class="n">Tokens</th><th>Main sources</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>English web, top quality tiers</td><td class="n">33%</td><td class="n">6.6 T</td><td>FineWeb-Edu, DCLM, Nemotron-CC (high)</td><td>Knowledge, reasoning breadth</td></tr>
+<tr><td>Code + code-adjacent</td><td class="n">22%</td><td class="n">4.4 T</td><td>The Stack v2 (permissive), issues, PRs, commits, notebooks, docs</td><td>Coding; precision</td></tr>
+<tr><td>Math</td><td class="n">8%</td><td class="n">1.6 T</td><td>FineMath, MegaMath, OpenWebMath, Proof-Pile-2</td><td>Multi-step reasoning</td></tr>
+<tr><td>Books, papers, reference</td><td class="n">6%</td><td class="n">1.2 T</td><td>arXiv, PMC-OA, peS2o, Wikipedia (all langs), public-domain books</td><td>Depth, long coherence</td></tr>
+<tr><td><b>Native Indic, 22 languages</b></td><td class="n">2%</td><td class="n">0.4 T</td><td>Sangraha, IndicCorp v2, FineWeb-2, new crawls, OCR of govt/library PDFs</td><td>Language skill; 4 epochs of ~100 B unique tokens</td></tr>
+<tr><td><b>Indic synthetic</b></td><td class="n">6%</td><td class="n">1.2 T</td><td>Translation of edu/math/code-explanation text (IndicTrans2 + LLM), rephrasing of native text</td><td>Fills the supply gap with high-value content</td></tr>
+<tr><td><b>India-centric English</b></td><td class="n">4%</td><td class="n">0.8 T</td><td>Court judgments, Gazette, PIB, Sansad, NCERT/state textbooks, Indian news</td><td>Most Indian knowledge is written in English</td></tr>
+<tr><td>Romanized / code-mixed Indic</td><td class="n">1%</td><td class="n">0.2 T</td><td>Sangraha <code>*_Latn</code>, forums, transliteration corpora</td><td>How Indians actually type</td></tr>
+<tr><td>Other languages</td><td class="n">5%</td><td class="n">1.0 T</td><td>FineWeb-2, top 30 languages</td><td>Multilingual parity with Gemma 4</td></tr>
+<tr><td>Synthetic reasoning + agent traces</td><td class="n">13%</td><td class="n">2.6 T</td><td>Rephrased web, verified code-execution traces, SWE/terminal/tool-call trajectories</td><td>Agentic loop format; reasoning density</td></tr>
+</tbody></table></div>
+<p><b>Indic supply (E4).</b> Sangraha (verified + unverified, parquet footers) and FineWeb-2 hold <b>67–111 B unique native Indic tokens</b> under our tokenizer (they overlap; both are Common Crawl). Four epochs of that is 0.27–0.44 T = <b>at most 2.2% of 20 T</b>. A 10% native share would need 18–30 epochs. So the always-on 8% is 2% native (repeated ≤ 4×, growing with new crawls and OCR) + 6% high-value English content translated into the 22 languages. A better tokenizer does not create supply: it carries the same bytes in fewer tokens.</p>
+<p><b>Schedule.</b> Phase 1 (0–16 T): the mix above. Phase 2 anneal (16–19.5 T): up-weight curated, reasoning, agentic and native Indic data. Phase 3 (0.5 T): context 8 K → 128 K with long Indic and code documents.
+Weights are set by mixture regression on 1B-parameter proxies (RegMix), scored by bits per byte per domain and language.</p>
+
+<h2>2. Post-training and RL data</h2>
+<div class="scroll"><table>
+<thead><tr><th>Stage</th><th>Data</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>SFT (~5 M dialogues)</td><td>Multilingual instruction following; verified code solutions; agent trajectories (SWE-Gym, SWE-smith, APIGen-MT, terminal); Indic instructions <i>written</i> by native speakers (IndicAlign, Aya, Anudesh) not only translated; India-default answers (₹, lakh/crore, IST, Indian law and maps)</td><td>Format, tool syntax, and the Indian default</td></tr>
+<tr><td>Preference</td><td>Pairs rated by Indian annotators per tier-1 language; safety pairs for caste, religion, region and Indian law (IT Rules 2021, DPDP Act 2023)</td><td>"Better" as an Indian user judges it</td></tr>
+<tr><td>RL with verifiers (GRPO)</td><td>Math (exact answer), code (unit tests), SWE (tests in Docker), tool use (simulated APIs, Indian tasks: UPI, IRCTC-style booking, GST), IFEval-style constraints in Indic languages</td><td>Rewards that style cannot game</td></tr>
+</tbody></table></div>
+
+<h2>3. Cleaning for these objectives</h2>
+<ol>
+<li><b>Extract</b> (trafilatura / resiliparse); OCR for Indic PDFs; detect legacy fonts (Krutidev, Shree-Lipi) and convert or drop.</li>
+<li><b>Normalize to NFC</b> in the pipeline, not in the tokenizer. E3: 43% of Marathi, 59% of Manipuri, 27% of Konkani documents were not NFC. Keep ZWJ/ZWNJ: they are spelling.</li>
+<li><b>Language + script ID per document</b> (GlotLID / IndicLID incl. romanized) and a script-purity check. E3 found Sangraha <code>verified/kas</code> is mostly mojibake and <code>verified/doi</code> contains English.</li>
+<li><b>Heuristics calibrated per language</b> on its own clean text (FineWeb-2 method): Unicode letters include marks; <code>।</code>, <code>॥</code>, <code>۔</code> end sentences; stop words from the language's own frequency list.</li>
+<li><b>Quality classifiers per domain and language</b>, grown from seeds by the DeepSeekMath loop (Indian legal, government, educational, each Indic language). Never an English classifier on Indic text.</li>
+<li><b>Dedup</b>: exact + MinHash (word 5-grams) per language after NFC; URL-level for crawls.</li>
+<li><b>PII</b>: Aadhaar (12 digits + Verhoeff check), PAN, +91 mobiles, UPI IDs, emails.</li>
+<li><b>Licence + opt-out filter</b>; code: permissive only.</li>
+<li><b>Decontaminate</b> against every eval set, incl. translated copies; ignore n-grams frequent in training (E5: 13-gram hits were generic phrases).</li>
+</ol>
+<div class="fig">
+<div class="legend"><span><i class="sw" style="background:var(--s2)"></i>English rules (Gopher + C4 + FineWeb)</span><span><i class="sw" style="background:var(--s1)"></i>Same rules, language-aware</span></div>
+<svg id="chart-clean" viewBox="0 0 840 230" role="img" aria-label="Share of already-clean documents rejected per language"></svg>
+<p class="cap">E3. Share of <i>already-clean</i> documents (Sangraha verified; English = FineWeb-Edu) rejected. Every rejection is a false positive (the <code>doi</code> pool is partly English, so its bars are not meaningful).</p>
+</div>
+
+<h2>4. Testing against the objectives</h2>
+<div class="scroll"><table>
+<thead><tr><th>Objective</th><th>Benchmarks (target = Gemma 4 31B where reported)</th></tr></thead>
+<tbody>
+<tr><td>General reasoning</td><td>MMLU-Pro (85.2), GPQA-Diamond (84.3), AIME 2026 (89.2), IFEval / IFBench</td></tr>
+<tr><td>Coding</td><td>LiveCodeBench v6, post-cutoff window (80.0); HumanEval+/MBPP+; BigCodeBench</td></tr>
+<tr><td>Agentic</td><td>SWE-bench Verified, Terminal-Bench, τ²-bench (retail 86.4), BFCL v3 — also translated into tier-1 languages, scored on exact tool arguments</td></tr>
+<tr><td>Indic language</td><td>MMMLU (88.4), MILU (11 languages), IndicGenBench, IN22 / FLORES chrF++, per-language bits per byte</td></tr>
+<tr><td>India-first</td><td>BhashaBench V1 (law, finance, agriculture, Ayurveda); <b>paired default test</b>: same question with no country named, Indian vs global default (₹, lakh, IST, map, law), rubric by Indian annotators</td></tr>
+<tr><td>Data ablations</td><td>Bits per byte (not per-token loss) on a sealed golden proxy, per language and domain; 1B proxies before any full-scale change</td></tr>
+<tr><td>Tokenizer gates</td><td>Fertility targets (section 5); exact round trip on 1,000 docs per script; zero byte fallback on all 22 languages</td></tr>
+</tbody></table></div>
+
+<h2>5. Languages, fertility targets and vocabulary size</h2>
+<p><b>Languages:</b> all 22 scheduled languages. <span class="tag">Tier 1</span> 11 languages with ≥ 30 M speakers (Hindi, Bengali, Marathi, Telugu, Tamil, Gujarati, Urdu, Kannada, Odia, Malayalam, Punjabi): full targets. <span class="tag">Tier 2</span> the other 11: looser targets, guaranteed vocabulary slots per script. Plus English, romanized Indic and Hinglish.</p>
+<div class="scroll"><table>
+<thead><tr><th>Group</th><th class="n">Target</th><th class="n">Ours, 262K</th><th class="n">Gemma 4</th><th class="n">Sarvam-30B</th><th>Basis</th></tr></thead>
+<tbody>
+<tr><td>English (tok/word)</td><td class="n">≤ 1.30</td><td class="n" id="t-eng"></td><td class="n" id="g-eng"></td><td class="n" id="s-eng"></td><td>o200k 1.23</td></tr>
+<tr><td>Tier-1 Indic, mean (tok/word)</td><td class="n">≤ 1.8</td><td class="n" id="t-t1"></td><td class="n" id="g-t1"></td><td class="n" id="s-t1"></td><td>Malayalam (2.39) is highest: long agglutinated words</td></tr>
+<tr><td>Tier-1 parity, worst language</td><td class="n">≤ 1.5</td><td class="n" id="t-p1"></td><td class="n" id="g-p1"></td><td class="n">–</td><td>same FLORES sentence vs English; fair across word lengths</td></tr>
+<tr><td>Tier-2 Indic, mean (tok/word)</td><td class="n">≤ 2.2</td><td class="n" id="t-t2"></td><td class="n" id="g-t2"></td><td class="n" id="s-t2"></td><td>Santali, Kashmiri: data-starved scripts</td></tr>
+<tr><td>Tier-2 parity, worst language</td><td class="n">≤ 2.5</td><td class="n" id="t-p2"></td><td class="n" id="g-p2"></td><td class="n">–</td><td>needs guaranteed slots for Ol Chiki, Perso-Arabic</td></tr>
+<tr><td>Code (bytes/tok)</td><td class="n">≥ 3.8</td><td class="n" id="t-code"></td><td class="n" id="g-code"></td><td class="n" id="s-code"></td><td>o200k 3.96</td></tr>
+<tr><td>Math (bytes/tok)</td><td class="n">≥ 3.4</td><td class="n" id="t-math"></td><td class="n" id="g-math"></td><td class="n" id="s-math"></td><td>web math; single digits cost 13% on GSM8K vs o200k (a deliberate trade)</td></tr>
+<tr><td>Agent traces (bytes/tok)</td><td class="n">≥ 3.6</td><td class="n" id="t-agent"></td><td class="n" id="g-agent"></td><td class="n" id="s-agent"></td><td>SWE-smith held out; JSON tool calls 3.37 vs o200k 3.63: add tool-call data to the tokenizer mix</td></tr>
+<tr><td>Science (bytes/tok)</td><td class="n">≥ 4.6</td><td class="n" id="t-sci"></td><td class="n" id="g-sci"></td><td class="n" id="s-sci"></td><td>SciQ</td></tr>
+</tbody></table></div>
+<p class="muted">FLORES-200 devtest (Bodo, Konkani: FLORES-IN). Dogri: no public evaluation text found.</p>
+
+<div class="fig">
+<div class="legend"><span><i class="sw" style="background:var(--s1)"></i>Tier-1 Indic, India-first tokenizer mix</span><span><i class="sw" style="background:var(--s2)"></i>Tier-1 Indic, English-first mix (5% Indic)</span><span>● released tokenizers</span></div>
+<svg id="chart-sweep" viewBox="0 0 840 300" role="img" aria-label="Tier-1 Indic fertility against vocabulary size"></svg>
+<p class="cap">E2. One BPE trained at 384K and cut to each size (a size-k BPE is the first k merges). The tokenizer's training mix moves Indic cost more than V does.</p>
+</div>
+<div class="fig">
+<svg id="chart-cost" viewBox="0 0 840 220" role="img" aria-label="Relative training cost per byte against vocabulary size"></svg>
+<p class="cap">E2. 40B training FLOPs per byte of the planned mix: (6N + 6dV + attention) × tokens/byte. d = 7,168, 60 layers, 8K context.</p>
+</div>
+<p><b>Why 262,144.</b> Cost per byte falls 14.5% from 32K to 256K and is flat (±0.7%) from 192K to 384K; 262K is 0.15% above the minimum (320K) and saves 0.8 B embedding weights against it.
+It is 2<sup>18</sup> (clean tensor-parallel sharding), equals Gemma 4's V (direct comparison), and at that size our tokenizer spends <b>32% fewer tokens on tier-1 Indic than Gemma 4</b> at the same English cost.
+Two cheaper levers matter more than V: the tokenizer's <b>training mix</b> (English-first mix at the same V: tier-1 2.02, +14% Indic tokens) and the <b>pre-tokenizer</b> (GPT-2's <code>\p{L}+</code> splits words at every Indic vowel sign: at 64K, Hindi 3.33 vs 1.58 tok/word, Tamil 6.83 vs 2.61). Released tokenizers miss whole script families: BrahmicTokenizer-131K drops Arabic script (Urdu, Kashmiri, Sindhi: 7.4–8.9 tok/word); every o200k-family tokenizer is in byte fallback on Ol Chiki (Santali, 15.3).</p>
+
+<details class="fig"><summary><b>Per-language fertility</b> (tokens per word, FLORES devtest)</summary>
+<div class="scroll"><table id="lang-table"><thead><tr><th>Language</th><th class="n">Tier</th><th class="n">Ours 262K</th><th class="n">Gemma 4</th><th class="n">Sarvam-30B</th><th class="n">Brahmic-131K</th><th class="n">o200k</th><th class="n">Llama 3.1</th></tr></thead><tbody></tbody></table></div>
+</details>
+
+<h2>6. Risks and next measurements</h2>
+<ul>
+<li>Tokenizer trained on 300 M characters; retrain on ≥ 10 GB of the final mix before the freeze.</li>
+<li>Confirm with two 1B proxies (ours vs Gemma 4 tokenizer) on equal bytes: bits per byte per language.</li>
+<li>Native Indic supply is the hard limit: fund new crawls, OCR of government and library archives, and licensed news.</li>
+</ul>
+</main>
+<script>
+const DATA={"sweep": {"india": [{"V": 32768, "t1": 2.6221610940458797, "t2": 2.8804648592567306, "eng": 1.4913930870736496, "code": 3.26351376042269}, {"V": 49152, "t1": 2.4021726709256717, "t2": 2.650245227237435, "eng": 1.4181544221725035, "code": 3.406480788626086}, {"V": 65536, "t1": 2.2581230613731362, "t2": 2.5104480226689017, "eng": 1.3729053467878178, "code": 3.510462790617016}, {"V": 98304, "t1": 2.083970947627306, "t2": 2.3208586260082744, "eng": 1.3199853887950321, "code": 3.6295019967702644}, {"V": 131072, "t1": 1.9782844940681479, "t2": 2.206143189094424, "eng": 1.2928633395735354, "code": 3.7014965946589724}, {"V": 163840, "t1": 1.9042675061165164, "t2": 2.1325561779488402, "eng": 1.2743710332861513, "code": 3.749553910461031}, {"V": 196608, "t1": 1.850136854922534, "t2": 2.0724417494473175, "eng": 1.2618601890324643, "code": 3.787843254173689}, {"V": 262144, "t1": 1.7740160092383397, "t2": 1.9939363568186619, "eng": 1.2460618236610201, "code": 3.8424777058860005}, {"V": 327680, "t1": 1.7227803460329747, "t2": 1.932058015581322, "eng": 1.2358796401990777, "code": 3.8800888353900156}, {"V": 393216, "t1": 1.6854591406252803, "t2": 1.8875771778336208, "eng": 1.2272042372494407, "code": 3.906355130327836}], "english": [{"V": 32768, "t1": 3.3480713558954496, "t2": 3.392017536000818, "eng": 1.348796858590932, "code": 3.4405476422218872}, {"V": 49152, "t1": 3.003596651369141, "t2": 3.0701243928807718, "eng": 1.30057988219716, "code": 3.5796327995322166}, {"V": 65536, "t1": 2.780288108761402, "t2": 2.8601443994542124, "eng": 1.2754668736587371, "code": 3.665583811986489}, {"V": 98304, "t1": 2.502819413369249, "t2": 2.605922696914539, "eng": 1.2488470846080089, "code": 3.759581752109502}, {"V": 131072, "t1": 2.339896379689203, "t2": 2.460262200014788, "eng": 1.2346468197799187, "code": 3.8208695105071095}, {"V": 163840, "t1": 2.227933215062286, "t2": 2.3624175647458565, "eng": 1.225103876535318, "code": 3.863913713483668}, {"V": 196608, "t1": 2.138748248731515, "t2": 2.275560415467502, "eng": 1.2191224145016208, "code": 3.8928233063379873}, {"V": 262144, "t1": 2.021332192670338, "t2": 2.158813905402859, "eng": 1.2119081320487648, "code": 3.9324497410480594}, {"V": 327680, "t1": 1.9474458005770914, "t2": 2.0862531107475784, "eng": 1.20615497009269, "code": 3.959933071810869}, {"V": 393216, "t1": 1.887256446235174, "t2": 2.0276419148012104, "eng": 1.2015889685402492, "code": 3.9765749106514945}]}, "cost": [{"V": 32768, "rel": 1.0}, {"V": 49152, "rel": 0.9537286910702296}, {"V": 65536, "rel": 0.9254117581263072}, {"V": 98304, "rel": 0.8942172775691479}, {"V": 131072, "rel": 0.8771197774491755}, {"V": 163840, "rel": 0.8675754935962715}, {"V": 196608, "rel": 0.8612146001337435}, {"V": 262144, "rel": 0.8555381101356176}, {"V": 327680, "rel": 0.8542117427273895}, {"V": 393216, "rel": 0.8557732969487456}], "ref": {"gemma-4": 2.585914754082992, "sarvam-30b": 2.026994648357684, "brahmic-131k": 3.2639430840143517, "gpt-oss": 3.003781540757373}, "cleaning": [{"lang": "eng", "en": 0.107, "aware": 0.012}, {"lang": "hin", "en": 1.0, "aware": 0.041}, {"lang": "ben", "en": 0.999, "aware": 0.057}, {"lang": "mar", "en": 0.999, "aware": 0.033}, {"lang": "tel", "en": 1.0, "aware": 0.087}, {"lang": "tam", "en": 1.0, "aware": 0.092}, {"lang": "guj", "en": 0.998, "aware": 0.033}, {"lang": "urd", "en": 0.999, "aware": 0.211}, {"lang": "kan", "en": 1.0, "aware": 0.084}, {"lang": "ory", "en": 0.999, "aware": 0.048}, {"lang": "mal", "en": 1.0, "aware": 0.206}, {"lang": "pan", "en": 1.0, "aware": 0.021}, {"lang": "asm", "en": 0.988, "aware": 0.08}, {"lang": "mai", "en": 0.957, "aware": 0.127}, {"lang": "sat", "en": 0.9705882352941176, "aware": 0.14705882352941177}, {"lang": "kas", "en": 0.948051948051948, "aware": 0.2857142857142857}, {"lang": "npi", "en": 1.0, "aware": 0.034}, {"lang": "snd", "en": 0.991, "aware": 0.033}, {"lang": "doi", "en": 0.9166666666666666, "aware": 0.5833333333333334}, {"lang": "gom", "en": 0.958, "aware": 0.108}, {"lang": "mni", "en": 0.7464788732394366, "aware": 0.06690140845070422}, {"lang": "brx", "en": 0.9986666666666667, "aware": 0.048}, {"lang": "san", "en": 0.999, "aware": 0.115}], "langs": [{"lang": "eng", "name": "English", "tier": 0, "ours": 1.2460618236610201, "gemma-4": 1.2380256609287248, "sarvam-30b": 1.23839094105292, "brahmic-131k": 1.2393498013789324, "gpt-oss": 1.227021597187343, "llama-3.1": 1.2406282818136158, "ours_parity": null, "gemma4_parity": 1.0}, {"lang": "hin", "name": "Hindi", "tier": 1, "ours": 1.3458643684436298, "gemma-4": 1.385212338649924, "sarvam-30b": 1.385212338649924, "brahmic-131k": 1.6483250789689194, "gpt-oss": 1.648637054946769, "llama-3.1": 2.6717622743048786, "ours_parity": 1.264639061927446, "gemma4_parity": 1.3100612229844362}, {"lang": "ben", "name": "Bengali", "tier": 1, "ours": 1.6770737209063877, "gemma-4": 1.683379472982672, "sarvam-30b": 1.6835845380908439, "brahmic-131k": 2.3342048600430636, "gpt-oss": 2.337332102942684, "llama-3.1": 8.0207628422024, "ours_parity": 1.198717478930011, "gemma4_parity": 1.2110348897248653}, {"lang": "mar", "name": "Marathi", "tier": 1, "ours": 1.6431796702719732, "gemma-4": 1.9865063530400084, "sarvam-30b": 1.9865063530400084, "brahmic-131k": 2.5596450698309354, "gpt-oss": 2.5613252126430748, "llama-3.1": 3.991336763624908, "ours_parity": 1.1467936973250275, "gemma4_parity": 1.395404588035701}, {"lang": "tel", "name": "Telugu", "tier": 1, "ours": 1.9400165308773172, "gemma-4": 2.8426024324005197, "sarvam-30b": 2.325245011217381, "brahmic-131k": 3.040146416341953, "gpt-oss": 3.061105207226355, "llama-3.1": 13.299149840595112, "ours_parity": 1.204104067423965, "gemma4_parity": 1.7757615991738585}, {"lang": "tam", "name": "Tamil", "tier": 1, "ours": 2.0138301043219076, "gemma-4": 2.3743666169895676, "sarvam-30b": 2.3743666169895676, "brahmic-131k": 3.1386587183308494, "gpt-oss": 3.171326378539493, "llama-3.1": 12.385812220566319, "ours_parity": 1.2378893367533894, "gemma4_parity": 1.4689828133067788}, {"lang": "guj", "name": "Gujarati", "tier": 1, "ours": 1.661830891506272, "gemma-4": 2.4151584793641674, "sarvam-30b": 1.9445561620224074, "brahmic-131k": 2.2902901465096237, "gpt-oss": 2.304653835104855, "llama-3.1": 9.97213444412525, "ours_parity": 1.271857823378527, "gemma4_parity": 1.8604042192225418}, {"lang": "urd", "name": "Urdu", "tier": 1, "ours": 1.3284996202943622, "gemma-4": 1.4885545872057282, "sarvam-30b": 1.4885545872057282, "brahmic-131k": 7.398329295194012, "gpt-oss": 1.6060463602502442, "llama-3.1": 3.0199616678118106, "ours_parity": 1.3461707585196043, "gemma4_parity": 1.5181456074352733}, {"lang": "kan", "name": "Kannada", "tier": 1, "ours": 2.152111801242236, "gemma-4": 3.2409937888198757, "sarvam-30b": 2.5372670807453415, "brahmic-131k": 3.2550931677018635, "gpt-oss": 3.2859627329192547, "llama-3.1": 14.948509316770187, "ours_parity": 1.2696592158299744, "gemma4_parity": 1.9244670649848787}, {"lang": "ory", "name": "Odia", "tier": 1, "ours": 1.8004077471967381, "gemma-4": 4.852140672782874, "sarvam-30b": 1.9776758409785933, "brahmic-131k": 4.145361875637105, "gpt-oss": 6.8277777777777775, "llama-3.1": 16.844750254841998, "ours_parity": 1.294393550751191, "gemma4_parity": 3.5110643947776055}, {"lang": "mal", "name": "Malayalam", "tier": 1, "ours": 2.3917615539182853, "gemma-4": 3.356530475552579, "sarvam-30b": 2.9629604822505025, "brahmic-131k": 3.4998660415271265, "gpt-oss": 3.522036168787676, "llama-3.1": 16.26135298057602, "ours_parity": 1.30850128252107, "gemma4_parity": 1.8482333849671757}, {"lang": "pan", "name": "Punjabi", "tier": 1, "ours": 1.559600092642631, "gemma-4": 2.8196170771249904, "sarvam-30b": 1.6310121207442292, "brahmic-131k": 2.593453254072416, "gpt-oss": 2.715394117192928, "llama-3.1": 8.194279317532619, "ours_parity": 1.480505679736167, "gemma4_parity": 2.6939957217673527}, {"lang": "asm", "name": "Assamese", "tier": 2, "ours": 1.8955363160350458, "gemma-4": 2.818756804396288, "sarvam-30b": 2.8188086474156253, "brahmic-131k": 2.7603815646223238, "gpt-oss": 2.7701280522577636, "llama-3.1": 8.612473430452589, "ours_parity": 1.3397947966288017, "gemma4_parity": 2.0052740281773254}, {"lang": "mai", "name": "Maithili", "tier": 2, "ours": 1.4189996343098614, "gemma-4": 1.805940433139653, "sarvam-30b": 1.805940433139653, "brahmic-131k": 1.9198732274186339, "gpt-oss": 1.9201170208443379, "llama-3.1": 2.8577871683393603, "ours_parity": 1.2796995236350313, "gemma4_parity": 1.6392269676182045}, {"lang": "sat", "name": "Santali", "tier": 2, "ours": 2.6640335924832663, "gemma-4": 5.919760528832162, "sarvam-30b": 2.0424895023489795, "brahmic-131k": 15.306572984658878, "gpt-oss": 15.306115661248077, "llama-3.1": 14.39467010352139, "ours_parity": 2.348039574935874, "gemma4_parity": 5.251456811979051}, {"lang": "kas", "name": "Kashmiri", "tier": 2, "ours": 2.7687996872149094, "gemma-4": 2.7755332551370606, "sarvam-30b": 2.7756635822581344, "brahmic-131k": 8.927625005430297, "gpt-oss": 3.0431382770754594, "llama-3.1": 3.8885268691081283, "ours_parity": 2.3354708684499816, "gemma4_parity": 2.356347274470753}, {"lang": "npi", "name": "Nepali", "tier": 2, "ours": 1.6075076199133735, "gemma-4": 2.2164055398107054, "sarvam-30b": 2.21661943211593, "brahmic-131k": 2.3200898347681944, "gpt-oss": 2.319501630928827, "llama-3.1": 3.753168279771135, "ours_parity": 1.1015756687431293, "gemma4_parity": 1.528693663789924}, {"lang": "snd", "name": "Sindhi", "tier": 2, "ours": 1.4195062312667612, "gemma-4": 2.1657990219277488, "sarvam-30b": 2.1657990219277488, "brahmic-131k": 7.3739943208708, "gpt-oss": 1.8124704212020823, "llama-3.1": 3.0641662722826943, "ours_parity": 1.3189080249175522, "gemma4_parity": 2.025374345356642}, {"lang": "gom", "name": "Konkani", "tier": 2, "ours": 1.7937533086289041, "gemma-4": 2.6173107464266807, "sarvam-30b": 2.6174695606140816, "brahmic-131k": 2.898305982001059, "gpt-oss": 2.9057702488088935, "llama-3.1": 3.7942826892535733, "ours_parity": null, "gemma4_parity": 1.823449140665339}, {"lang": "mni", "name": "Manipuri", "tier": 2, "ours": 2.1107191034554322, "gemma-4": 3.530299885856594, "sarvam-30b": 3.530299885856594, "brahmic-131k": 4.0900695237106985, "gpt-oss": 4.283438829511259, "llama-3.1": 9.402044204627996, "ours_parity": 1.4907292048369367, "gemma4_parity": 2.509515379508741}, {"lang": "brx", "name": "Bodo", "tier": 2, "ours": 2.1402724342310493, "gemma-4": 3.444525319746283, "sarvam-30b": 3.444525319746283, "brahmic-131k": 3.9228969533118434, "gpt-oss": 3.9235728397629197, "llama-3.1": 4.389466569616305, "ours_parity": null, "gemma4_parity": 2.443460942686435}, {"lang": "san", "name": "Sanskrit", "tier": 2, "ours": 2.1202356406480116, "gemma-4": 2.8263328424153165, "sarvam-30b": 2.8263328424153165, "brahmic-131k": 3.297673048600884, "gpt-oss": 3.300677466863034, "llama-3.1": 4.216730486008837, "ours_parity": 1.318834737999267, "gemma4_parity": 1.7694548941506234}], "domains": {"eng_web": {"ours": 4.8217391408647, "gemma-4": 4.771105071388727, "sarvam-30b": 4.770210554295099, "brahmic-131k": 4.823440057209501, "gpt-oss": 4.876498131884128, "llama-3.1": 4.821982055464926}, "science_sciq": {"ours": 4.96660648067253, "gemma-4": 4.924775481523549, "sarvam-30b": 4.923969741882086, "brahmic-131k": 4.799440911052326, "gpt-oss": 4.867289470680011, "llama-3.1": 4.806926227967981}, "math_gsm8k": {"ours": 2.882990129478974, "gemma-4": 2.8497882375784247, "sarvam-30b": 2.8497882375784247, "brahmic-131k": 3.306048035139422, "gpt-oss": 3.3206649823714627, "llama-3.1": 3.300889765587297}, "math_web": {"ours": 3.4943489467358355, "gemma-4": 3.36141766406648, "sarvam-30b": 3.3437138536920856, "brahmic-131k": 3.5972807346724918, "gpt-oss": 3.653368305052143, "llama-3.1": 3.6347131354249758}, "code_humaneval": {"ours": 3.3427511691662635, "gemma-4": 2.9964727651208514, "sarvam-30b": 2.9964727651208514, "brahmic-131k": 3.3908719123180107, "gpt-oss": 3.410734853720341, "llama-3.1": 3.4134308204064157}, "code_github": {"ours": 3.8424777058860005, "gemma-4": 3.281351986893806, "sarvam-30b": 3.260121968241016, "brahmic-131k": 3.849399728705265, "gpt-oss": 3.955625583779622, "llama-3.1": 3.9894693968716948}, "agentic_swe": {"ours": 3.6418632416787267, "gemma-4": 2.8172948555403488, "sarvam-30b": 2.830795319367929, "brahmic-131k": 3.7079098265044266, "gpt-oss": 3.7210637409109224, "llama-3.1": 3.733969627052251}, "agentic_tools": {"ours": 3.374446795360525, "gemma-4": 3.3344385123881284, "sarvam-30b": 3.3431065383635543, "brahmic-131k": 3.624487422545534, "gpt-oss": 3.634230242252864, "llama-3.1": 3.646599336119915}, "hinglish": {"ours": 3.7432195173082468, "gemma-4": 3.8881025613108684, "sarvam-30b": 3.8881025613108684, "brahmic-131k": 3.5759525359234967, "gpt-oss": 3.616603792693116, "llama-3.1": 3.34845288326301}, "roman_hin": {"ours": 4.22872652272756, "gemma-4": 3.065883626489224, "sarvam-30b": 3.0657055055269313, "brahmic-131k": 3.0388973084384094, "gpt-oss": 3.12017390438371, "llama-3.1": 2.7929015346301593}}};
+const NS="http://www.w3.org/2000/svg";
+function el(tag,attrs,parent,text){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;if(parent)parent.appendChild(e);return e;}
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+function axes(svg,x0,x1,y0,y1,yticks,ylabel){
+  for(const t of yticks){const y=y1(t);el("line",{x1:x0,x2:x1,y1:y,y2:y,stroke:"var(--grid)","stroke-width":1},svg);
+    el("text",{x:x0-6,y:y+4,"text-anchor":"end","font-size":11,fill:"var(--muted)"},svg,ylabel(t));}
+}
+function lineChart(id,series,opts){
+  const svg=document.getElementById(id),W=840,H=+svg.getAttribute("viewBox").split(" ")[3],L=56,R=20,T=14,B=34;
+  const lx=v=>Math.log2(v),xs=opts.xticks,xmin=lx(xs[0]),xmax=lx(xs[xs.length-1]);
+  const X=v=>L+(lx(v)-xmin)/(xmax-xmin)*(W-L-R),Y=v=>T+(opts.ymax-v)/(opts.ymax-opts.ymin)*(H-T-B);
+  axes(svg,L,W-R,0,Y,opts.yticks,opts.yfmt);
+  for(const t of xs){el("text",{x:X(t),y:H-12,"text-anchor":"middle","font-size":11,fill:"var(--muted)"},svg,(t/1024)+"K");}
+  el("line",{x1:L,x2:W-R,y1:H-B,y2:H-B,stroke:"var(--axis)"},svg);
+  for(const s of series){
+    el("path",{d:s.pts.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+","+Y(p[1]).toFixed(1)).join(""),fill:"none",stroke:s.color,"stroke-width":2},svg);
+    for(const p of s.pts){const c=el("circle",{cx:X(p[0]),cy:Y(p[1]),r:4,fill:s.color,stroke:"var(--surface)","stroke-width":2},svg);
+      el("title",{},c,`${s.name}: V=${(p[0]/1024)}K → ${p[1].toFixed(3)}`);
+      const hit=el("circle",{cx:X(p[0]),cy:Y(p[1]),r:10,fill:"transparent"},svg);el("title",{},hit,`${s.name}: V=${(p[0]/1024)}K → ${p[1].toFixed(3)}`);}
+  }
+  for(const m of (opts.marks||[])){
+    const c=el("circle",{cx:X(m.V),cy:Y(m.y),r:5,fill:"none",stroke:"var(--ink2)","stroke-width":2},svg);el("title",{},c,`${m.name}: ${m.y.toFixed(2)}`);
+    el("text",{x:X(m.V)+(m.dx||8),y:Y(m.y)+(m.dy||4),"font-size":11,fill:"var(--ink2)","text-anchor":m.anchor||"start"},svg,`${m.name} ${m.y.toFixed(2)}`);
+  }
+  if(opts.vline){const x=X(opts.vline);el("line",{x1:x,x2:x,y1:T,y2:H-B,stroke:"var(--ink2)","stroke-dasharray":"4 4"},svg);
+    el("text",{x:x+6,y:T+12,"font-size":11,fill:"var(--ink)"},svg,"chosen: 262,144");}
+  if(opts.ylabel)el("text",{x:14,y:T+(H-T-B)/2,"font-size":11,fill:"var(--muted)",transform:`rotate(-90 14 ${T+(H-T-B)/2})`,"text-anchor":"middle"},svg,opts.ylabel);
+}
+function render(){
+  if(!DATA)return;
+  const xt=[32768,65536,131072,262144,393216];
+  lineChart("chart-sweep",[
+    {name:"India-first mix",color:"var(--s1)",pts:DATA.sweep.india.map(r=>[r.V,r.t1])},
+    {name:"English-first mix",color:"var(--s2)",pts:DATA.sweep.english.map(r=>[r.V,r.t1])}],
+    {xticks:xt,ymin:1.5,ymax:3.6,yticks:[1.5,2,2.5,3,3.5],yfmt:t=>t.toFixed(1),vline:262144,ylabel:"tier-1 tokens per word",
+     marks:[{name:"Gemma 4",V:262144,y:DATA.ref["gemma-4"],dx:-8,anchor:"end"},{name:"Sarvam-30B",V:262144,y:DATA.ref["sarvam-30b"],dx:10,dy:-10},
+            {name:"Brahmic-131K",V:131072,y:DATA.ref["brahmic-131k"]},{name:"o200k",V:204800,y:DATA.ref["gpt-oss"],dy:-6}]});
+  lineChart("chart-cost",[{name:"relative FLOPs per byte",color:"var(--s1)",pts:DATA.cost.map(r=>[r.V,r.rel])}],
+    {xticks:xt,ymin:0.84,ymax:1.01,yticks:[0.85,0.9,0.95,1.0],yfmt:t=>t.toFixed(2),vline:262144,ylabel:"cost per byte (32K = 1)"});
+  // cleaning bars
+  const svg=document.getElementById("chart-clean"),W=840,H=230,L=40,R=8,T=10,B=28,d=DATA.cleaning,n=d.length,bw=(W-L-R)/n;
+  const Y=v=>T+(1-v)*(H-T-B);
+  for(const t of [0,.25,.5,.75,1]){el("line",{x1:L,x2:W-R,y1:Y(t),y2:Y(t),stroke:"var(--grid)"},svg);el("text",{x:L-5,y:Y(t)+4,"text-anchor":"end","font-size":11,fill:"var(--muted)"},svg,(t*100)+"%");}
+  d.forEach((r,i)=>{const x=L+i*bw,w=(bw-6)/2;
+    for(const [k,col,off] of [["en","var(--s2)",0],["aware","var(--s1)",w+2]]){
+      const h=Math.max(r[k]*(H-T-B),1),b=el("rect",{x:x+2+off,y:Y(r[k]),width:w,height:h,rx:2,fill:col},svg);
+      el("title",{},b,`${r.lang}: ${k==="en"?"English rules":"language-aware"} reject ${(r[k]*100).toFixed(1)}%`);}
+    el("text",{x:x+bw/2,y:H-10,"text-anchor":"middle","font-size":10.5,fill:r.lang==="eng"?"var(--ink)":"var(--muted)","font-weight":r.lang==="eng"?700:400},svg,r.lang);});
+  el("line",{x1:L,x2:W-R,y1:H-B,y2:H-B,stroke:"var(--axis)"},svg);
+  // tables
+  const L1=DATA.langs,mean=(k,t)=>{const a=L1.filter(r=>r.tier===t);return a.reduce((s,r)=>s+r[k],0)/a.length;};
+  const set=(id,v,d=2)=>{const e=document.getElementById(id);if(e)e.textContent=v.toFixed(d);};
+  const eng=L1.find(r=>r.lang==="eng");
+  set("t-eng",eng.ours);set("g-eng",eng["gemma-4"]);set("s-eng",eng["sarvam-30b"]);
+  set("t-t1",mean("ours",1));set("g-t1",mean("gemma-4",1));set("s-t1",mean("sarvam-30b",1));
+  set("t-t2",mean("ours",2));set("g-t2",mean("gemma-4",2));set("s-t2",mean("sarvam-30b",2));
+  const worst=(k,t)=>Math.max(...L1.filter(r=>r.tier===t&&r[k]!=null).map(r=>r[k]));
+  set("t-p1",worst("ours_parity",1));set("g-p1",worst("gemma4_parity",1));set("t-p2",worst("ours_parity",2));set("g-p2",worst("gemma4_parity",2));
+  const D=DATA.domains;
+  for(const [k,key] of [["code","code_github"],["math","math_web"],["agent","agentic_swe"],["sci","science_sciq"]]){set("t-"+k,D[key].ours);set("g-"+k,D[key]["gemma-4"]);set("s-"+k,D[key]["sarvam-30b"]);}
+  const tb=document.querySelector("#lang-table tbody");
+  for(const r of L1){const tr=document.createElement("tr");const vals=[r.ours,r["gemma-4"],r["sarvam-30b"],r["brahmic-131k"],r["gpt-oss"],r["llama-3.1"]];const best=Math.min(...vals);
+    tr.innerHTML=`<td>${r.name}</td><td class="n">${r.tier||"–"}</td>`+vals.map(v=>`<td class="n${v===best?" best":""}">${v.toFixed(2)}</td>`).join("");tb.appendChild(tr);}
+}
+render();
+</script>
+</body>
+</html>

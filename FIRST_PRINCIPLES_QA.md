@@ -2,9 +2,9 @@
 
 This document uses ASD-STE100 Simplified Technical English rules. The terms are defined in [PLAN.md](PLAN.md#2-words). The theory and sources are in [SESSION_03_EXPLAINER.md](SESSION_03_EXPLAINER.md).
 
-**How to use it.** Each question removes one assumption. Answer it on paper before you read the answer. Do the arithmetic yourself. An answer from first principles has three parts: the basic fact, the calculation or measurement, and the decision that follows. The numbers come from `results/` (E1–E5), run on 17 Oct 2026.
+**How to use it.** Each question removes one assumption. Answer it on paper before you read the answer. Do the arithmetic yourself. An answer from first principles has three parts: the basic fact, the calculation or measurement, and the decision that follows. The numbers come from `results/` (E1–E6), run on 17 Oct 2026.
 
-The questions are in the order in which the decisions depend on each other: budget → supply → tokenizer → mix → cleaning → evaluation → post-training → empirical findings (Sections A–I), followed by the deep mathematical foundations, Lagrangian proofs, systems engineering derivations, and dual-perspective explanations (18-year-old intuitive analogies vs. 20-year AI veteran mathematical rigour) for all 40 foundational papers (Sections J–P), culminating in an end-to-end full-stack trace from Indian legal requirement down to silicon transistors (Section Q).
+The questions are in the order in which the decisions depend on each other: budget → supply → tokenizer → mix → cleaning → evaluation → post-training → empirical findings (Sections A–I), followed by the deep mathematical foundations, Lagrangian proofs, systems engineering derivations, and dual-perspective explanations (18-year-old intuitive analogies vs. 20-year AI veteran mathematical rigour) for all 40 foundational papers (Sections J–P), an end-to-end full-stack trace from Indian legal requirement down to silicon transistors (Section Q), and the lessons from the 85 top peer submissions (Section R).
 
 ---
 
@@ -1413,3 +1413,72 @@ flowchart TD
 | **Silicon Transistors** | 4nm TSMC FinFET Channel | $\approx 0.5\text{ picoseconds}$ | Electrons tunnel through gate dielectrics, flipping binary voltage states |
 | **Semantic Intelligence** | Full 60-Layer 40B Network | $\approx 12\text{ ms/token}$ | Indian legal statute retrieval & fluent Devanagari generation |
 
+
+---
+
+## R. Lessons from the 85 top submissions
+
+The course published 85 top submissions for this assignment. We read the 78 that render as text (17 Oct 2026). These questions test practices that many of them share, and the places where this repository disagrees and why. The counts in the explainer (section 10) are "submissions that mention it", from a text search; they show what is common, not what is correct.
+
+**R1. Most submissions chose a vocabulary between 192K and 262K. Is agreement evidence?**
+- **The First-Principles Question:** If 30+ independent reports land near 256K, does that confirm the number?
+- **For an 18-Year-Old (Everyday Analogy):**
+  If 30 students copy the same answer from the same textbook, you have one answer, not 30. Most reports cite the same few sources (Gemma's 262K, MUTANT's 200K, Sarvam's 262K). Few measured anything.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  The citations are correlated, so the effective sample size is about 3, not 30. Independent evidence is a measured curve. MUTANT (arXiv:2511.03237, Table 13) finds "no significant impact on fertility scores beyond 200K". E2 finds the 40B training cost per byte flat (±0.7%) from 192K to 384K. Two different methods give one plateau: that is evidence. The choice inside the plateau (262,144) is made on secondary grounds: 2¹⁸ for sharding, direct comparison with Gemma 4, and few untrained rows (E6, R6).
+
+**R2. Sangraha has 251 B tokens. Why does every good report use a smaller number?**
+- **The First-Principles Question:** Which supply number goes into the epoch rule $\text{share} \times D \le 4 \times U$?
+- **For an 18-Year-Old (Everyday Analogy):**
+  A library says it has 251 Telugu books. 190 of them are English books with the words swapped. You have about 60 real Telugu books.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  The Sangraha card: 64.3 B verified, 24.3 B unverified, 162.7 B synthetic (65%: translated Wikimedia and romanized copies). Telugu 16.3 B → 3.7 B verified; Odia 12.5 B → 1.2 B. $U$ counts native text only, because synthetic text is derived from English. E4 measures 47 B + 20 B under our tokenizer from the parquet footers and adds FineWeb-2 (overlapping): $U \approx 67$–$111$ B. With $D = 20$ T, the native share is $\le 4U/D \le 2.2\%$.
+
+**R3. Peers cap synthetic Indic at 25–40%. Our always-on channel is 75% translated. Who is right?**
+- **The First-Principles Question:** What decides the synthetic share of the Indic channel: a rule of thumb, or arithmetic?
+- **For an 18-Year-Old (Everyday Analogy):**
+  If you have 2 kg of rice for 8 people, you add other food or feed fewer people. A rule that "rice must be 75% of the meal" does not create rice.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  The 25–40% caps come with larger supply claims (300–600 B unique, counting OCR and ASR text that does not exist yet) or with more than 4 epochs. With measured $U$ and 4 epochs, the native share is $\le 2.2\%$, so an 8% channel is $\ge 72\%$ non-native by arithmetic. The alternatives are a smaller channel (less Indic exposure) or more epochs (Muennighoff et al.: returns fall after ~4 and vanish by ~16). We keep 8% and limit the damage: translate only high-value English (education, math, code explanations), never generate synthetic text from synthetic text, keep translationese out of the native pool with a native-vs-translated classifier, and test fluency only on native-authored text. As OCR and ASR add native supply, the translated share goes down.
+
+**R4. Why hold the anneal data back from day 0?**
+- **The First-Principles Question:** The same tokens can be used early or late. Why does the order matter?
+- **For an 18-Year-Old (Everyday Analogy):**
+  You revise your best notes the night before the exam, not in the first week of term.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  During learning-rate decay the weights settle, so late data has a large effect on the final model. OLMo 2 (arXiv:2501.00656, Table 9) raised 7B GSM8K from 24.1 to 67.5 with its mid-training mix (13B: 37.3 → 75.1). If the reserve is mixed into the first 16 T, it is used up at a high learning rate. So the reserve is set aside on day 0: verified native Indic, tested code, competition math, agent traces, India-centric reference.
+
+**R5. Fluent Hindi is a goal. Why is it not enough for "India-first"?**
+- **The First-Principles Question:** Can a model be fluent in 22 Indian languages and still not view the world from India?
+- **For an 18-Year-Old (Everyday Analogy):**
+  A guide who learnt perfect Hindi from translated American textbooks speaks well, but still gives prices in dollars and dates as MM/DD.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  Agarwal et al. ("Fluent but Foreign", arXiv:2505.21548) tested six Indic and six global models: the Indic models were not closer to Indian values, and regional fine-tuning did not fix it. Fluency comes from native text. Perspective comes from Indian-authored sources (judgments, Gazette, NCERT, Indian news) and from the defaults in SFT and preference data. Two pools, two tests: MILU, BhashaBench and the paired default test measure perspective; FLORES and bits per byte measure fluency.
+
+**R6. Are all 262,144 embedding rows trained?**
+- **The First-Principles Question:** BPE learns each merge from a frequent pair. Can a learned token still be almost never used?
+- **For an 18-Year-Old (Everyday Analogy):**
+  You make a stamp for "ing", then a stamp for "ring". Now every "ring" uses the new stamp, and the "ing" stamp can sit in the drawer.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  A later merge can absorb an earlier token, so the earlier token becomes an orphan in the final encoding. Its embedding row gets no gradient: a glitch-token risk (Land and Bartolo, arXiv:2405.05417). E6 encodes the tokenizer's own 300 M-character training sample (73 M tokens) with each truncated vocabulary and counts every learned id (special tokens excluded). Orphans: 173 at 131K, 775 at 262K (0.30%), 2,055 at 384K (0.52%); tokens seen fewer than 10 times: 1.0%, 2.7%, 4.8%. The orphans are mostly Latin (427 of 775 at 262K), not Indic. Every token seen at least once in 73 M fires about 270,000 times in a 20 T run, so a gate of "≥ 1,000 occurrences" passes for every non-orphan. Before the freeze: retrain on ≥ 10 GB, then drop or re-map tokens with zero count.
+
+**R7. A test suite passes. Is the RL reward correct?**
+- **The First-Principles Question:** In RL with verifiable rewards, what does the policy actually optimize?
+- **For an 18-Year-Old (Everyday Analogy):**
+  If the teacher only counts the lines in your answer, you learn to write the right number of lines.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  The policy maximizes $\mathbb{E}[r(x, y)]$, not correctness, so any gap between $r$ and correctness becomes a gradient towards the gap. Wang et al. (arXiv:2503.15223): 29.6% of SWE-bench patches that pass the tests behave differently from the reference fix, 28.6% of those are certainly wrong, and reported solve rates are inflated by 6.2 points. Huang et al. (arXiv:2505.22203): rule-based math checkers give false negatives that grow as the policy improves; model-based checkers can be hacked. So each verifier gets hidden tests, a second checker and a human audit of rewarded rollouts before training, with a stop rule at > 5% wrong rewards in any environment.
+
+**R8. Gemma 4 publishes no SWE-bench and no Indic score. What does "as good as Gemma 4" mean there?**
+- **The First-Principles Question:** How do you set a target against a number that does not exist?
+- **For an 18-Year-Old (Everyday Analogy):**
+  If your rival never sat the Hindi exam, you cannot copy their mark. You both sit the same exam, in the same room, on the same day.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  The Gemma 4 report (arXiv:2607.02770, Table 5, thinking mode) gives MMLU-Pro 85.2, GPQA-Diamond 84.3, AIME 2026 89.2, LiveCodeBench v6 80.0, Codeforces 2150, MMMLU 88.4, τ²-bench airline/retail/telecom 75.0/86.4/69.3 and Terminal-Bench Hard 36.0. Some reports quote a τ² "average" of 76.9; Table 5 has no average. For the missing axes, run both open-weight models in one frozen harness (same prompts, tool budget, temperature, seeds) and report the difference with a 95% bootstrap interval, per language, with the worst language shown.
+
+**R9. What did this repository do that most submissions did not, and what did they do that it did not?**
+- **The First-Principles Question:** What is the difference between a cited number and a measured number in a design report?
+- **For an 18-Year-Old (Everyday Analogy):**
+  "The bridge holds 10 tonnes because another bridge did" is different from putting 10 tonnes on it.
+- **For a 10–20 Year AI Veteran (Math, Proof & Systems Trade-offs):**
+  Most submissions take fertility targets from published tables of other tokenizers and the vocabulary from citations. This repository trains and measures: E1 (11 released tokenizers on the same FLORES text), E2 (one curve from 32K to 384K plus a cost model), E3 (English rules on clean Indic text), E4 (supply from parquet footers), E5 (contamination), E6 (orphan tokens). Two measurements found facts that no cited table shows: Sangraha `verified/kas` is mojibake and `verified/doi` is partly English, and Gemma 4 reuses the Gemma 3 tokenizer. In the other direction, the peer reports supplied practices this repository lacked: the anneal reserve, verifier audits, ASR as a supply source, dated legal facts, release stop rules, and the Sangraha headline-vs-verified correction. All are now in the report.

@@ -10,8 +10,8 @@ ERA V5 Session 3 assignment: decide the data, cleaning, evaluation, fertility ta
 |---|---|
 | [report/template.html](report/template.html) | The submission: decisions and numbers only (built and deployed as the site home page). |
 | [PLAN.md](PLAN.md) | Experiment plan: words, design options with reasons, procedures, budget, tests. |
-| [SESSION_03_EXPLAINER.md](SESSION_03_EXPLAINER.md) | Session 3 in depth: token budget, tiers, mining loop, erasure risk, Unicode issues, tokenizer theory, evaluation; 40 papers (arXiv numbers checked). |
-| [FIRST_PRINCIPLES_QA.md](FIRST_PRINCIPLES_QA.md) | 46 questions that rebuild each decision from first principles, with answers from the measurements. |
+| [SESSION_03_EXPLAINER.md](SESSION_03_EXPLAINER.md) | Session 3 in depth: token budget, tiers, mining loop, erasure risk, Unicode issues, tokenizer theory, evaluation, best practices from the 85 top peer submissions; 44 papers (arXiv numbers checked). |
+| [FIRST_PRINCIPLES_QA.md](FIRST_PRINCIPLES_QA.md) | 90 questions (sections A–R) that rebuild each decision from first principles, with answers from the measurements; section R tests the lessons from the top peer submissions. |
 
 ## How to run
 
@@ -25,6 +25,7 @@ python -m src.e3_cleaning           # E3: English rules on clean Indic text (2 m
 python -m src.e4_supply bytes       # E4: Sangraha parquet footers (network)
 python -m src.e4_supply             # E4: unique Indic tokens, epochs
 python -m src.e5_contamination      # E5: 13-gram overlap (10 min)
+python -m src.e6_token_usage        # E6: untrained vocabulary rows (10 min)
 pytest                              # CPU only, no download
 ```
 
@@ -46,6 +47,7 @@ Run on 17 Oct 2026, one desktop CPU (Core Ultra 7 265K, 63 GB RAM).
 | E4 | How many unique native Indic tokens exist? | 67–111 B under our tokenizer (Sangraha + FineWeb-2, overlapping). At 4 epochs: at most 2.2% of a 20 T run, so the 8% always-on channel is 2% native + 6% translated. |
 | E2c | Does the pre-tokenizer matter? | Yes. GPT-2 pattern at 64K: Hindi 3.33 vs 1.58 tokens per word, Tamil 6.83 vs 2.61. |
 | E5 | Is evaluation text in the training pools? | FLORES-Indic 0%, FLORES-English 0.2%, HumanEval 0.6%, SciQ 0.4%; the matches are generic phrases. |
+| E6 | Are all vocabulary rows trained? | At 262K, 775 learned tokens (0.30%) never occur in the tokenizer's own training sample (384K: 2,055, 0.52%); mostly Latin pieces absorbed by later merges. Re-map them before the freeze. |
 
 ## Limits
 

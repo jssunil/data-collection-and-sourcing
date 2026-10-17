@@ -2,7 +2,7 @@
 
 This document uses ASD-STE100 Simplified Technical English rules: short sentences, active voice, one meaning for each word. The terms are defined in the "Words" table of [PLAN.md](PLAN.md#2-words).
 
-Sources: the course notes (`era-v5-capstone-tracker/sessions/session_03_data_collection_and_sourcing.md`), the BrahmicTokenizer-131K report (the V4 course tokenizer), and the papers in section 11. The measurements are from this repository (`results/`). Each arXiv number in section 11 was checked on arxiv.org on 17 Oct 2026.
+Sources: the course notes (`era-v5-capstone-tracker/sessions/session_03_data_collection_and_sourcing.md`), the BrahmicTokenizer-131K report (the V4 course tokenizer), the 85 top peer submissions (section 10), and the papers in section 12. The measurements are from this repository (`results/`). Each arXiv number in section 12 was checked on arxiv.org on 17 Oct 2026.
 
 ---
 
@@ -25,6 +25,7 @@ Sources: the course notes (`era-v5-capstone-tracker/sessions/session_03_data_col
 5. Read "Scaling laws with vocabulary" (Tao et al.). Run E2.
 6. Read DeepSeekMath §2 (the mining loop) and Llama 3 §3.1 (data) and §5 (contamination).
 7. Read the report (`site/index.html`, or the Netlify link in README) and check each number against `results/`.
+8. Read section 10, then two peer submissions. For each, find one number that is cited but not measured, and one practice this repository lacks.
 
 ---
 
@@ -57,6 +58,8 @@ Muennighoff et al. (2023) show that up to about 4 epochs of the same data cost l
 > share × 20 T ≤ 4 × unique tokens
 
 English web has more than 15 T unique high-quality tokens (FineWeb, DCLM, Nemotron-CC). Code has several trillion (The Stack v2). **Indic text does not.** E4 measures it: see the report. E4: 67–111 B unique native Indic tokens; 4 epochs of that is at most 2.2% of 20 T. This single fact shapes the Indic plan: synthetic translation, multi-epoch native data, and a tokenizer that does not waste the scarce Indic tokens.
+
+**Do not plan against a headline count.** Sangraha's dataset card gives 251 B tokens, but only 64.3 B are verified; 24.3 B are unverified and 162.7 B (65%) are synthetic (translated Wikimedia and romanized copies). Telugu falls from 16.3 B to 3.7 B verified, Odia from 12.5 B to 1.2 B. E4 reads the parquet footers and agrees: 47 B verified + 20 B unverified tokens under our tokenizer.
 
 ---
 
@@ -154,6 +157,15 @@ Test text leaks in through web copies, GitHub mirrors, and translated benchmark 
 ### 6.3 The golden proxy
 A sealed held-out set, owned by the evaluation team only. It contains the same domains as the mix: English, each Indic language, code, math, agent traces, India-specific facts. Data engineers see only the BPB numbers, never the text.
 
+### 6.4 Rules for a fair comparison with Gemma 4
+- **Use the numbers Gemma 4 reports, and know which are missing.** The Gemma 4 report (Table 5, thinking mode) gives for 31B: MMLU-Pro 85.2, GPQA-Diamond 84.3, AIME 2026 89.2, LiveCodeBench v6 80.0, Codeforces 2150, MMMLU 88.4, τ²-bench airline 75.0 / retail 86.4 / telecom 69.3, Terminal-Bench Hard 36.0. It gives **no SWE-bench Verified and no Indic score**. For those, run Gemma 4 and our model in the same harness.
+- **Compare thinking mode with thinking mode.** Report both modes separately.
+- **Report the worst language, not only the mean.** A good Hindi score can hide a broken Malayalam score. Report multi-script languages (Santali, Manipuri, Sindhi, Kashmiri, Konkani) per script.
+- **Give uncertainty.** Three seeds for stochastic agent runs; 95% bootstrap confidence intervals.
+- **Drop saturated sets as targets.** HumanEval, MBPP and GSM8K are near 95% for frontier models and are in many crawls. Keep them only as smoke tests.
+- **Prefer native-authored Indic tests.** MILU is mostly from real Indian exams. Translated sets (much of IndicGenBench, IndicXTREME) measure translation more than Indian knowledge.
+- **Put canary strings in private test sets.** If a checkpoint completes a canary, the test text leaked into training.
+
 ---
 
 ## 7. Post-training and RL data
@@ -165,6 +177,14 @@ A sealed held-out set, owned by the evaluation team only. It contains the same d
 | RL with verifiers | Math (answer check), code (unit tests), SWE (tests in Docker), tool use (simulated environments), instruction constraints (IFEval-style, in Indic languages) | Rewards that cannot be gamed by style |
 
 Tulu 3 (Lambert et al., 2024) gives an open recipe for SFT → DPO → RL with verifiable rewards. DeepSeek-R1 (2025) shows RL with verifiable rewards alone can teach long reasoning. SWE-Gym and SWE-smith give executable environments for agentic RL.
+
+**Test the verifier before it gives reward.** In RL the model optimizes the reward directly, so a wrong verifier teaches the wrong behaviour efficiently. The errors are measured:
+- Wang et al. (2025) re-checked SWE-bench patches that pass the tests. 29.6% of these "plausible" patches behave differently from the reference fix, 28.6% of the divergent ones are certainly wrong, and the reported solve rates are inflated by 6.2 points.
+- Huang et al. (2025) find that rule-based math checkers reject correct answers in other formats (false negatives), and the loss grows as the policy improves; model-based checkers accept wrong patterns (reward hacking).
+
+Thus: add hidden tests and a second checker, and have humans audit a sample of rewarded rollouts per environment and per language before RL starts.
+
+**Hold the anneal data back from day 0.** The best data (verified native Indic, tested code, competition math, agent traces) has the most effect at the end of training, when the learning rate decays. OLMo 2 (2025) raised 7B GSM8K from 24.1 to 67.5 with its mid-training mix. If this data is spent in the general pool, the lever is gone.
 
 ---
 
@@ -179,6 +199,12 @@ Test it with paired questions that have a different default answer in India and 
 
 ---
 
+**Fluency is not perspective.** Agarwal et al. (2025, "Fluent but Foreign") tested six Indic and six global models on Indian values and practices. The Indic models were not closer to Indian norms than the global ones; "a U.S. respondent is a closer proxy for Indian values than any Indic model". Regional fine-tuning did not fix it. Thus Indic fluency data and India-perspective data are two separate pools with two separate tests.
+
+**India-first is not one view.** Keep plural sources on contested history and politics, and attribute each view. Store a date and a jurisdiction (Union or state) with each legal or policy fact: the Bharatiya Nyaya Sanhita replaced the IPC on 1 July 2024, and a model trained on undated text mixes both.
+
+---
+
 ## 9. Corrections to the course notes
 
 - **"Chinchilla: 20 tokens per parameter."** This is the compute-optimal point for training loss at fixed training compute. It is not a rule for a deployed model.
@@ -187,7 +213,44 @@ Test it with paired questions that have a different default answer in India and 
 
 ---
 
-## 10. Results in one table
+## 10. Best practices from the 85 top submissions
+
+The course published 85 top submissions for this assignment. We read the 78 that render as text (17 Oct 2026). The count column is the number of those 78 that mention the practice (text search), so it shows what is common, not what is right. The last column says what this repository does with it.
+
+| Practice | Count | In this repository |
+|---|---|---|
+| Hinglish / romanized / code-mixed text as a real register | 62 | Already: 1% of the mix, romanized eval sets, tokenizer trained on `*_Latn` |
+| Anneal (cooldown) phase with the best data | 46 | Added: the reserve is held back from day 0 (OLMo 2: 7B GSM8K 24.1 → 67.5) |
+| OCR of Indian print; ASR of Indian audio | 40; 30 | ASR added as a supply source (radio, Sansad, court audio). OCR already there |
+| Proxy-model ablations before the full run | 40 | Already in the plan: 1B proxies, RegMix, bits per byte (not run here) |
+| Indian court judgments as India-centric text | 39 | Added the open source: 25 High Courts, CC-BY-4.0, AWS bucket `indian-high-court-judgments` |
+| Provenance / licence ledger at collection time | 38 | Added to cleaning step 8 |
+| Single-digit numbers | 33 | Already (E2 math cost) |
+| Plural viewpoints, no partisan default | 33 | Added to section 8 |
+| Native-authored SFT, not translated | 31 | Already |
+| Tokenizer fertility from published tables (MUTANT, Sarvam) | 26 | We measure instead (E1, E2); MUTANT's plateau beyond 200K agrees with E2's flat cost curve from 192K |
+| Reserved control tokens | 24 | 11 today; reserve a block of 1,024 ids so tool and thinking tokens never shift ids |
+| Verifier audit / reward hacking | 22 | Added (section 7): hidden tests, a second checker, human audit, a 5% stop rule |
+| Translationese detection | 21 | Added: native-vs-translated classifier; fluency tested on native text only |
+| Canary strings in private test sets | 20 | Added (6.4) |
+| Per-snapshot dedup (FineWeb) | 17 | Kept per-language MinHash; per-snapshot is an ablation for the English pool |
+| Dated legal and policy facts (IPC → BNS) | 15 | Added (section 8 and India-centric pool) |
+| Confidence intervals, seeds | 15 | Added (6.4) |
+| Release / stop rules | 14 | Added to the report (risks) |
+| Bits per byte for cross-language comparison | 6 | Already central (6.1) |
+| Own measurements (trained a tokenizer, read the data) | very few | E1–E6 |
+
+**Where we disagree with the common choice.**
+- **Synthetic share of the Indic channel.** Many reports cap it at 25–40%. That cap needs 3–5× more native supply than E4 measures, or more than 4 epochs. Our channel is 75% translated by arithmetic, with the controls above (FIRST_PRINCIPLES_QA R3).
+- **Fertility targets copied from another tokenizer's table.** A target that a measured tokenizer already beats is not a target. Our targets are set against E2's measured 262K tokenizer and Gemma 4 on the same text.
+- **"Gemma 4 τ²-bench 76.9".** Several reports quote this average; the Gemma 4 report's Table 5 gives only the three domains (75.0 / 86.4 / 69.3).
+- **Morphology-aware pre-tokenization for Dravidian languages.** A pre-tokenizer boundary only removes merges that BPE could learn, so at a fixed V it does not, in general, lower fertility. E2c shows the opposite lever: keeping vowel signs inside words (`\p{M}`) halves Indic fertility.
+
+**E6: are all vocabulary rows trained?** One peer report proposed the gate "≥ 99.5% of tokens occur ≥ 1,000 times in the final mix". E6 tests it on our tokenizer's own 300 M-character training sample (73 M tokens): 775 learned tokens never occur at 262K (0.30%; 131K: 173; 384K: 2,055), mostly Latin pieces absorbed by later merges. 2.7% occur fewer than 10 times. Any token that occurs once in the sample occurs about 270,000 times in a 20 T run, so the gate passes for all but the orphans. The fix: retrain on ≥ 10 GB and drop or re-map zero-count tokens before the freeze.
+
+---
+
+## 11. Results in one table
 
 | Experiment | Finding |
 |---|---|
@@ -196,10 +259,11 @@ Test it with paired questions that have a different default answer in India and 
 | E3 | English rules reject 75–100% of clean Indic text; per-language rules 2–21%. |
 | E4 | 67–111 B unique native Indic tokens (Sangraha + FineWeb-2, overlapping). At 4 epochs: at most 2.2% of a 20 T run. |
 | E5 | 0% FLORES-Indic, 0.2% FLORES-English, 0.6% HumanEval, 0.4% SciQ; the matches are generic phrases. |
+| E6 | At 262K, 775 learned tokens (0.30%) never occur in the tokenizer's own training sample; 384K: 2,055 (0.52%). Mostly Latin pieces. |
 
 ---
 
-## 11. References
+## 12. References
 
 1. Hoffmann et al., Training Compute-Optimal Large Language Models (Chinchilla), arXiv:2203.15556
 2. Muennighoff et al., Scaling Data-Constrained Language Models, arXiv:2305.16264
@@ -241,3 +305,9 @@ Test it with paired questions that have a different default answer in India and 
 38. Liu et al., RegMix: Data Mixture as Regression, arXiv:2407.01492
 39. Xie et al., DoReMi, arXiv:2305.10429
 40. Kudugunta et al., MADLAD-400, arXiv:2309.04662
+41. Team OLMo, 2 OLMo 2 Furious, arXiv:2501.00656
+42. Agarwal et al., Fluent but Foreign: Even Regional LLMs Lack Cultural Alignment, arXiv:2505.21548
+43. Wang et al., Are "Solved Issues" in SWE-bench Really Solved Correctly?, arXiv:2503.15223
+44. Huang et al., From Accuracy to Robustness: A Study of Rule- and Model-based Verifiers in Mathematical Reasoning, arXiv:2505.22203
+
+Data sources checked on 17 Oct 2026: Sangraha dataset card (huggingface.co/datasets/ai4bharat/sangraha: verified 64,306 M, unverified 24,308 M, synthetic 162,708 M tokens); AWS Open Data registry, Indian High Court Judgments (25 High Courts, CC-BY-4.0, `s3://indian-high-court-judgments`, no account needed).

@@ -62,13 +62,13 @@ code{font-size:13px}
 <main>
 <h1>Data plan for a 40B India-first model</h1>
 <p class="sub">ERA V5 · Session 3 assignment · 17 Oct 2026. Every number below is either measured in the
-<a href="https://github.com/jssunil/data-collection-and-sourcing">evidence repository</a> (experiments E1–E5, code and logs) or cited.</p>
+<a href="https://github.com/jssunil/data-collection-and-sourcing">evidence repository</a> (experiments E1–E6, code and logs) or cited. <a href="explainer.html#10-best-practices-from-the-85-top-submissions">Revised after the 85 top peer submissions</a>.</p>
 
 <div class="grid">
   <div class="tile"><b>Budget</b><span>40B dense, <b style="display:inline;text-transform:none;font-size:inherit;color:inherit">20 T tokens</b> (500/weight), 4.8e24 FLOPs ≈ 3.3 M H100-hours.</span></div>
   <div class="tile"><b>Indic</b><span>8% of every batch (always-on): 2% native + 6% translated, plus 4% India-centric English. Native supply is the limit (E4).</span></div>
   <div class="tile"><b>Cleaning</b><span>Per-language calibrated filters. English rules delete 75–100% of <i>clean</i> Indic text (E3).</span></div>
-  <div class="tile"><b>Testing</b><span>Gemma 4 benchmark set + bits-per-byte on a sealed golden proxy + an India-default paired test.</span></div>
+  <div class="tile"><b>Testing</b><span>Gemma 4's own table, same harness; worst language, not the mean; bits per byte on a sealed golden proxy; India-default paired test.</span></div>
   <div class="tile"><b>Tokenizer</b><span>Byte-level BPE, <b style="display:inline;text-transform:none;font-size:inherit;color:inherit">V = 262,144</b>, trained on the India-first mix, single digits, exact round trip.</span></div>
   <div class="tile"><b>Fertility</b><span>Parity vs English ≤ 1.5 for every tier-1 language (worst measured 1.48), ≤ 2.5 tier-2 (2.35); tier-1 mean ≤ 1.8 tok/word (1.77); English ≤ 1.30 (1.25).</span></div>
 </div>
@@ -83,15 +83,16 @@ code{font-size:13px}
 <tr><td>Code + code-adjacent</td><td class="n">22%</td><td class="n">4.4 T</td><td>The Stack v2 (permissive), issues, PRs, commits, notebooks, docs</td><td>Coding; precision</td></tr>
 <tr><td>Math</td><td class="n">8%</td><td class="n">1.6 T</td><td>FineMath, MegaMath, OpenWebMath, Proof-Pile-2</td><td>Multi-step reasoning</td></tr>
 <tr><td>Books, papers, reference</td><td class="n">6%</td><td class="n">1.2 T</td><td>arXiv, PMC-OA, peS2o, Wikipedia (all langs), public-domain books</td><td>Depth, long coherence</td></tr>
-<tr><td><b>Native Indic, 22 languages</b></td><td class="n">2%</td><td class="n">0.4 T</td><td>Sangraha, IndicCorp v2, FineWeb-2, new crawls, OCR of govt/library PDFs</td><td>Language skill; 4 epochs of ~100 B unique tokens</td></tr>
+<tr><td><b>Native Indic, 22 languages</b></td><td class="n">2%</td><td class="n">0.4 T</td><td>Sangraha, IndicCorp v2, FineWeb-2, new crawls, OCR of govt/library PDFs, ASR of radio, Sansad and court audio</td><td>Language skill; 4 epochs of ~100 B unique tokens</td></tr>
 <tr><td><b>Indic synthetic</b></td><td class="n">6%</td><td class="n">1.2 T</td><td>Translation of edu/math/code-explanation text (IndicTrans2 + LLM), rephrasing of native text</td><td>Fills the supply gap with high-value content</td></tr>
-<tr><td><b>India-centric English</b></td><td class="n">4%</td><td class="n">0.8 T</td><td>Court judgments, Gazette, PIB, Sansad, NCERT/state textbooks, Indian news</td><td>Most Indian knowledge is written in English</td></tr>
+<tr><td><b>India-centric English</b></td><td class="n">4%</td><td class="n">0.8 T</td><td>High Court judgments (25 courts, CC-BY-4.0, open S3), Gazette, PIB, Sansad, NCERT, Indian news; facts dated (IPC → BNS)</td><td>Most Indian knowledge is written in English</td></tr>
 <tr><td>Romanized / code-mixed Indic</td><td class="n">1%</td><td class="n">0.2 T</td><td>Sangraha <code>*_Latn</code>, forums, transliteration corpora</td><td>How Indians actually type</td></tr>
 <tr><td>Other languages</td><td class="n">5%</td><td class="n">1.0 T</td><td>FineWeb-2, top 30 languages</td><td>Multilingual parity with Gemma 4</td></tr>
 <tr><td>Synthetic reasoning + agent traces</td><td class="n">13%</td><td class="n">2.6 T</td><td>Rephrased web, verified code-execution traces, SWE/terminal/tool-call trajectories</td><td>Agentic loop format; reasoning density</td></tr>
 </tbody></table></div>
-<p><b>Indic supply (E4).</b> Sangraha (verified + unverified, parquet footers) and FineWeb-2 hold <b>67–111 B unique native Indic tokens</b> under our tokenizer (they overlap; both are Common Crawl). Four epochs of that is 0.27–0.44 T = <b>at most 2.2% of 20 T</b>. A 10% native share would need 18–30 epochs. So the always-on 8% is 2% native (repeated ≤ 4×, growing with new crawls and OCR) + 6% high-value English content translated into the 22 languages. A better tokenizer does not create supply: it carries the same bytes in fewer tokens.</p>
-<p><b>Schedule.</b> Phase 1 (0–16 T): the mix above. Phase 2 anneal (16–19.5 T): up-weight curated, reasoning, agentic and native Indic data. Phase 3 (0.5 T): context 8 K → 128 K with long Indic and code documents.
+<p><b>Indic supply (E4).</b> Sangraha (verified + unverified, parquet footers) and FineWeb-2 hold <b>67–111 B unique native Indic tokens</b> under our tokenizer (they overlap; both are Common Crawl). Four epochs of that is 0.27–0.44 T = <b>at most 2.2% of 20 T</b>. A 10% native share would need 18–30 epochs. So the always-on 8% is 2% native (repeated ≤ 4×, growing with new crawls, OCR and ASR) + 6% high-value English content translated into the 22 languages. Sangraha's card agrees: 64.3 B of its 251 B tokens are verified; 65% is synthetic. A better tokenizer does not create supply: it carries the same bytes in fewer tokens.</p>
+<p><b>Synthetic rules.</b> Never synthetic from synthetic; a native-vs-translated classifier guards the native pool; fluency is tested on native text only.</p>
+<p><b>Schedule.</b> Phase 1 (0–16 T): the mix above. Phase 2 anneal (16–19.5 T): a reserve held back from day 0 (verified native Indic, tested code, competition math, agent traces); OLMo 2 7B GSM8K rose 24.1 → 67.5 this way. Phase 3 (0.5 T): context 8 K → 128 K with long Indic and code documents.
 Weights are set by mixture regression on 1B-parameter proxies (RegMix), scored by bits per byte per domain and language.</p>
 
 <h2>2. Post-training and RL data</h2>
@@ -100,19 +101,19 @@ Weights are set by mixture regression on 1B-parameter proxies (RegMix), scored b
 <tbody>
 <tr><td>SFT (~5 M dialogues)</td><td>Multilingual instruction following; verified code solutions; agent trajectories (SWE-Gym, SWE-smith, APIGen-MT, terminal); Indic instructions <i>written</i> by native speakers (IndicAlign, Aya, Anudesh) not only translated; India-default answers (₹, lakh/crore, IST, Indian law and maps)</td><td>Format, tool syntax, and the Indian default</td></tr>
 <tr><td>Preference</td><td>Pairs rated by Indian annotators per tier-1 language; safety pairs for caste, religion, region and Indian law (IT Rules 2021, DPDP Act 2023)</td><td>"Better" as an Indian user judges it</td></tr>
-<tr><td>RL with verifiers (GRPO)</td><td>Math (exact answer), code (unit tests), SWE (tests in Docker), tool use (simulated APIs, Indian tasks: UPI, IRCTC-style booking, GST), IFEval-style constraints in Indic languages</td><td>Rewards that style cannot game</td></tr>
+<tr><td>RL with verifiers (GRPO)</td><td>Math (exact answer), code (unit tests), SWE (tests in Docker), tool use (simulated APIs, Indian tasks: UPI, IRCTC-style booking, GST), IFEval-style constraints in Indic languages. <b>Verifiers audited first</b> (SWE-bench tests pass wrong patches: +6.2 pt, Wang et al. 2025)</td><td>Rewards that style cannot game</td></tr>
 </tbody></table></div>
 
 <h2>3. Cleaning for these objectives</h2>
 <ol>
-<li><b>Extract</b> (trafilatura / resiliparse); OCR for Indic PDFs; detect legacy fonts (Krutidev, Shree-Lipi) and convert or drop.</li>
-<li><b>Normalize to NFC</b> in the pipeline, not in the tokenizer. E3: 43% of Marathi, 59% of Manipuri, 27% of Konkani documents were not NFC. Keep ZWJ/ZWNJ: they are spelling.</li>
+<li><b>Extract</b> (trafilatura); OCR for Indic PDFs; convert or drop legacy fonts (Krutidev).</li>
+<li><b>NFC</b> in the pipeline, not the tokenizer (E3: 43% of Marathi, 59% of Manipuri documents were not NFC). Keep ZWJ/ZWNJ: they are spelling.</li>
 <li><b>Language + script ID per document</b> (GlotLID / IndicLID incl. romanized) and a script-purity check. E3 found Sangraha <code>verified/kas</code> is mostly mojibake and <code>verified/doi</code> contains English.</li>
-<li><b>Heuristics calibrated per language</b> on its own clean text (FineWeb-2 method): Unicode letters include marks; <code>।</code>, <code>॥</code>, <code>۔</code> end sentences; stop words from the language's own frequency list.</li>
+<li><b>Heuristics calibrated per language</b> on its own clean text (FineWeb-2 method): letters include marks; <code>।</code>, <code>۔</code> end sentences; own stop words.</li>
 <li><b>Quality classifiers per domain and language</b>, grown from seeds by the DeepSeekMath loop (Indian legal, government, educational, each Indic language). Never an English classifier on Indic text.</li>
 <li><b>Dedup</b>: exact + MinHash (word 5-grams) per language after NFC; URL-level for crawls.</li>
-<li><b>PII</b>: Aadhaar (12 digits + Verhoeff check), PAN, +91 mobiles, UPI IDs, emails.</li>
-<li><b>Licence + opt-out filter</b>; code: permissive only.</li>
+<li><b>PII</b>: Aadhaar (Verhoeff check), PAN, +91 mobiles, UPI IDs.</li>
+<li><b>Licence + opt-out filter</b>, provenance recorded at collection; code: permissive only. Scarce pools (Indic, agent) are re-weighted by quality, not deleted.</li>
 <li><b>Decontaminate</b> against every eval set, incl. translated copies; ignore n-grams frequent in training (E5: 13-gram hits were generic phrases).</li>
 </ol>
 <div class="fig">
@@ -123,13 +124,14 @@ Weights are set by mixture regression on 1B-parameter proxies (RegMix), scored b
 
 <h2>4. Testing against the objectives</h2>
 <div class="scroll"><table>
-<thead><tr><th>Objective</th><th>Benchmarks (target = Gemma 4 31B where reported)</th></tr></thead>
+<thead><tr><th>Objective</th><th>Benchmarks (target = Gemma 4 31B, thinking mode, its Table 5)</th></tr></thead>
 <tbody>
 <tr><td>General reasoning</td><td>MMLU-Pro (85.2), GPQA-Diamond (84.3), AIME 2026 (89.2), IFEval / IFBench</td></tr>
-<tr><td>Coding</td><td>LiveCodeBench v6, post-cutoff window (80.0); HumanEval+/MBPP+; BigCodeBench</td></tr>
-<tr><td>Agentic</td><td>SWE-bench Verified, Terminal-Bench, τ²-bench (retail 86.4), BFCL v3 — also translated into tier-1 languages, scored on exact tool arguments</td></tr>
-<tr><td>Indic language</td><td>MMMLU (88.4), MILU (11 languages), IndicGenBench, IN22 / FLORES chrF++, per-language bits per byte</td></tr>
-<tr><td>India-first</td><td>BhashaBench V1 (law, finance, agriculture, Ayurveda); <b>paired default test</b>: same question with no country named, Indian vs global default (₹, lakh, IST, map, law), rubric by Indian annotators</td></tr>
+<tr><td>Coding</td><td>LiveCodeBench v6, post-cutoff window (80.0); Codeforces (2150); BigCodeBench. HumanEval+/MBPP+ as smoke tests only (saturated)</td></tr>
+<tr><td>Agentic</td><td>τ²-bench (airline 75.0, retail 86.4, telecom 69.3), Terminal-Bench Hard (36.0), BFCL v3, SWE-bench Verified (not reported: same-harness run); tool tasks also in tier-1 languages</td></tr>
+<tr><td>Indic language</td><td>MMMLU (88.4), MILU (from Indian exams), IN22 / FLORES chrF++, per-language bits per byte; IndicGenBench secondary (translated). No Gemma 4 Indic score: head-to-head</td></tr>
+<tr><td>India-first</td><td>BhashaBench V1 (law, finance, agriculture, Ayurveda); <b>paired default test</b>: same question with no country named, Indian vs global default (₹, lakh, IST, map, law), rubric by Indian annotators. (fluency ≠ perspective: Agarwal et al. 2025)</td></tr>
+<tr><td>Reporting</td><td>Thinking vs thinking; worst language and per script; 3 seeds, 95% CIs; canaries in private sets</td></tr>
 <tr><td>Data ablations</td><td>Bits per byte (not per-token loss) on a sealed golden proxy, per language and domain; 1B proxies before any full-scale change</td></tr>
 <tr><td>Tokenizer gates</td><td>Fertility targets (section 5); exact round trip on 1,000 docs per script; zero byte fallback on all 22 languages</td></tr>
 </tbody></table></div>
@@ -161,8 +163,8 @@ Weights are set by mixture regression on 1B-parameter proxies (RegMix), scored b
 <p class="cap">E2. 40B training FLOPs per byte of the planned mix: (6N + 6dV + attention) × tokens/byte. d = 7,168, 60 layers, 8K context.</p>
 </div>
 <p><b>Why 262,144.</b> Cost per byte falls 14.5% from 32K to 256K and is flat (±0.7%) from 192K to 384K; 262K is 0.15% above the minimum (320K) and saves 0.8 B embedding weights against it.
-It is 2<sup>18</sup> (clean tensor-parallel sharding), equals Gemma 4's V (direct comparison), and at that size our tokenizer spends <b>32% fewer tokens on tier-1 Indic than Gemma 4</b> at the same English cost.
-Two cheaper levers matter more than V: the tokenizer's <b>training mix</b> (English-first mix at the same V: tier-1 2.02, +14% Indic tokens) and the <b>pre-tokenizer</b> (GPT-2's <code>\p{L}+</code> splits words at every Indic vowel sign: at 64K, Hindi 3.33 vs 1.58 tok/word, Tamil 6.83 vs 2.61). Released tokenizers miss whole script families: BrahmicTokenizer-131K drops Arabic script (Urdu, Kashmiri, Sindhi: 7.4–8.9 tok/word); every o200k-family tokenizer is in byte fallback on Ol Chiki (Santali, 15.3).</p>
+It is 2<sup>18</sup> (clean tensor-parallel sharding), equals Gemma 4's V (direct comparison), and at that size our tokenizer spends <b>32% fewer tokens on tier-1 Indic than Gemma 4</b> at the same English cost. MUTANT independently finds no fertility gain beyond 200K. <b>E6:</b> 775 learned tokens (0.30%) never occur in the tokenizer's own training sample at 262K (384K: 2,055), mostly Latin; they are re-mapped before the freeze. 1,024 ids are reserved for tool and thinking tokens.
+Two levers matter more than V: the <b>training mix</b> (English-first mix, same V: tier-1 2.02, +14% Indic tokens) and the <b>pre-tokenizer</b> (GPT-2's <code>\p{L}+</code> splits at every Indic vowel sign: at 64K, Hindi 3.33 vs 1.58, Tamil 6.83 vs 2.61). Released tokenizers miss whole script families: BrahmicTokenizer-131K drops Arabic script (Urdu, Kashmiri, Sindhi: 7.4–8.9 tok/word); every o200k-family tokenizer is in byte fallback on Ol Chiki (Santali, 15.3).</p>
 
 <details class="fig"><summary><b>Per-language fertility</b> (tokens per word, FLORES devtest)</summary>
 <div class="scroll"><table id="lang-table"><thead><tr><th>Language</th><th class="n">Tier</th><th class="n">Ours 262K</th><th class="n">Gemma 4</th><th class="n">Sarvam-30B</th><th class="n">Brahmic-131K</th><th class="n">o200k</th><th class="n">Llama 3.1</th></tr></thead><tbody></tbody></table></div>
@@ -172,8 +174,9 @@ Two cheaper levers matter more than V: the tokenizer's <b>training mix</b> (Engl
 <ul>
 <li>Tokenizer trained on 300 M characters; retrain on ≥ 10 GB of the final mix before the freeze.</li>
 <li>Confirm with two 1B proxies (ours vs Gemma 4 tokenizer) on equal bytes: bits per byte per language.</li>
-<li>Native Indic supply is the hard limit: fund new crawls, OCR of government and library archives, and licensed news.</li>
+<li>Native Indic supply is the hard limit: fund new crawls, OCR of government and library archives, ASR of Indian audio, and licensed news.</li>
 </ul>
+<p><b>Stop rules.</b> Re-plan if a tier-1 language misses parity by &gt; 0.15, a 1B proxy with our tokenizer loses bits per byte to Gemma 4's on any tier-1 language, a canary is completed, or a verifier audit finds &gt; 5% wrong rewards.</p>
 </main>
 <script>
 const DATA=/*DATA*/null;

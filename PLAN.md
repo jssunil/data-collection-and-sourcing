@@ -20,7 +20,7 @@ The assignment asks four questions:
 | Q1 | What data do you collect for pre-training, post-training and RL, and why? | Literature + E4 (supply of Indic tokens) |
 | Q2 | How do you clean it for these objectives? | E3 (English rules on Indic text) + E5 (contamination) |
 | Q3 | How do you test the model against the objectives? | Literature + E1/E2 (tokenizer gates) |
-| Q4 | Which fertility targets, which languages, and which vocabulary size? | E1 (released tokenizers) + E2 (vocabulary sweep and cost model) |
+| Q4 | Which fertility targets, which languages, and which vocabulary size? | E1 (released tokenizers) + E2 (vocabulary sweep and cost model) + E6 (untrained vocabulary rows) |
 
 The submission is a short report on Netlify (`site/index.html`, built from `report/template.html`). The assignment says: "Longer submissions will result in lower scores." Thus the report gives decisions and numbers only. This repository holds the evidence.
 
@@ -197,6 +197,15 @@ A script-purity filter (≥ 50% of letters in the expected script) catches the f
 3. Mark an item contaminated if one sequence matches. Test items of 8–12 words as whole sequences.
 4. Report the rate per set.
 
+## 9a. E6: untrained vocabulary rows
+
+Added on 17 Oct 2026 after reading the 85 top peer submissions (one proposed the gate "≥ 99.5% of tokens occur ≥ 1,000 times in the final mix").
+
+1. Rebuild the tokenizer's own training sample (India-first mix, 300 M characters, seed 0).
+2. Cut the 384K tokenizer to 131K, 196K, 262K and 384K.
+3. Encode the sample with each size. Count each learned id (special tokens excluded).
+4. Report zero-count tokens (orphans: absorbed by later merges), tokens seen fewer than 10 times, and the script of each orphan.
+
 ---
 
 ## 10. Budget
@@ -210,6 +219,7 @@ A script-purity filter (≥ 50% of letters in the expected script) catches the f
 | E3 | 2 min |
 | E4 footers | 15 min (network) |
 | E5 | 10 min |
+| E6 | 10 min |
 
 ## 11. Tests
 

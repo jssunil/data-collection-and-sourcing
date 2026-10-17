@@ -6,3 +6,4 @@ cache/
 report/.netlify/
 .netlify/
 site/
+sessionid.txt

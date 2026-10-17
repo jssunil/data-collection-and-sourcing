@@ -58,8 +58,8 @@ Run on 17 Oct 2026, one desktop CPU (Core Ultra 7 265K, 63 GB RAM).
 ## Deploying the report
 
 ```
-python report/build.py                              # injects results/*.json into report/index.html
-npx netlify-cli deploy --dir report --prod          # first time: npx netlify-cli login
+python report/build.py                              # builds site/: report (results/*.json injected) + all docs as pages
+npx netlify-cli deploy --dir site --prod          # folder is linked to the site (.netlify/state.json)
 ```
 
 Netlify link: https://era-v5-s3-data-india-40b.netlify.app
